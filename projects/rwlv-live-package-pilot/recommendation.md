@@ -2,75 +2,89 @@
 
 ## Executive Summary
 
-The preferred direction is to represent room + ticket packages through existing Resorts World Live merchandising components, starting with a reusable Stay + Show Feature Card. This gives packages meaningful visibility, supports room-night growth, preserves the current ticket-first journey, and fits a two-week, low-risk implementation window.
+The preferred direction is to represent Resorts World Live packages as date-specific Stay + Show booking paths, starting with a Stay + Show CTA on eligible lineup cards. New operational evidence shows the package flow is Artist -> Package Link -> Booking Engine (IBE) -> Arrival/Departure Dates Preloaded -> Promotion Preselected -> Room Inventory Displayed. The package is therefore primarily date-centric and booking-centric, not primarily artist-centric.
+
+This direction gives packages meaningful visibility at the moment guests compare show dates, supports room-night growth, preserves the current ticket-first journey, and fits a two-week, low-risk implementation window.
 
 Do not create a new package builder or new custom module for the pilot. Use existing hero, promo/feature card, event card, related rail, CTA, and detail components.
 
 ## Preferred Direction
 
-Move forward with Concept 1: Stay + Show Feature Card.
+Move forward with a date-specific Stay + Show package experience.
 
 Recommended first release:
 
-- Add one package-focused feature/promo card near the top of the Live page.
-- Use existing image, headline, body, CTA, and terms/detail fields.
-- Route to an existing package, offer, room booking, or campaign destination.
+- Add a Stay + Show CTA to eligible lineup cards.
+- Route each package CTA to the existing IBE package link with arrival/departure dates preloaded and the promotion preselected.
+- Use existing event card, CTA, badge/metadata, and terms/detail fields.
 - Preserve "Buy Tickets" as a clear ticket-only path.
-- Instrument package impression, CTA click, detail view, booking start, and ticket-only fallback.
+- Instrument package impression, CTA click, promotion handoff, room inventory view, booking start, package attach rate, and ticket-only fallback.
 
 Recommended stretch:
 
-- Add the same package card pattern to eligible event detail pages as "Make It A Stay."
-- Add package badges or secondary CTAs to a curated subset of eligible event cards.
+- Add an enhanced Concert Weekend Stay module for high-demand package dates.
+- Add a featured artist package treatment only for promoted shows with campaign-backed package links.
+- Add the same package CTA pattern to eligible event detail pages as "Make It A Stay" once template access is confirmed.
 
 ## Why This Direction
 
 This approach best satisfies the stakeholder request and constraints:
 
+- Aligns the front-end package merchandising with the real operational flow: date-specific package link into the booking engine.
 - Increases room-night visibility without disrupting ticket purchase behavior.
 - Uses existing components and avoids new UI construction.
-- Can be launched for a small, manually curated event set.
-- Creates measurable package engagement quickly.
-- Keeps operational risk low by avoiding unvalidated inventory guarantees.
-- Supports future iteration into event cards, detail pages, and cross-sell rails.
+- Can be launched for a small, manually curated set of package-eligible show dates and promotions.
+- Creates measurable package engagement and attach-rate data quickly.
+- Keeps operational risk low by avoiding unvalidated artist-specific or bundle-specific claims.
+- Supports future iteration into weekend modules, promoted-show treatments, detail pages, and cross-sell rails.
+
+## Ranked Recommendation
+
+1. Stay + Show CTA on lineup cards.
+2. Enhanced Concert Weekend Stay module.
+3. Featured Artist package treatment for promoted shows only.
+
+The lineup-card CTA is the highest-priority recommendation because it sits closest to the guest's date-selection behavior and can route directly to the correct preloaded IBE package. The Concert Weekend Stay module is the best companion because it reuses existing feature/promo components and gives high-demand dates more visibility without requiring a new commerce pattern. Featured Artist treatment should be selective because the artist can drive campaign attention, but the package itself is date-specific, promotion-specific, and fulfilled through booking-engine inventory.
 
 ## Recommended Package Structure
 
 | Field | Recommendation |
 | --- | --- |
-| Audience | Guests considering a featured show, residency, or event weekend. |
+| Audience | Guests considering a specific show date, residency date, or promoted event weekend. |
 | Occasion | Entertainment-led overnight stay, date night, celebration, or weekend trip. |
-| Promise | "Make the show a stay" with room and ticket planning presented together. |
-| Inclusions | Room path plus event ticket path; only list bundled inclusions if confirmed. |
+| Promise | "Make the show a stay" with eligible room inventory surfaced for the selected date window. |
+| Inclusions | Preloaded room package path plus event ticket path; only list bundled inclusions if confirmed. |
 | Optional upgrades | Dining, VIP, room upgrade, loyalty benefit, or nightlife cross-sell. |
-| Constraints | Availability, blackout dates, ticket purchase rules, taxes/fees, dining availability, and fulfillment terms. |
+| Constraints | Arrival/departure dates, promotion rules, availability, blackout dates, ticket purchase rules, taxes/fees, dining availability, and fulfillment terms. |
 | Operational owner | Product with Revenue/Hotel, Entertainment, Marketing, Analytics, and Engineering validation. |
-| Primary CTA | "View room + ticket package" or "Check package availability." |
+| Primary CTA | "Stay + Show" or "Check stay + show rates." |
 | Secondary action | "Buy tickets only." |
 
 ## Scorecard Summary
 
-| Concept | Implementation effort | Expected business impact | Design consistency | Package visibility | Total |
+| Concept | Existing component reuse | Low implementation effort | Booking-engine integration | Package attach rate | Total |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Stay + Show Feature Card | 5 | 4 | 5 | 4 | 18 |
-| Package-Aware Event Cards | 4 | 4 | 4 | 5 | 17 |
-| Make It A Stay Detail Card | 4 | 5 | 4 | 4 | 17 |
-| Complete The Night Related Rail | 5 | 3 | 5 | 3 | 16 |
-| Page-Wide Stay + Show Promo Banner | 5 | 3 | 4 | 4 | 16 |
+| Stay + Show CTA On Lineup Cards | 4 | 4 | 5 | 5 | 18 |
+| Enhanced Concert Weekend Stay Module | 5 | 5 | 4 | 4 | 18 |
+| Featured Artist Package Treatment For Promoted Shows | 4 | 4 | 4 | 4 | 16 |
+| Make It A Stay Detail Card | 4 | 4 | 4 | 4 | 16 |
+| Complete The Night Related Rail | 5 | 5 | 2 | 3 | 15 |
+| Page-Wide Stay + Show Promo Banner | 5 | 5 | 3 | 2 | 15 |
 
 ## Implementation Plan
 
 ### Week 1
 
 - Confirm existing component capabilities from screenshots/CMS/component library.
-- Select one priority event, residency, or campaign for the pilot.
+- Select one or more package-eligible show dates and promotions for the pilot.
+- Confirm IBE package link behavior for preloaded arrival/departure dates, preselected promotion, and room inventory display.
 - Confirm package terms, routing, inventory assumptions, and legal copy.
-- Draft final card copy and CTA labels.
-- Add telemetry requirements to the selected component.
+- Draft final lineup-card CTA labels, badge/metadata copy, and terms copy.
+- Add telemetry requirements to the lineup card package CTA.
 
 ### Week 2
 
-- Configure the card in the existing Live page surface.
+- Configure eligible lineup-card CTAs in the existing Live page surface.
 - QA desktop and mobile layout with real copy.
 - Validate routing and third-party handoffs.
 - Validate analytics events in staging.
@@ -84,15 +98,20 @@ Required events:
 - `package_card_engaged`
 - `package_detail_viewed`
 - `cta_clicked`
+- `promotion_handoff_clicked`
+- `room_inventory_viewed`
 - `availability_check_started`
 - `booking_started`
+- `package_attached`
 - `ticket_only_clicked`
 
 Required context:
 
 - Package ID/name.
 - Source module.
-- Event/show/artist/venue.
+- Event/show/date/artist/venue.
+- Arrival/departure dates.
+- Promotion code or promotion ID.
 - CTA text and destination.
 - Device class.
 - Availability state when known.
@@ -100,10 +119,11 @@ Required context:
 
 Primary KPI:
 
-- Room booking starts from Live package surfaces.
+- Package attach rate from Live package surfaces.
 
 Secondary KPIs:
 
+- Room booking starts from Live package surfaces.
 - Package card engagement.
 - Package detail view rate.
 - Package CTA click-through.
@@ -116,11 +136,12 @@ Secondary KPIs:
 | Risk | Impact | Mitigation |
 | --- | --- | --- |
 | Screenshots/component inventory unavailable in this checkout | Exact placement and component capabilities need validation. | Run a screenshot validation pass before final build. |
-| Package copy overpromises bundled inventory | Guest confusion and operational risk. | State clearly whether tickets are included, linked, or purchased separately. |
+| Package copy overpromises bundled inventory | Guest confusion and operational risk. | State clearly whether the flow is a preloaded room package, a room + ticket bundle, or a room path linked near ticket purchase. |
 | Package CTA competes with ticket sales | Potential ticket conversion drag. | Keep ticket-only action visible and track it as a guardrail. |
-| Booking and ticketing handoffs fragment measurement | Incomplete attribution. | Add source parameters and package context to every available handoff. |
+| Booking and ticketing handoffs fragment measurement | Incomplete attribution. | Add source parameters, dates, promotion ID, and package context to every available handoff. |
 | Mobile card density increases friction | Lower engagement or more backtracking. | QA with real copy and prefer one concise package card in the first release. |
+| Artist-led campaign treatment obscures date-specific package mechanics | Misaligned expectations and higher approval risk. | Reserve artist package treatment for promoted shows only and keep the CTA tied to stay dates and promotion rules. |
 
 ## Final Recommendation
 
-Launch a small, measurable Stay + Show Feature Card pilot using existing components only. Treat it as the first package merchandising layer, not a full package commerce redesign. If the pilot lifts qualified package engagement without hurting ticket behavior, expand the same pattern into event detail pages and eligible event cards.
+Launch a small, measurable Stay + Show CTA pilot on eligible lineup cards using existing components only. Treat it as the first date-specific package merchandising layer, not a full package commerce redesign. Pair it with an enhanced Concert Weekend Stay module for priority dates, and reserve Featured Artist package treatment for promoted shows where the campaign has a validated package link. If the pilot lifts package attach rate without hurting ticket behavior, expand the same pattern into event detail pages and additional eligible dates.
