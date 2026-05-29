@@ -1,89 +1,141 @@
 # Opportunities
 
-## Room + Entertainment Packages
+## Opportunity Summary
 
-Create stay + event bundles that coordinate show dates, room availability, venue proximity, arrival timing, and booking next steps.
+Resorts World Live can increase room nights, ticket sales, and package engagement by making entertainment-led stays visible inside the existing Live journey. The practical opportunity is to turn current event modules into package-aware merchandising surfaces without creating new components or a complex booking flow.
 
-Starter opportunity:
+## Primary Gaps
 
-- Pair featured shows or residencies with two-night stay options.
-- Present room fit by occasion: celebration, couples trip, group weekend, premium stay, or easy overnight.
-- Clarify what is included, what is optional, and whether ticketing is bundled, linked, or handled separately.
-- Measure event selection, room pairing, availability checks, booking starts, and completion.
+| Gap | Guest impact | Business impact | Component reuse opportunity |
+| --- | --- | --- | --- |
+| Packages are not visible early enough | Guests may think only about tickets, not the full trip. | Lost room-night attachment. | Add package copy or card in hero, feature card, or banner. |
+| Event cards likely focus on ticket CTAs only | Guests do not see stay options while scanning events. | Lower package engagement and fewer room searches from event intent. | Add secondary package CTA or package badge to event cards. |
+| Date context is not connected to room nights | Guests must map show date to hotel stay manually. | Room booking path loses entertainment attribution. | Add package card near date/schedule modules. |
+| Cross-sell is broad rather than curated | Dining, nightlife, and upgrades feel like separate errands. | Missed attachment revenue. | Repurpose related content rail for event-adjacent recommendations. |
+| Package details may be hard to validate | Guests worry about what is included, excluded, or available. | Lower click confidence and higher abandonment. | Use existing rich text, detail, or accordion components. |
+| Analytics likely cannot isolate package interest | Teams may not know which package surfaces work. | Weak learning loop for future optimization. | Instrument existing components with package context. |
 
-## Dining + Entertainment Packages
+## Package Merchandising Opportunities
 
-Help guests plan dinner, drinks, or late-night experiences around show timing.
+### Room + Ticket Package Visibility
 
-Starter opportunity:
+Use an existing promo card, feature card, or event card enhancement to present a clear "Stay + Show" path.
 
-- Create pre-show and post-show dining recommendations by venue, cuisine, timing, and party type.
-- Package dining credits, tasting menus, priority reservation windows, or curated dining paths where operationally valid.
-- Avoid overpromising reservation access if inventory is not guaranteed.
-- Measure dining module engagement, reservation starts, dining add-on interest, and event-to-dining attachment.
+Best placements:
 
-## Weekend Experience Bundles
+- Below the hero for a featured residency or campaign.
+- Within the event grid as a package card.
+- On event detail pages near the ticket CTA.
+- Near date/schedule selection once show timing is visible.
 
-Frame entertainment as the anchor of a broader weekend itinerary.
+Why it matters:
 
-Starter opportunity:
+- Converts entertainment intent into room-night consideration.
+- Helps guests understand that a show can anchor a full resort stay.
+- Requires mostly content, routing, and tracking if existing card patterns can be reused.
 
-- Build weekend packages around arrival, room, show, dinner, nightlife, breakfast, spa, or pool moments.
-- Use an experience timeline to make the weekend feel easy and believable.
-- Provide comparison across energy levels: effortless escape, celebration weekend, VIP night, culinary weekend.
-- Measure timeline engagement, package saves, comparison behavior, date selection, and booking starts.
+### Contextual Event Card Add-On
 
-## VIP Experiences
+Keep the event card's ticket CTA intact, but add a secondary package action for eligible events.
 
-Surface premium access, service, seating, arrival, hosting, or group options when they can be fulfilled.
+Possible treatments:
 
-Starter opportunity:
+- Existing badge treatment: "Room + ticket package available."
+- Secondary CTA: "View stay package."
+- Supporting line: "Make it a two-night stay around this show."
 
-- Create VIP inquiry paths for high-intent guests, groups, or special occasions.
-- Explain access and service levels plainly without vague exclusivity claims.
-- Offer upgrade paths only after base package value is understood.
-- Measure VIP detail views, inquiry starts, form completion, call clicks, and downstream qualification.
+Why it matters:
 
-## Seasonal Experiences
+- Reaches users while they are comparing events.
+- Avoids a new page architecture.
+- Lets package visibility scale by event eligibility.
 
-Connect entertainment with calendar moments such as holidays, residencies, festivals, sporting weekends, or seasonal campaigns.
+### Feature Package Rail
 
-Starter opportunity:
+Repurpose an existing card rail or grid to show a small set of curated packages.
 
-- Build seasonal campaign modules that curate shows, rooms, dining, and resort moments under one narrative.
-- Use time context to create relevance without fake scarcity or pressure.
-- Define booking windows, stay windows, blackout dates, and operational ownership.
-- Measure seasonal campaign engagement, package selection, and conversion by date range.
+Recommended package cards:
 
-## Loyalty Integrations
+- Featured Residency Weekend.
+- Date Night Stay + Show.
+- Celebration Weekend.
+- VIP Night Out.
+- Member Stay + Show Offer.
 
-Use loyalty to improve relevance, recognition, and return behavior.
+Why it matters:
 
-Starter opportunity:
+- Creates package engagement without interrupting browsing.
+- Lets marketing curate a manageable set of offers.
+- Works across desktop and mobile if the component already handles responsive cards.
 
-- Offer member-aware package framing, rewards visibility, or personalized recommendations where rules permit.
-- Support sign-in or join moments during consideration without blocking exploration.
-- Clarify eligibility and benefit rules before commitment.
-- Measure loyalty engagement, member package interest, sign-in during consideration, and member conversion lift.
+### Event Detail "Make It A Stay"
 
-## Cross-Sell Opportunities
+Place one existing offer or promo card near the event detail CTA area.
 
-Use entertainment intent to recommend relevant resort experiences.
+Content pattern:
 
-Starter opportunity:
+- Package promise.
+- Included elements.
+- Optional upgrades.
+- Clear constraints.
+- Primary CTA to check room/package availability.
+- Secondary CTA to buy tickets only.
 
-- Recommend dining, nightlife, spa, room upgrades, transportation, or post-show experiences based on event context.
-- Keep recommendations limited, explainable, and tied to the guest's likely plan.
-- Support save, compare, and add-to-itinerary behaviors before high-commitment checkout.
-- Measure recommendation impressions, acceptance, dismissal, save actions, attachment rate, and downstream conversion.
+Why it matters:
 
-## Prioritization Notes
+- This is the highest-intent moment after the guest has selected an event.
+- It reduces the planning burden before the user leaves the page.
+- It improves measurement of event-to-room attachment.
 
-Initial priority should favor opportunities with:
+### Related Experience Cross-Sell
 
-- Strong guest need.
-- Clear package promise.
-- Reliable operational fulfillment.
-- Natural conversion path.
-- Measurable behavior.
-- Reusable component and prompt patterns.
+Repurpose related content modules for "complete the night" recommendations.
+
+Cross-sell categories:
+
+- Pre-show dinner.
+- Post-show lounge or nightlife.
+- Room upgrade.
+- VIP inquiry.
+- Loyalty benefit.
+
+Why it matters:
+
+- Adds package richness without building a package configurator.
+- Supports dining and VIP engagement alongside rooms and tickets.
+- Keeps recommendations editorial and limited.
+
+## Friction Reduction Opportunities
+
+- Preserve ticket purchase as the default primary action for pure ticket intent.
+- Add package CTAs as contextual secondary actions where users are already considering a show.
+- Use simple package language: "room + tickets," "two-night stay," "pre-show dinner optional."
+- Keep constraints visible: availability, blackout dates, ticketing handled separately, dining subject to reservation.
+- Avoid presenting unvalidated inclusions as guaranteed benefits.
+- Use one package detail destination rather than multiple scattered links.
+
+## Existing Components With Highest Leverage
+
+| Component | Why it is strong | Recommended use |
+| --- | --- | --- |
+| Feature or promo card | Clear package promise, image, CTA, and terms can fit in the existing shape. | Primary room + ticket package representation. |
+| Event card | Already tied to show intent and date context. | Add package badge, supporting line, or secondary CTA. |
+| Hero | Highest visibility and good for a campaign anchor. | Feature one priority package or seasonal stay + show offer. |
+| Related content rail | Familiar cross-sell surface with minimal layout risk. | Dining, nightlife, room upgrade, and VIP add-ons. |
+| Promo banner | Small implementation footprint. | Page-wide package awareness and campaign entry. |
+| Accordion/details | Handles package inclusions and restrictions. | Clarify terms and reduce confusion. |
+
+## Prioritization Guidance
+
+For a two-week, low-risk implementation, prioritize concepts that:
+
+- Reuse the existing hero, card, rail, banner, and detail patterns.
+- Do not require live package inventory logic in the first release.
+- Keep package routing simple and measurable.
+- Preserve existing ticket purchase behavior.
+- Can be launched for a curated subset of events.
+- Require content and tracking more than new UI engineering.
+
+## Opportunity Takeaway
+
+The strongest opportunity is not a new package-building product. It is a package merchandising layer that turns existing Resorts World Live modules into clearer bridges between entertainment, rooms, tickets, dining, and VIP engagement.
