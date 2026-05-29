@@ -1,135 +1,126 @@
 # Recommendation
 
-This file is a template for the future pilot recommendation and executive summary. Complete it after the current-state audit, concept generation, scorecard review, Figma prompting, and telemetry plan have been validated.
-
 ## Executive Summary
 
-TBD
+The preferred direction is to represent room + ticket packages through existing Resorts World Live merchandising components, starting with a reusable Stay + Show Feature Card. This gives packages meaningful visibility, supports room-night growth, preserves the current ticket-first journey, and fits a two-week, low-risk implementation window.
 
-Summarize:
+Do not create a new package builder or new custom module for the pilot. Use existing hero, promo/feature card, event card, related rail, CTA, and detail components.
 
-- The opportunity.
-- The strongest concept or concepts.
-- The expected guest and business value.
-- The recommended next step.
-- The primary risk or dependency.
+## Preferred Direction
 
-## Recommended Direction
+Move forward with Concept 1: Stay + Show Feature Card.
 
-Recommendation:
+Recommended first release:
 
-- Move forward.
-- Revise and rescore.
-- Validate operational feasibility.
-- Run limited experiment.
-- Produce Figma exploration.
-- Park for future campaign.
+- Add one package-focused feature/promo card near the top of the Live page.
+- Use existing image, headline, body, CTA, and terms/detail fields.
+- Route to an existing package, offer, room booking, or campaign destination.
+- Preserve "Buy Tickets" as a clear ticket-only path.
+- Instrument package impression, CTA click, detail view, booking start, and ticket-only fallback.
 
-Rationale:
+Recommended stretch:
 
-TBD
+- Add the same package card pattern to eligible event detail pages as "Make It A Stay."
+- Add package badges or secondary CTAs to a curated subset of eligible event cards.
 
-## Product Opportunity
+## Why This Direction
 
-Document the clearest product opportunity:
+This approach best satisfies the stakeholder request and constraints:
 
-- Guest problem.
-- Business objective.
-- Affected journey.
-- Package category.
-- Target audience.
-- Decision being improved.
-- Current friction.
+- Increases room-night visibility without disrupting ticket purchase behavior.
+- Uses existing components and avoids new UI construction.
+- Can be launched for a small, manually curated event set.
+- Creates measurable package engagement quickly.
+- Keeps operational risk low by avoiding unvalidated inventory guarantees.
+- Supports future iteration into event cards, detail pages, and cross-sell rails.
 
-## Recommended Concept
+## Recommended Package Structure
 
-Concept name:
-
-TBD
-
-Why this concept:
-
-TBD
-
-Package structure:
-
-- Audience: TBD
-- Occasion: TBD
-- Promise: TBD
-- Inclusions: TBD
-- Optional upgrades: TBD
-- Exclusions or constraints: TBD
-- Operational owner: TBD
-- Primary CTA: TBD
-- Secondary actions: TBD
+| Field | Recommendation |
+| --- | --- |
+| Audience | Guests considering a featured show, residency, or event weekend. |
+| Occasion | Entertainment-led overnight stay, date night, celebration, or weekend trip. |
+| Promise | "Make the show a stay" with room and ticket planning presented together. |
+| Inclusions | Room path plus event ticket path; only list bundled inclusions if confirmed. |
+| Optional upgrades | Dining, VIP, room upgrade, loyalty benefit, or nightlife cross-sell. |
+| Constraints | Availability, blackout dates, ticket purchase rules, taxes/fees, dining availability, and fulfillment terms. |
+| Operational owner | Product with Revenue/Hotel, Entertainment, Marketing, Analytics, and Engineering validation. |
+| Primary CTA | "View room + ticket package" or "Check package availability." |
+| Secondary action | "Buy tickets only." |
 
 ## Scorecard Summary
 
-| Criterion | Score | Summary |
-| --- | --- | --- |
-| Brand alignment | TBD | TBD |
-| Package strength | TBD | TBD |
-| Conversion potential | TBD | TBD |
-| Implementation effort | TBD | TBD |
-| Analytics readiness | TBD | TBD |
-| Overall recommendation | TBD | TBD |
+| Concept | Implementation effort | Expected business impact | Design consistency | Package visibility | Total |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Stay + Show Feature Card | 5 | 4 | 5 | 4 | 18 |
+| Package-Aware Event Cards | 4 | 4 | 4 | 5 | 17 |
+| Make It A Stay Detail Card | 4 | 5 | 4 | 4 | 17 |
+| Complete The Night Related Rail | 5 | 3 | 5 | 3 | 16 |
+| Page-Wide Stay + Show Promo Banner | 5 | 3 | 4 | 4 | 16 |
 
-## Design And Figma Recommendation
+## Implementation Plan
 
-Document:
+### Week 1
 
-- Which prompt should be used first.
-- Which modules should appear in the first draft.
-- Which mobile states must be included.
-- Which assumptions must be annotated.
-- Which doctrine risks the design review should inspect.
+- Confirm existing component capabilities from screenshots/CMS/component library.
+- Select one priority event, residency, or campaign for the pilot.
+- Confirm package terms, routing, inventory assumptions, and legal copy.
+- Draft final card copy and CTA labels.
+- Add telemetry requirements to the selected component.
 
-## Telemetry Recommendation
+### Week 2
 
-Document:
+- Configure the card in the existing Live page surface.
+- QA desktop and mobile layout with real copy.
+- Validate routing and third-party handoffs.
+- Validate analytics events in staging.
+- Launch as a limited pilot or content experiment.
 
-- Required events before launch.
-- Required funnel reporting.
-- Primary KPI.
-- Secondary KPIs.
-- Guardrail metrics.
-- Experiment readiness.
-- Analytics gaps that block confident decision-making.
+## Telemetry Requirements
 
-## Implementation Recommendation
+Required events:
 
-Document:
+- `package_impression`
+- `package_card_engaged`
+- `package_detail_viewed`
+- `cta_clicked`
+- `availability_check_started`
+- `booking_started`
+- `ticket_only_clicked`
 
-- Recommended implementation path.
-- Systems involved.
-- Operational dependencies.
-- Content and creative needs.
-- Engineering dependencies.
-- Third-party handoffs.
-- Launch or experiment sequencing.
+Required context:
+
+- Package ID/name.
+- Source module.
+- Event/show/artist/venue.
+- CTA text and destination.
+- Device class.
+- Availability state when known.
+- User state when available.
+
+Primary KPI:
+
+- Room booking starts from Live package surfaces.
+
+Secondary KPIs:
+
+- Package card engagement.
+- Package detail view rate.
+- Package CTA click-through.
+- Entertainment-to-room attachment.
+- Ticket CTA guardrail.
+- Mobile abandonment/backtracking.
 
 ## Risks And Mitigations
 
 | Risk | Impact | Mitigation |
 | --- | --- | --- |
-| Operational feasibility unclear | TBD | Validate inclusions, ownership, inventory, and handoffs before design approval. |
-| Package promise overstates access | TBD | Require stakeholder confirmation and clear constraints. |
-| Analytics gaps limit learning | TBD | Prioritize event and funnel coverage before experiment launch. |
-| Conversion pressure weakens trust | TBD | Use conversion-with-respect review before publishing. |
-| Mobile flow becomes too dense | TBD | Require mobile-first Figma prompt and design review. |
+| Screenshots/component inventory unavailable in this checkout | Exact placement and component capabilities need validation. | Run a screenshot validation pass before final build. |
+| Package copy overpromises bundled inventory | Guest confusion and operational risk. | State clearly whether tickets are included, linked, or purchased separately. |
+| Package CTA competes with ticket sales | Potential ticket conversion drag. | Keep ticket-only action visible and track it as a guardrail. |
+| Booking and ticketing handoffs fragment measurement | Incomplete attribution. | Add source parameters and package context to every available handoff. |
+| Mobile card density increases friction | Lower engagement or more backtracking. | QA with real copy and prefer one concise package card in the first release. |
 
-## Decision Log
+## Final Recommendation
 
-| Date | Decision | Owner | Notes |
-| --- | --- | --- | --- |
-| TBD | TBD | TBD | TBD |
-
-## Next Steps
-
-- Complete current-state audit.
-- Validate stakeholder assumptions.
-- Generate Concepts A through E.
-- Score concepts.
-- Select concept for Figma prompt generation.
-- Complete telemetry readiness review.
-- Draft final implementation recommendation.
+Launch a small, measurable Stay + Show Feature Card pilot using existing components only. Treat it as the first package merchandising layer, not a full package commerce redesign. If the pilot lifts qualified package engagement without hurting ticket behavior, expand the same pattern into event detail pages and eligible event cards.

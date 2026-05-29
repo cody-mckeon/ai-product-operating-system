@@ -1,83 +1,106 @@
 # Concept Scorecard
 
-Use this scorecard to evaluate generated concepts before Figma exploration or implementation planning. Scores should be supported by notes, evidence, and explicit assumptions.
-
 Scoring scale:
 
 - 1: weak or unclear.
-- 2: partially supports the criterion.
-- 3: acceptable starting point.
-- 4: strong and mostly validated.
-- 5: excellent, specific, and ready for next-stage work.
+- 2: partial support.
+- 3: acceptable.
+- 4: strong.
+- 5: excellent.
 
-## Scorecard Template
+For implementation effort, a higher score means lower effort and lower implementation risk.
 
-| Criterion | Score | Notes | Required Follow-Up |
-| --- | --- | --- | --- |
-| Brand alignment | TBD | Does the concept feel composed, premium, hospitable, editorial, and respectful? | TBD |
-| Package strength | TBD | Does it have a clear audience, occasion, promise, inclusions, constraints, and reason to exist? | TBD |
-| Conversion potential | TBD | Does it support qualified intent with clear CTAs, comparison, availability, and reduced uncertainty? | TBD |
-| Implementation effort | TBD | Can it be fulfilled across rooms, entertainment, dining, loyalty, systems, and operations? | TBD |
-| Analytics readiness | TBD | Can behavior be measured across attention, consideration, intent, conversion, friction, and recovery? | TBD |
-| Overall recommendation | TBD | Should the concept move forward, be revised, be parked, or be rejected? | TBD |
+## Summary Scorecard
 
-## Brand Alignment
+| Concept | Implementation effort | Expected business impact | Design consistency | Package visibility | Total | Recommendation |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| Stay + Show Feature Card | 5 | 4 | 5 | 4 | 18 | Preferred first release. |
+| Package-Aware Event Cards | 4 | 4 | 4 | 5 | 17 | Strong second release or paired test. |
+| Make It A Stay Detail Card | 4 | 5 | 4 | 4 | 17 | High-intent placement; validate template access. |
+| Complete The Night Related Rail | 5 | 3 | 5 | 3 | 16 | Good cross-sell companion, not primary package solution. |
+| Page-Wide Stay + Show Promo Banner | 5 | 3 | 4 | 4 | 16 | Fast awareness layer; weaker personalization. |
 
-Evaluate whether the concept:
+## Concept 1: Stay + Show Feature Card
 
-- Creates arrival, orientation, and calm momentum.
-- Uses hospitality language rather than promotional pressure.
-- Preserves trust through clear inclusions, exclusions, and constraints.
-- Avoids casino-style clutter, fake scarcity, and excessive offer stacking.
-- Feels emotionally continuous with the broader Resorts World experience.
+| Criterion | Score | Rationale |
+| --- | ---: | --- |
+| Implementation effort | 5 | Reuses existing feature/promo card, image, copy, CTA, and routing patterns. |
+| Expected business impact | 4 | Strong room-night potential because it appears early and frames the show as a stay. |
+| Design consistency | 5 | Fits current merchandising patterns if copy and imagery match the page tone. |
+| Package visibility | 4 | Highly visible, though limited to one or a few featured packages. |
 
-## Package Strength
+Primary risk: copy must be clear about whether tickets are bundled or separately purchased.
 
-Evaluate whether the concept:
+## Concept 2: Package-Aware Event Cards
 
-- Defines audience, occasion, emotional benefit, and commercial objective.
-- Connects entertainment, stay, dining, VIP, loyalty, or resort elements into a coherent promise.
-- Makes value legible without relying only on savings.
-- Shows operational truth, including availability, ownership, eligibility, restrictions, and handoffs.
-- Supports meaningful comparison against other packages or standalone booking.
+| Criterion | Score | Rationale |
+| --- | ---: | --- |
+| Implementation effort | 4 | Reuses event card fields, but may require configuration and mobile spacing checks. |
+| Expected business impact | 4 | Puts package consideration directly into event comparison behavior. |
+| Design consistency | 4 | Consistent if limited to badge/metadata/secondary CTA, risky if cards become crowded. |
+| Package visibility | 5 | Every eligible event can show package availability during browsing. |
 
-## Conversion Potential
+Primary risk: added package messaging could reduce card clarity or compete with ticket CTAs.
 
-Evaluate whether the concept:
+## Concept 3: Make It A Stay Detail Card
 
-- Presents the right CTA at the right journey stage.
-- Gives guests enough context before asking for commitment.
-- Provides secondary actions such as save, compare, inquire, or check availability.
-- Reduces planning friction across event, room, dining, and package decisions.
-- Supports mobile conversion without overwhelming the guest.
+| Criterion | Score | Rationale |
+| --- | ---: | --- |
+| Implementation effort | 4 | Reuses offer/promo/detail components, but depends on event detail template control. |
+| Expected business impact | 5 | Strongest intent point because the guest has already chosen an event. |
+| Design consistency | 4 | Consistent if placed as a single contextual card and terms use existing details UI. |
+| Package visibility | 4 | Visible for selected events, but only after the guest enters detail pages. |
 
-## Implementation Effort
+Primary risk: downstream booking and ticketing handoffs may fragment attribution.
 
-Evaluate whether the concept:
+## Concept 4: Complete The Night Related Rail
 
-- Requires new integrations or can use existing surfaces.
-- Depends on live inventory, ticketing, dining, loyalty, or booking-system coordination.
-- Creates operational fulfillment risk.
-- Needs new content, photography, campaign logic, or legal review.
-- Can be launched as a pilot, experiment, manual operation, or phased build.
+| Criterion | Score | Rationale |
+| --- | ---: | --- |
+| Implementation effort | 5 | Reuses related-card rail/grid and existing destination pages. |
+| Expected business impact | 3 | Better for attachment and engagement than direct room + ticket conversion. |
+| Design consistency | 5 | Highly consistent with existing related content patterns. |
+| Package visibility | 3 | Supports package richness but may read as cross-sell instead of package merchandising. |
 
-## Analytics Readiness
+Primary risk: recommendations feel generic if not curated by event, venue, or occasion.
 
-Evaluate whether the concept:
+## Concept 5: Page-Wide Stay + Show Promo Banner
 
-- Identifies surfaces, modules, entities, actions, signals, and funnels.
-- Defines package impression, detail, inclusion, comparison, CTA, booking, abandonment, and recovery signals.
-- Separates engagement from qualified intent.
-- Includes primary metrics, secondary metrics, and guardrails.
-- Can support future AI-assisted recommendations and orchestration.
+| Criterion | Score | Rationale |
+| --- | ---: | --- |
+| Implementation effort | 5 | Fastest path if a banner/strip component already exists. |
+| Expected business impact | 3 | Creates awareness but may not be tied to the user's event choice. |
+| Design consistency | 4 | Consistent if the banner is restrained and does not feel like an alert. |
+| Package visibility | 4 | Broad page-level visibility, including mobile users near the top of the page. |
 
-## Overall Recommendation
+Primary risk: broad package messaging may be ignored or feel less relevant than event-specific placement.
 
-Recommendation options:
+## Ranking
 
-- Move forward to Figma prompt generation.
-- Revise package structure.
-- Validate operational feasibility.
-- Validate analytics coverage.
-- Park for future campaign.
-- Reject due to weak guest value, operational risk, or measurement gaps.
+1. Stay + Show Feature Card.
+2. Make It A Stay Detail Card.
+3. Package-Aware Event Cards.
+4. Complete The Night Related Rail.
+5. Page-Wide Stay + Show Promo Banner.
+
+## Recommended Two-Week Scope
+
+Minimum viable package merchandising release:
+
+- Launch the Stay + Show Feature Card for one priority event, residency, or campaign.
+- Add package-aware tracking to the card and CTAs.
+- Preserve existing ticket CTA behavior.
+- Add a simple package detail/terms destination using existing content modules.
+
+Stretch scope if capacity allows:
+
+- Add the Make It A Stay Detail Card to eligible event detail pages.
+- Add package-aware badges or secondary CTAs to a curated subset of event cards.
+
+## Validation Needed
+
+- Confirm exact existing component capabilities from screenshots or CMS/component library.
+- Confirm whether package routing can use an existing offer or booking URL.
+- Confirm legal, revenue, ticketing, and operations language for bundled versus linked purchase.
+- Confirm mobile layout with real copy.
+- Confirm analytics support for package impression, CTA, detail, and booking-start events.
