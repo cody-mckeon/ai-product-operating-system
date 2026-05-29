@@ -142,6 +142,28 @@ Secondary KPIs:
 | Mobile card density increases friction | Lower engagement or more backtracking. | QA with real copy and prefer one concise package card in the first release. |
 | Artist-led campaign treatment obscures date-specific package mechanics | Misaligned expectations and higher approval risk. | Reserve artist package treatment for promoted shows only and keep the CTA tied to stay dates and promotion rules. |
 
+## Operational Discovery
+
+Package fulfillment is date-specific.
+
+Each package CTA routes directly into the booking engine with:
+
+- Arrival date preloaded
+- Departure date preloaded
+- Promotion preselected
+- Room inventory surfaced
+
+Package merchandising should therefore emphasize:
+- show date
+- package availability
+- stay extension opportunity
+
+rather than artist-only promotion.
+
+The booking flow is fundamentally:
+
+Show Date → Stay + Show Package → Booking Engine → Room Selection.
+
 ## Final Recommendation
 
 Launch a small, measurable Stay + Show CTA pilot on eligible lineup cards using existing components only. Treat it as the first date-specific package merchandising layer, not a full package commerce redesign. Pair it with an enhanced Concert Weekend Stay module for priority dates, and reserve Featured Artist package treatment for promoted shows where the campaign has a validated package link. If the pilot lifts package attach rate without hurting ticket behavior, expand the same pattern into event detail pages and additional eligible dates.
