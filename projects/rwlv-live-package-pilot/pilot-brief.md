@@ -2,65 +2,205 @@
 
 ## Project Summary
 
-The RWLV Live Package Pilot explores how Resorts World Live can better connect entertainment demand with rooms, dining, VIP experiences, loyalty, and resort-wide planning. The pilot will use the AI Product Operating System to identify opportunities, generate concepts, evaluate them, create design prompts, define telemetry, and support future implementation decisions.
+The Resorts World Live Stay + Show Package Pilot explores whether package merchandising can increase room-booking intent and package engagement by surfacing date-specific package opportunities within the existing Resorts World Live experience.
 
-This is a workflow pilot, not a page redesign. Design exploration should begin only after the package opportunity, guest decision, conversion path, and measurement intent are clear.
+The pilot will focus on low-risk enhancements using existing Resorts World components and existing booking-engine package links.
+
+The pilot is not intended to redesign the Resorts World Live experience or create a new package commerce platform.
+
+The pilot is intended to validate whether guests respond to package availability messaging and whether package merchandising can drive additional room-night demand without negatively impacting ticket purchase behavior.
+
+---
+
+## Business Objective
+
+Primary Objective
+
+Increase room-booking intent from Resorts World Live traffic.
+
+Secondary Objectives
+
+* Increase package engagement.
+* Increase package booking starts.
+* Increase entertainment-to-room attachment.
+* Establish a measurable package merchandising framework.
+
+---
 
 ## Stakeholders
 
-- Product: owns guest journey, prioritization, and implementation recommendation.
-- Marketing: owns campaign framing, content quality, audience positioning, and channel alignment.
-- Revenue and hotel operations: validate room inventory, rate strategy, package feasibility, and blackout constraints.
-- Entertainment and venue operations: validate event schedules, ticketing flows, access rules, and fulfillment handoffs.
-- Food and beverage: validate dining inventory, reservation timing, credits, prix fixe menus, and experience availability.
-- Loyalty or CRM: validate member eligibility, personalization signals, offer rules, and retention opportunities.
-- Design: owns UX quality, component use, visual hierarchy, and AI-assisted design review.
-- Analytics: owns measurement plan, event definitions, funnel reporting, and experiment readiness.
-- Engineering: validates technical feasibility, integration needs, third-party handoffs, and implementation sequencing.
+### Product
+
+Owns strategy, prioritization, recommendations, and pilot success criteria.
+
+### Marketing
+
+Owns messaging, campaign alignment, content quality, and audience targeting.
+
+### Hotel Revenue & Operations
+
+Validates package inventory, promotion eligibility, room availability, and rate strategy.
+
+### Entertainment
+
+Validates event participation, package eligibility, and ticketing handoffs.
+
+### Analytics
+
+Owns instrumentation, KPI reporting, experiment design, and success measurement.
+
+### Engineering / Web Vendor
+
+Validates implementation feasibility and executes approved changes.
+
+---
+
+## Current State
+
+The current Resorts World Live experience is artist-first.
+
+Guests discover entertainment by browsing artists and events.
+
+Package fulfillment is date-specific and occurs through the booking engine using preconfigured package links.
+
+Current journey:
+
+Artist
+→ Event
+→ Buy Tickets
+
+Package journey today:
+
+Artist
+→ Package Link
+→ Booking Engine
+→ Preloaded Dates
+→ Preselected Promotion
+→ Room Inventory
+
+Package visibility is currently limited and inconsistent.
+
+---
+
+## Pilot Scope
+
+### In Scope
+
+* Stay + Show package merchandising.
+* Existing component reuse.
+* Eligible lineup-card package treatments.
+* Enhanced Concert Weekend Stay module.
+* Analytics instrumentation.
+* Booking-engine package routing validation.
+* Mobile and desktop QA.
+
+### Out of Scope
+
+* New booking-engine functionality.
+* New package builder experiences.
+* Calendar-based package search.
+* Dynamic package recommendations.
+* New CMS component development.
+* Pricing strategy changes.
+* Loyalty personalization.
+
+---
+
+## Recommended Pilot Experience
+
+### Primary Recommendation
+
+Stay + Show CTA on eligible lineup cards.
+
+Example:
+
+[ Buy Tickets ]
+
+[ Stay + Show ]
+
+Package CTA routes directly into the booking engine using the existing package URL.
+
+### Supporting Recommendation
+
+Enhanced Concert Weekend Stay module for priority package dates.
+
+### Future Exploration
+
+Date-driven Concert Weekend discovery experience.
+
+Example:
+
+"What's happening during my stay?"
+
+This concept is outside the pilot scope but emerged as a strategic opportunity during discovery.
+
+---
 
 ## Assumptions
 
-- Resorts World Live visitors include guests who may be considering a broader trip, not only a ticket purchase.
-- Entertainment-led travel can support curated stay, dining, and VIP package concepts when operational constraints are visible.
-- Current analytics may not fully connect entertainment browsing, room booking, dining reservations, and package intent.
-- Package value should be communicated through clarity, fit, and ease rather than aggressive discount language.
-- AI-generated concepts require doctrine-level review before they become design or implementation direction.
+* Guests may be interested in a complete entertainment weekend, not only ticket purchase.
+* Package visibility is currently lower than ticket visibility.
+* Existing components can support package merchandising without requiring new development.
+* Package links can be maintained operationally by marketing, hotel, and entertainment teams.
+* Measurement is available for package impressions, clicks, booking-engine arrivals, and booking starts.
 
-## Scope
+---
 
-In scope:
+## Success Criteria
 
-- Current-state journey documentation.
-- Opportunity mapping for entertainment-led packages.
-- Initial package concept placeholders.
-- Concept scoring framework.
-- Figma Make, UX, package, and experimentation prompt structures.
-- Telemetry plan for package engagement and booking intent.
-- Recommendation template for future executive review.
+The pilot will be considered successful if:
 
-Out of scope for this pilot phase:
+* Guests engage with package merchandising.
+* Booking-engine arrivals increase.
+* Room-booking starts increase.
+* Package attach-rate opportunities become measurable.
+* Ticket purchase behavior remains stable.
 
-- Production page redesign.
-- Final pricing, rate codes, or live inventory configuration.
-- Final legal, compliance, or terms language.
-- Final event, room, or restaurant availability validation.
-- Detailed engineering implementation tickets.
-- Launch-ready experiment setup.
+---
 
-## Constraints
+## Key Questions
 
-- Package concepts must not invent access, exclusivity, savings, availability, or operational guarantees.
-- Conversion guidance must avoid pressure tactics, fake urgency, hidden rules, or excessive CTAs.
-- Figma prompts must preserve brand restraint, component reuse, mobile behavior, and telemetry intent.
-- Analytics requirements must be purposeful and not create noisy instrumentation.
-- Concepts should remain feasible across hotel, entertainment, dining, loyalty, and third-party booking systems.
+1. Do guests engage with Stay + Show package merchandising?
 
-## Open Questions
+2. Does package merchandising generate additional booking-engine traffic?
 
-- Which Resorts World Live surfaces currently drive the most qualified booking or event intent?
-- Where do users currently leave the entertainment journey to book rooms, reserve dining, or purchase tickets?
-- What package inventory can be reliably fulfilled for specific shows, residencies, or weekends?
-- Which dining venues and room types are best suited for entertainment-led packaging?
-- What loyalty benefits can be included without creating eligibility confusion?
-- Which third-party ticketing or booking handoffs limit measurement continuity?
-- What baseline metrics are available for package engagement, CTA clicks, booking starts, and completion?
+3. Does package merchandising increase room-booking starts?
+
+4. Does package merchandising negatively impact ticket purchase behavior?
+
+5. Which package treatment performs best?
+
+* Package Available Badge
+* Stay + Show CTA
+* Enhanced Concert Weekend Stay Module
+
+---
+
+## Risks
+
+### Operational Complexity
+
+Package inventory, dates, and promotions must remain synchronized.
+
+### Attribution Gaps
+
+Third-party booking and ticketing handoffs may limit measurement continuity.
+
+### Ticket Cannibalization
+
+Package merchandising must not reduce ticket purchase intent.
+
+### Mobile Friction
+
+Additional package messaging must not create unnecessary complexity on smaller screens.
+
+---
+
+## Deliverables
+
+* Recommendation.md
+* Telemetry-Plan.md
+* Vendor Requirements.md
+* Figma Explorations
+* Analytics Dashboard Requirements
+* Pilot Readout Framework
