@@ -2,11 +2,7 @@
 
 ## Executive Summary
 
-The preferred direction is to represent Resorts World Live packages as date-specific Stay + Show booking paths, starting with a Stay + Show CTA on eligible lineup cards. New operational evidence shows the package flow is Artist -> Package Link -> Booking Engine (IBE) -> Arrival/Departure Dates Preloaded -> Promotion Preselected -> Room Inventory Displayed. The package is therefore primarily date-centric and booking-centric, not primarily artist-centric.
-
-This direction gives packages meaningful visibility at the moment guests compare show dates, supports room-night growth, preserves the current ticket-first journey, and fits a two-week, low-risk implementation window.
-
-Do not create a new package builder or new custom module for the pilot. Use existing hero, promo/feature card, event card, related rail, CTA, and detail components.
+The preferred direction is to merchandise Stay + Show packages through existing event discovery surfaces while progressively introducing date-driven package discovery. The pilot will begin with Stay + Show CTAs on eligible lineup cards because it is the lowest-risk implementation using existing components. Future iterations should explore date-based concert weekend discovery experiences that align more closely with the booking engine's package architecture.
 
 ## Preferred Direction
 
@@ -40,9 +36,10 @@ This approach best satisfies the stakeholder request and constraints:
 
 ## Ranked Recommendation
 
-1. Stay + Show CTA on lineup cards.
-2. Enhanced Concert Weekend Stay module.
-3. Featured Artist package treatment for promoted shows only.
+1. Stay + Show CTA On Eligible Lineup Cards
+2. Concert Weekend Stay Module
+3. Date-Based Concert Weekend Discovery Experience
+4. Featured Artist Package Treatment
 
 The lineup-card CTA is the highest-priority recommendation because it sits closest to the guest's date-selection behavior and can route directly to the correct preloaded IBE package. The Concert Weekend Stay module is the best companion because it reuses existing feature/promo components and gives high-demand dates more visibility without requiring a new commerce pattern. Featured Artist treatment should be selective because the artist can drive campaign attention, but the package itself is date-specific, promotion-specific, and fulfilled through booking-engine inventory.
 
@@ -163,6 +160,33 @@ rather than artist-only promotion.
 The booking flow is fundamentally:
 
 Show Date → Stay + Show Package → Booking Engine → Room Selection.
+
+## Strategic Observation
+
+During concept development, a key operational insight emerged.
+
+The Resorts World Live page is primarily artist-first. Guests discover entertainment by browsing artists and events.
+
+The package booking flow is primarily date-first. Package links preload arrival dates, departure dates, promotion codes, and inventory availability within the booking engine.
+
+This creates a mismatch between entertainment discovery and package fulfillment.
+
+For the pilot, package merchandising should remain embedded within existing artist and event discovery components to minimize implementation effort.
+
+Longer term, Resorts World should evaluate a date-driven "Concert Weekend" discovery experience that helps guests answer:
+
+"What is happening while I am visiting?"
+
+rather than requiring guests to first select an artist.
+
+Potential future experiences include:
+
+- Concert Weekend Finder
+- Events During My Stay
+- Stay + Show Calendar View
+- Package-Eligible Event Filters
+
+These concepts fall outside the pilot scope but may represent the larger strategic opportunity.
 
 ## Final Recommendation
 
