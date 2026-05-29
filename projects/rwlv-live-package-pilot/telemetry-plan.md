@@ -1,165 +1,353 @@
 # Telemetry Plan
 
-This telemetry plan defines the measurement requirements for the RWLV Live Package Pilot. It follows the analytics framework by connecting journey, surface, module, entity, action, signal, funnel, experiment, and insight.
+# Resorts World Live Stay + Show Package Pilot
 
-## KPIs
+## Purpose
 
-Primary KPIs:
+This pilot is designed to determine whether package merchandising can increase room-booking intent and package engagement without negatively impacting ticket purchase behavior.
 
-- Package detail view rate from Resorts World Live surfaces.
-- Package availability check rate.
-- Package booking start rate.
-- Package booking completion rate.
-- Entertainment-to-room attachment rate.
-- Entertainment-to-dining attachment rate.
-- Package revenue or value per package visitor, where available.
+The pilot is not intended to validate a full package platform.
 
-Secondary KPIs:
+The pilot is intended to validate whether surfacing Stay + Show packages within the Resorts World Live experience creates measurable business value.
 
-- Package module engagement rate.
-- Inclusion expansion rate.
-- Package comparison interaction rate.
-- Save or itinerary action rate.
-- VIP inquiry start and completion rate.
-- Loyalty sign-in, join, or member offer engagement rate.
-- Return visit and recovery conversion rate.
+---
 
-Guardrail KPIs:
+# Pilot Success Criteria
 
-- Abandonment after price, restriction, availability, fee, account, or handoff exposure.
-- Low-quality CTA clicks with no downstream intent.
-- Mobile backtracking, repeated taps, dead clicks, or form errors.
-- Package confusion signals from support, feedback, or repeated policy expansion.
+The pilot will be considered successful if:
 
-## Package Engagement Events
+* Guests engage with package merchandising.
+* Guests enter the booking engine through package paths.
+* Package paths generate measurable room-booking intent.
+* Ticket purchase behavior remains stable.
 
-Required event families:
+---
 
-- `package_impression`
-- `package_card_engaged`
-- `package_detail_viewed`
-- `package_inclusion_expanded`
-- `package_media_engaged`
-- `package_saved`
-- `package_shared`
-- `package_policy_viewed`
-- `package_unavailable_viewed`
+# Business Questions
 
-Required context:
+## Question 1
 
-- Package ID and package name.
-- Package category: room + entertainment, dining + entertainment, weekend bundle, VIP, seasonal, loyalty, cross-sell.
-- Source surface and source module.
-- Event, show, artist, venue, room, dining, loyalty, or resort entities included.
-- Journey stage.
-- Availability state.
-- Price band or pricing posture when appropriate.
-- Device class.
+Do guests engage with Stay + Show package merchandising?
 
-## CTA Tracking
+Success Metric:
 
-Track all material CTAs with:
+* Package CTA Click Rate
 
-- CTA text.
-- CTA type.
-- CTA priority.
-- Source page.
-- Source module.
-- Destination.
-- Funnel stage.
-- Associated package or entity.
-- User state: anonymous, returning, loyalty member, signed in, or unknown.
-- Result: destination reached, handoff started, error, unavailable, abandoned, completed.
+---
 
-Priority CTA events:
+## Question 2
 
-- `cta_clicked`
-- `availability_check_started`
-- `booking_started`
-- `reservation_started`
-- `vip_inquiry_started`
-- `loyalty_action_started`
-- `compare_started`
-- `save_clicked`
+Do package paths generate additional booking intent?
 
-## Funnel Tracking
+Success Metric:
 
-Recommended package funnel:
+* Booking Engine Arrivals
+* Booking Starts
 
-1. Discovery: package or event surface impression.
-2. Orientation: package promise, inclusions, and event context understood.
-3. Consideration: detail view, inclusion expansion, price or availability inspection, comparison.
-4. Intent: CTA click, availability check, booking start, reservation start, inquiry start, save.
-5. Commitment: booking, ticket purchase, restaurant reservation, package purchase, or qualified inquiry.
-6. Expansion: dining, room upgrade, VIP add-on, loyalty action, itinerary addition.
-7. Recovery: return visit, retargeted session, saved package revisit, abandoned booking completion.
+---
 
-Each funnel report should include entry surface, source module, package identity, primary action, friction point, abandonment stage, and downstream conversion.
+## Question 3
 
-## Package Comparison Tracking
+Does package merchandising negatively impact ticket sales intent?
 
-Track comparison behavior to understand decision confidence:
+Guardrail Metric:
 
-- `package_compare_started`
-- `package_compare_item_added`
-- `package_compare_attribute_viewed`
-- `package_compare_item_removed`
-- `package_compare_selection_made`
-- `package_compare_abandoned`
+* Ticket-Only CTA Click Rate
 
-Comparison attributes:
+---
 
-- Event date.
-- Room type.
-- Dining inclusion.
-- VIP access.
-- Price band.
-- Availability.
-- Audience fit.
-- Occasion fit.
-- Policy or restriction.
-- Loyalty eligibility.
+## Question 4
 
-## Booking Intent Signals
+Which package treatment generates stronger intent?
 
-High-intent signals:
+Future Experiment:
 
-- Date selection or date change.
-- Availability check.
-- Room pairing selection.
-- Dining time selection.
-- VIP inquiry start.
-- Package save followed by return visit.
-- Price detail expansion.
-- Policy or restriction view followed by continued progress.
-- Loyalty sign-in during package consideration.
-- Booking start.
+* Package Available Badge
+* Stay + Show CTA
+* Concert Weekend Stay Module
 
-Friction signals:
+---
 
-- Repeated CTA taps without progress.
-- Backtracking from price, fees, restrictions, or availability.
-- Abandonment after third-party handoff.
-- Form errors.
-- Unavailable state after date selection.
-- Repeated package comparison without selection.
-- Mobile exits during date or party-size input.
+# Primary KPI
 
-## Success Measurements
+## Package Booking Start Rate
 
-The pilot should be considered successful if it creates measurable learning even before a production redesign. Initial success should be judged by:
+Definition:
 
-- A complete event and funnel map for the proposed package journey.
-- A prioritized telemetry backlog for any missing instrumentation.
-- A concept scorecard that includes analytics readiness before Figma generation.
-- Experiment candidates with clear hypotheses and decision rules.
-- A recommendation that distinguishes product opportunity, design direction, measurement needs, and implementation constraints.
+Percentage of users exposed to package merchandising who initiate a booking flow.
 
-## Reporting Questions
+Formula:
 
-- Which entertainment contexts create the strongest package interest?
-- Which inclusions create confidence and which create friction?
-- Which CTA labels and placements produce qualified intent?
-- Where do guests abandon when moving from entertainment to room, dining, VIP, or booking paths?
-- Which package concepts improve attachment without increasing confusion?
-- Which signals should future AI agents use to recommend package improvements?
+Booking Starts ÷ Package CTA Clicks
+
+---
+
+# Secondary KPIs
+
+## Package CTA Click Rate
+
+Definition:
+
+Percentage of exposed users who click a package CTA.
+
+Formula:
+
+Package CTA Clicks ÷ Package Impressions
+
+---
+
+## Booking Engine Arrival Rate
+
+Definition:
+
+Percentage of users who successfully arrive at the booking engine after selecting a package.
+
+Formula:
+
+Booking Engine Arrivals ÷ Package CTA Clicks
+
+---
+
+## Ticket-Only Click Rate
+
+Definition:
+
+Percentage of users who continue through the standard ticket flow.
+
+Purpose:
+
+Guardrail metric to ensure package merchandising does not suppress ticket demand.
+
+---
+
+# Required Events
+
+## package_impression
+
+Triggered when:
+
+A package treatment becomes visible.
+
+Examples:
+
+* Stay + Show CTA
+* Package Available Badge
+* Concert Weekend Stay Module
+
+Required Context:
+
+* Event Name
+* Event Date
+* Artist Name
+* Source Module
+* Device Type
+
+---
+
+## package_cta_clicked
+
+Triggered when:
+
+User selects a package path.
+
+Required Context:
+
+* Event Name
+* Event Date
+* Artist Name
+* CTA Text
+* Package URL
+* Source Module
+
+---
+
+## ticket_only_clicked
+
+Triggered when:
+
+User selects the ticket-only path.
+
+Required Context:
+
+* Event Name
+* Event Date
+* Artist Name
+* Source Module
+
+---
+
+## booking_engine_arrived
+
+Triggered when:
+
+User successfully reaches the booking engine.
+
+Required Context:
+
+* Event Name
+* Event Date
+* Promotion Code
+* Arrival Date
+* Departure Date
+
+---
+
+## booking_started
+
+Triggered when:
+
+User begins the booking process within the booking engine.
+
+Required Context:
+
+* Event Name
+* Event Date
+* Promotion Code
+
+---
+
+## booking_completed
+
+Triggered when:
+
+A booking is successfully completed.
+
+Required Context:
+
+* Event Name
+* Event Date
+* Promotion Code
+* Booking Value (if available)
+
+---
+
+# Funnel
+
+## Step 1
+
+Package Impression
+
+↓
+
+## Step 2
+
+Package CTA Click
+
+↓
+
+## Step 3
+
+Booking Engine Arrival
+
+↓
+
+## Step 4
+
+Booking Start
+
+↓
+
+## Step 5
+
+Booking Completion
+
+---
+
+# Guardrails
+
+Monitor for:
+
+* Ticket-only click rate decline
+* Mobile engagement decline
+* Excessive exits before booking engine arrival
+* Booking engine handoff failures
+* Package CTA confusion
+
+---
+
+# Reporting Dashboard
+
+## Executive Metrics
+
+* Package Impressions
+* Package CTA Clicks
+* Package CTR
+* Booking Engine Arrivals
+* Booking Starts
+* Booking Completions
+
+---
+
+## Funnel Metrics
+
+* Impression → CTA
+* CTA → Booking Engine
+* Booking Engine → Booking Start
+* Booking Start → Booking Completion
+
+---
+
+## Business Outcome Metrics
+
+* Package Attach Rate
+* Room Booking Starts
+* Booking Revenue (if available)
+* Ticket-Only Click Rate
+
+---
+
+# Pilot Hypotheses
+
+## H1
+
+Stay + Show package merchandising will increase booking engine entries from Resorts World Live traffic.
+
+Success Metric:
+
+booking_engine_arrived
+
+---
+
+## H2
+
+Stay + Show package merchandising will increase room-booking starts.
+
+Success Metric:
+
+booking_started
+
+---
+
+## H3
+
+Package merchandising will not materially reduce ticket purchase intent.
+
+Guardrail Metric:
+
+ticket_only_clicked
+
+---
+
+## H4
+
+Guests respond more strongly to package availability messaging than generic package promotion.
+
+Future Experiment:
+
+Package Available Badge vs Stay + Show CTA
+
+---
+
+# Future Enhancements
+
+Not included in this pilot:
+
+* Package comparison
+* Package save/share functionality
+* VIP package journeys
+* Loyalty personalization
+* Dynamic package recommendations
+* Date-based package finder
+* Concert weekend recommendation engine
+
+These should be evaluated only after the pilot demonstrates measurable demand for package merchandising.
