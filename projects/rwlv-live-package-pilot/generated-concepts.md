@@ -1,8 +1,8 @@
 # Generated Concepts
 
-All concepts below use existing components only. None requires a new package builder, new custom module, or new interaction pattern. Each concept assumes stakeholder validation for eligibility, inventory, terms, tracking, and destination URLs.
+## Concept A: Weekend Concert Escape
 
-## Evidence Note
+### Working Title
 
 New operational evidence changes the package framing:
 
@@ -12,78 +12,119 @@ New operational evidence changes the package framing:
 - Concepts should prioritize surfaces that can drive guests into a preloaded booking engine flow with the right stay dates, promotion, and inventory context already applied.
 
 The requested screenshot directories were not present in this checkout:
+Weekend Concert Escape
 
-- `screenshots/current-state/`
-- `screenshots/existing-components/`
+### Target Guest Segment
 
-The concepts therefore use the documented current-state inventory and inferred reusable components: hero module, feature or promo card, event card, card rail/grid, promo banner, CTA button pair, rich text/details block, related content module, offer tile, and accordion/details pattern.
+Regional drive-market guests from Southern California, Arizona, and Nevada planning a one-night or weekend trip.
 
-## Concept 1: Weekend Concert Escape
+### Occasion
 
-### Summary
+Weekend concert getaway.
 
-Repurpose an existing feature or promo card, supported by a related content rail, to frame a concert as the anchor for a full weekend at Resorts World Las Vegas.
+### Core Package Promise
 
-### Target Guest
+Everything needed for a seamless concert weekend in one booking.
 
-Out-of-town guests or regional drive-market visitors who are deciding whether a concert is worth turning into a one- or two-night resort stay.
+### Package Structure
 
-### Package Promise
+Included:
 
-"Make the concert your weekend" with a clear path from show interest to room planning, optional dining, and post-show resort experiences.
+* Hotel stay
+* Concert ticket
+* Self-parking
+* Resort access
 
-### Existing Components
+Optional:
 
-- Feature card or promo card for the primary package.
-- Existing image treatment for artist, venue, room, or resort lifestyle imagery.
-- Existing CTA button pair.
-- Related content rail or grid for dining, nightlife, and room upgrade paths.
-- Existing terms/detail link or accordion for inclusions and restrictions.
+* Room upgrades
+* Additional nights
+* Dining reservations
 
-### Placement
+### Journey And Components
 
-Below the hero or immediately after a featured event module on Resorts World Live. A supporting related rail can appear below event details or after the event listing.
+**Primary Component**
 
-### CTA Strategy
+Repurpose the existing "Concert Weekend Stay" module.
 
-- Primary: "Check weekend availability."
-- Secondary: "Buy concert tickets."
-- Supporting card CTAs: "Explore rooms," "Reserve dinner," and "View nightlife."
-- Detail link: "Weekend package details."
+**Placement**
 
-### Operational Assumptions
+Immediately below the Featured Artist section.
 
-- The package can route to an existing offer, booking, or campaign URL.
-- Ticket purchase may remain a separate flow if room and ticket inventory cannot be transacted together.
-- Copy must clearly state whether tickets are included, reserved separately, or subject to availability.
-- Dining and nightlife recommendations can be curated manually by event, venue, or showtime.
-- Blackout dates, minimum stays, and event eligibility must be validated before launch.
+**Flow**
+
+Featured Artist
+↓
+Weekend Concert Escape Package
+↓
+Book Package
+↓
+Lineup Exploration
+
+### Primary CTA
+
+Book Concert Package
+
+### Secondary CTA
+
+View Available Shows
 
 ### Measurement Intent
 
-Track package impression, feature card engagement, primary and secondary CTA clicks, package detail views, inclusion expansion, room availability checks, booking starts, ticket-only fallback clicks, related rail clicks, dining reservation starts, and downstream entertainment-to-room attachment.
+* Package CTR
+* Package booking starts
+* Package booking completions
+* Lift in room-night bookings
 
-### Risks
+### Risks And Open Questions
 
-- Weekend language may imply bundled availability if rooms and tickets are actually purchased separately.
-- A broad weekend promise can become too generic unless tied to a specific concert, date range, or residency.
-- Dining and nightlife recommendations may create operational friction if times do not align with show schedules.
+* Booking engine package support
+* Ticket inventory integration
+* Package pricing flexibility
 
-## Concept 2: Stay + Show Package
+---
 
-### Summary
+## Concept B: Stay + Show Package
+
+### Working Title
+
+Stay + Show Package
+
+### Target Guest Segment
+
+Guests actively browsing the lineup who have not yet selected lodging.
+
+### Occasion
+
+Single-show trip planning.
+
+### Core Package Promise
+
+Choose a show. Add a stay.
+
+### Package Structure
+
+Included:
+
+* Show ticket
+* Hotel room
 
 Use an existing event card CTA, offer tile, or feature card to present a date-specific Stay + Show package that routes directly into the booking engine with arrival/departure dates preloaded, the promotion preselected, and eligible room inventory displayed.
+Optional:
 
-### Target Guest
+* Premium room upgrades
+* Early check-in
+* Resort credits
 
 Guests comparing specific show dates who want the simplest path from a lineup card or promoted event into a stay offer for that exact concert window.
+### Journey And Components
 
-### Package Promise
+**Primary Component**
 
 "Stay steps from the show" with the booking flow already scoped to the event dates and package promotion, reducing the work required to find eligible inventory.
+Repurpose the existing lineup card grid.
 
-### Existing Components
+Each lineup card receives:
 
 - Offer tile or feature card.
 - Existing image treatment.
@@ -95,16 +136,27 @@ Guests comparing specific show dates who want the simplest path from a lineup ca
 ### Placement
 
 Primary placement on eligible lineup cards as a "Stay + Show" CTA next to the ticket path. Secondary placement can appear in an enhanced Concert Weekend Stay module near featured or high-demand dates.
+* Secure Tickets
+* Stay + Show
 
-### CTA Strategy
+dual CTA structure.
+
+Inspired by the Entertainment Grid pattern.
+
+### Placement
+
+Within the Just Announced section.
+
+### Primary CTA
 
 - Primary: "Check stay + show rates."
 - Secondary: "Buy tickets only."
 - Event-card secondary CTA: "Stay + Show."
 - Badge: "Stay package available."
 - Detail link: "Package terms."
+Stay + Show
 
-### Operational Assumptions
+### Secondary CTA
 
 - Eligible packages are manually configured by show date, arrival/departure date, and promotion code for the first release.
 - The package link routes to the existing IBE with dates preloaded and the promotion preselected.
@@ -115,132 +167,186 @@ Primary placement on eligible lineup cards as a "Stay + Show" CTA next to the ti
 ### Measurement Intent
 
 Track package impressions by source module, package CTA clicks by event date, promotion handoff clicks, booking-engine arrivals with dates/promotion present, room inventory views, booking starts, package attach rate, ticket-only fallback clicks, and ticket CTA impact as a guardrail.
+Secure Tickets
 
-### Risks
+### Measurement Intent
+
+* Package click-through
+* Ticket-only vs package selection rate
+* Package attach rate
+
+### Risks And Open Questions
+
+* Grid density
+* Mobile usability
+* Artist-specific package availability
+
+---
+
+## Concept C: Date Night Experience
+
+### Working Title
+
+Date Night Experience
+
+### Target Guest Segment
+
+Couples.
 
 - "Package" may overpromise if copy implies a bundled room + ticket checkout when the operational flow is a preloaded room promotion.
 - Added event-card messaging could crowd mobile cards or compete with the primary ticket CTA.
 - Downstream attribution may be incomplete if ticketing or booking hands off to third-party systems.
+### Occasion
 
-## Concept 3: Date Night Experience
+Weekend escape, anniversary, celebration, date night.
 
-### Summary
+### Core Package Promise
 
-Repurpose an existing promo card plus related content rail to position select shows as an easy date night with room, dinner, and entertainment paths kept close together.
+Dinner. Show. Stay.
 
-### Target Guest
+### Package Structure
 
-Couples and local or regional guests planning a special night, anniversary, birthday, proposal weekend, or elevated evening out.
+Included:
 
-### Package Promise
+* Hotel stay
+* Concert tickets
+* Dining reservation
 
-"Plan the whole night around the show" with simple next steps for tickets, dinner, an overnight stay, and optional upgrades.
+Optional:
 
-### Existing Components
+* Alle Lounge
+* Spa
+* VIP upgrades
 
-- Promo card or offer tile for the date-night package.
-- Existing restaurant/nightlife/room cards in a related content rail.
-- Existing CTA button pair.
-- Existing rich text block for occasion-focused copy.
-- Existing accordion/details block for timing, inclusions, and restrictions.
+### Journey And Components
 
-### Placement
+**Primary Components**
 
-Near the selected event detail CTA area or below a featured event module. A "Complete the night" rail can follow the package card with dining, lounge, and room options.
-
-### CTA Strategy
-
-- Primary: "Plan date night."
-- Secondary: "Buy show tickets."
-- Supporting CTAs: "Reserve dinner," "Explore rooms," and "View lounges."
-- Detail link: "Date night details."
-
-### Operational Assumptions
-
-- Dining destinations and reservation windows can be curated for show timing.
-- The package does not guarantee dining availability unless inventory is explicitly held.
-- Room stay, dining, and ticket actions may route to separate existing destinations.
-- Copy avoids promising romance, exclusivity, upgrades, or special treatment unless validated.
-- The component supports concise occasion copy without adding new layout behavior.
-
-### Measurement Intent
-
-Track package impression, package card engagement, primary CTA clicks, ticket-only clicks, dining card clicks, reservation starts, room exploration, inclusion expansion, policy views, save or return behavior, and attachment between entertainment, dining, and room booking paths.
-
-### Risks
-
-- The concept can feel generic if dining and lounge recommendations are not curated by venue, time, or occasion.
-- Too many add-on paths may dilute the core show decision.
-- Reservation unavailability after a package click could create disappointment if constraints are not visible early.
-
-## Concept 4: Friends Getaway Package
-
-### Summary
-
-Use an existing card rail or promo module to present a group-oriented entertainment weekend that connects the show with rooms, dining, nightlife, and optional VIP inquiry.
-
-### Target Guest
-
-Small groups planning a birthday trip, reunion, bachelor or bachelorette-adjacent weekend, or shared Las Vegas getaway around a concert or residency.
-
-### Package Promise
-
-"Bring the group together for the show" with a coordinated path to rooms, tickets, dining, nightlife, and optional VIP planning.
-
-### Existing Components
-
-- Card rail or grid for package cards and supporting recommendations.
-- Feature card or promo card for the primary group package.
-- Existing event card or featured event module for the show anchor.
-- Existing restaurant/nightlife/room cards.
-- Existing CTA button pair.
-- Existing inquiry CTA pattern if available for VIP or group support.
-- Existing details/accordion module for group-size, eligibility, and policy notes.
+* Conrad Complete package structure
+* Alle Lounge editorial module
+* Concert Weekend Stay module
 
 ### Placement
 
-Below the event listing as a curated package rail, or on eligible event detail pages after the primary ticket CTA. A page-wide promo banner can point high-level group traffic into the package destination.
+Below Featured Artist.
 
-### CTA Strategy
+### Primary CTA
 
-- Primary: "Build a group getaway."
-- Secondary: "Buy tickets."
-- Supporting CTAs: "Explore group rooms," "Reserve dinner," "View nightlife," and "Request VIP details."
-- Detail link: "Group package details."
+Book Date Night Package
 
-### Operational Assumptions
+### Secondary CTA
 
-- Group framing can be used without requiring a new group booking engine.
-- VIP inquiries route to an existing form, phone path, or sales destination.
-- Room, dining, and nightlife inventory are subject to availability and may be booked separately.
-- Group-size thresholds, deposit requirements, cancellation terms, and age restrictions are validated.
-- Package content can be curated for a limited set of high-demand event weekends.
+View Inclusions
 
 ### Measurement Intent
 
-Track package impression, rail engagement, primary CTA clicks, secondary ticket clicks, group-room exploration, dining reservation starts, nightlife clicks, VIP inquiry starts and completions, policy views, availability checks, booking starts, and attachment by party-size signal where available.
+* Package engagement
+* Dining attach rate
+* Premium room upgrades
 
-### Risks
+### Risks And Open Questions
 
-- Group and VIP language can imply service levels that operations may not be ready to fulfill.
-- Multiple CTAs may make the package feel like a directory rather than a curated experience.
-- Age, party-size, and venue restrictions must be clear to avoid poor-fit inquiries.
+* Restaurant availability
+* Dining package fulfillment
+* Guest expectation management
+
+---
+
+## Concept D: Friends Getaway Package
+
+### Working Title
+
+Friends Getaway Package
+
+### Target Guest Segment
+
+Groups of friends attending shows.
+
+### Occasion
+
+Weekend entertainment trip.
+
+### Core Package Promise
+
+Turn a concert into a full Vegas weekend.
+
+### Package Structure
+
+Included:
+
+* Multi-ticket bundle
+* Shared accommodations
+
+Optional:
+
+* Dayclub
+* Nightlife
+* Dining
+
+### Journey And Components
+
+**Primary Components**
+
+* Entertainment Grid
+* No Resort Fee module
+* Concert Weekend Stay module
+
+### Placement
+
+Immediately below lineup.
+
+### Primary CTA
+
+Build Your Weekend
+
+### Secondary CTA
+
+View Experiences
+
+### Measurement Intent
+
+* Group package starts
+* Multi-room bookings
+* Ancillary experience attachment
+
+### Risks And Open Questions
+
+* Inventory complexity
+* Package customization
+* Booking path complexity
+
+---
+
+## Concept E: Featured Artist Package
+
+### Working Title
+
+Featured Artist Package
+
+### Target Guest Segment
+
+Fans of a specific headliner.
 
 ## Concept 5: Featured Artist Package Treatment For Promoted Shows
+### Occasion
 
-### Summary
+Artist-specific travel planning.
 
 Repurpose the hero or featured event module to create a promoted-show package treatment for select priority dates. The artist can provide the campaign hook, but the package itself should be merchandised as a date-specific Stay + Show booking path.
+### Core Package Promise
 
-### Target Guest
+Experience the artist and stay at Resorts World.
 
 Fans of a specific artist, residency, or promoted show date who arrive with high show intent and may be persuaded to book the associated stay window through the preconfigured package link.
+### Package Structure
 
-### Package Promise
+Included:
 
 "Make the promoted show a stay" with one package path tied to specific event dates, preloaded arrival/departure dates, a preselected promotion, and available resort inventory.
+* Featured artist ticket
+* Hotel stay
 
-### Existing Components
+Optional:
 
 - Hero module or featured event module.
 - Existing artist/show image treatment.
@@ -253,16 +359,38 @@ Fans of a specific artist, residency, or promoted show date who arrive with high
 ### Placement
 
 Top of page only when the show is actively promoted as a package campaign, or immediately after the hero when the page needs to preserve a broader Live introduction. Eligible dates in the event grid can include a Stay + Show badge or secondary CTA.
+* Premium room
+* Lounge access
+* Dining package
 
-### CTA Strategy
+### Journey And Components
+
+**Primary Components**
+
+* Existing Featured Artist module
+* Conrad Complete hero treatment
+* Concert Weekend Stay package CTA
+
+### Placement
+
+Directly inside the Featured Artist section.
+
+### Flow
+
+Artist Story
+↓
+Featured Artist Package
+↓
+Book Package
 
 - Primary: "Check stay + show rates."
 - Secondary: "Buy tickets."
 - Event-card secondary CTA: "Stay + Show."
 - Supporting CTAs: "Explore rooms" and "Request VIP details" where operationally valid.
 - Detail link: "Package terms."
+### Primary CTA
 
-### Operational Assumptions
+Book Artist Package
 
 - Marketing, entertainment, and legal approve artist name, image, and campaign usage.
 - Package eligibility is limited to specific event dates, stay dates, and promotion rules.
@@ -274,9 +402,60 @@ Top of page only when the show is actively promoted as a package campaign, or im
 ### Measurement Intent
 
 Track hero/package impressions, media engagement, package CTA clicks, ticket CTA clicks, eligible-date badge impressions, package detail views, promotion handoff clicks, booking-engine arrivals with dates/promotion present, room inventory views, booking starts, VIP inquiry starts where used, package attach rate, and conversion by artist, date, venue, promotion, and source module.
+### Secondary CTA
 
-### Risks
+Buy Tickets Only
+
+### Measurement Intent
+
+* Featured package CTR
+* Artist-specific package conversion
+* Ticket-to-package upgrade rate
+
+### Risks And Open Questions
+
+* Artist participation
+* Dynamic package inventory
+* Frequent content updates
+
+---
+
+# Initial Recommendation
+
+## Preferred Direction
+
+### #1 Concept E: Featured Artist Package
+
+Highest visibility.
+
+Appears at the moment of strongest purchase intent.
+
+Minimal additional page length.
+
+Uses existing Featured Artist module and existing package patterns.
+
+---
+
+### #2 Concept A: Weekend Concert Escape
+
+Fastest implementation.
+
+Requires minimal design changes.
+
+Leverages existing Concert Weekend Stay section already present on the page.
+
+---
+
+### Phase 1 Recommendation
+
+Implement:
+
+1. Featured Artist Package
+2. Enhanced Concert Weekend Stay Package
+
+Together.
 
 - Artist-focused copy has higher approval risk and may need stricter brand, legal, and partner review, so it should be reserved for promoted shows.
 - Fans may expect access or perks beyond a room and ticket path if language is not disciplined.
 - Limited inventory or date eligibility can cause frustration if unavailable states are not clear.
+These provide the highest business impact with the lowest implementation effort while remaining consistent with the current Resorts World design system.
