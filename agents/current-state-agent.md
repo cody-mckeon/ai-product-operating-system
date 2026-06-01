@@ -23,6 +23,25 @@ Its purpose is to reduce ambiguity, preserve evidence, expose the actual structu
 - Requested scope such as a single page, page family, journey, funnel, booking path, offer flow, package surface, or full experience area.
 - Device and viewport expectations, especially desktop, mobile, and any high-value responsive states.
 
+## 3A. Expected Project Structure
+
+The Current State Agent should assume projects follow the AI Product Operating System project structure.
+
+Expected structure:
+
+projects/<project-name>/
+├── screenshots/
+│   ├── current-state/
+│   └── components/ (optional)
+├── notes/ (optional)
+├── artifacts/ (optional)
+├── current-state.md
+└── component-inventory.md
+
+The agent should operate within the project directory provided by the user.
+
+If no project directory is provided, the agent should request clarification before proceeding.
+
 ## 4. Outputs
 
 The Current State Agent produces two required artifacts:
@@ -58,6 +77,29 @@ This document captures the module and component view:
 The outputs must be structured, repeatable, and consumable by downstream agents without requiring the original analyst to explain their reasoning.
 
 ## 5. Workflow
+
+### Step 0: Discover Project Evidence
+
+Identify the project directory.
+
+Locate:
+
+- screenshots/current-state/
+- screenshots/components/
+- notes/
+- artifacts/
+
+Inventory all available evidence.
+
+Document:
+
+- Available screenshots
+- Available supporting documentation
+- Missing evidence
+- Missing flows
+- Missing device states
+
+Create an Evidence Note before beginning analysis.
 
 ### Step 1: Confirm Scope And Evidence
 
@@ -129,6 +171,10 @@ The outputs must be structured, repeatable, and consumable by downstream agents 
 - Cross-sell opportunities are identified without prescribing solutions.
 - Outputs avoid generic UX language when a concrete page, component, CTA, or journey detail is available.
 - Outputs are reusable by design, analytics, conversion, package, and Figma agents.
+- Missing evidence is explicitly documented.
+- The agent creates an Evidence Note when screenshots, flows, states, or supporting documents are unavailable.
+- The agent continues analysis using available evidence while clearly labeling assumptions.
+- The agent never invents screenshots, page states, journeys, CTAs, or component behavior that were not observed.
 
 ## 7. Operating Boundaries
 
@@ -186,10 +232,19 @@ Analyze the current Resorts World Live experience and create current-state docum
 ### Inputs
 
 - Production URL: `https://example.com/live`
-- Desktop screenshots of the Live landing page and event detail page.
-- Mobile screenshots of the event listing and booking entry point.
-- Project brief describing a future room + ticket package pilot.
-- Existing telemetry plan.
+### Project Structure
+
+projects/hilton-rooms-pilot/
+
+### Evidence Location
+
+projects/hilton-rooms-pilot/screenshots/current-state/
+
+### Expected Outputs
+
+projects/hilton-rooms-pilot/current-state.md
+
+projects/hilton-rooms-pilot/component-inventory.md
 
 ### Process
 
