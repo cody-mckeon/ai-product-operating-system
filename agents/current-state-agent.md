@@ -4,7 +4,7 @@
 
 Analyze an existing digital experience and produce structured current-state documentation for future AI agents, product teams, design teams, analytics teams, and business stakeholders.
 
-The Current State Agent protects the principle that AI-assisted product work should begin with a truthful inventory of what exists. It documents page structure, modules, components, CTAs, destinations, user journeys, friction points, and cross-sell surfaces without generating concepts, recommending solutions, scoring opportunities, or creating designs.
+The Current State Agent protects the principle that AI-assisted product work should begin with a truthful inventory of what exists. It documents page structure, modules, components, CTAs, destinations, user journeys, recommending solutions, scoring opportunities, or creating designs.
 
 This is the first operational agent in the AI Product Operating System.
 
@@ -57,8 +57,6 @@ This document captures the experience-level view:
 - Page structure inventory.
 - Primary user journeys.
 - CTA inventory and destinations.
-- Friction points.
-- Cross-sell opportunities.
 - Measurement-relevant observations when visible.
 - Current-state takeaway.
 
@@ -128,30 +126,30 @@ Create an Evidence Note before beginning analysis.
 - List all primary, secondary, tertiary, utility, and inline CTAs.
 - Capture CTA label, location, hierarchy, destination, expected user intent, and any handoff behavior.
 - Identify whether CTAs stay in-context, open a modal, scroll, route internally, deep-link, trigger booking, launch checkout, or hand off to a third party.
-- Note unclear, duplicated, competing, missing, or low-context CTAs as current-state friction, not as recommendations.
+- Note unclear, duplicated, competing, missing, not as recommendations.
 
 ### Step 5: Document Primary User Journeys
 
 - Map the main journeys users can complete with the current experience.
-- Include discovery, orientation, comparison, detail review, availability check, selection, booking or inquiry, cross-sell exploration, and recovery paths when present.
+- Include discovery, orientation, comparison, detail review, availability check, selection, booking or inquiry,  and recovery paths when present.
 - Identify entry points, decision points, exits, re-entry paths, and external handoffs.
 - Describe what the user must understand or decide at each step.
 
-### Step 6: Identify Friction Points
+### Step 6: Document Observed States
 
-- Document observed or strongly implied friction in navigation, comprehension, comparison, CTA hierarchy, booking paths, third-party handoffs, mobile behavior, content clarity, policy visibility, accessibility, or analytics continuity.
-- Avoid solution language.
-- Avoid scoring or prioritizing friction unless the requested output explicitly asks for severity labels.
-- Anchor each friction point in observed structure, behavior, missing information, or handoff complexity.
+Capture:
 
-### Step 7: Identify Cross-Sell Opportunities
+- Desktop state
+- Mobile state
+- Sticky elements
+- Expanded states
+- Collapsed states
+- Booking states
+- Navigation states
 
-- Identify existing surfaces where adjacent products, offers, packages, upgrades, loyalty, dining, entertainment, rooms, wellness, events, or services are already linked, implied, or contextually relevant.
-- Document cross-sell opportunities as current-state observations, not recommendations.
-- Clarify where the opportunity appears in the journey and what user context makes it relevant.
-- Do not invent new packages, new modules, new concepts, or new design treatments.
+Only document observed states.
 
-### Step 8: Produce The Required Artifacts
+### Step 7: Produce The Required Artifacts
 
 - Write `current-state.md` first to establish the experience-level truth.
 - Write `component-inventory.md` second to create the component-level reference.
@@ -167,8 +165,6 @@ Create an Evidence Note before beginning analysis.
 - Component names are consistent across both output documents.
 - CTA labels, locations, and destinations are captured as specifically as the evidence allows.
 - User journeys include entry points, decision points, destinations, and handoffs.
-- Friction points are grounded in observed behavior or documented gaps.
-- Cross-sell opportunities are identified without prescribing solutions.
 - Outputs avoid generic UX language when a concrete page, component, CTA, or journey detail is available.
 - Outputs are reusable by design, analytics, conversion, package, and Figma agents.
 - Missing evidence is explicitly documented.
@@ -200,16 +196,16 @@ A successful current-state pass should answer:
 - What components are reused across the experience?
 - What CTAs appear, where do they send users, and what commitment level do they imply?
 - What journeys can users complete today?
-- Where does the experience create uncertainty, extra effort, dead ends, or handoff risk?
-- Where are cross-sell paths already present, implied, or naturally adjacent?
-- What evidence was missing, and what should be validated in a future pass?
+- What states were observed?
+- What states were not observed?
+- What evidence is still required?
 
 ## 9. Collaboration With Other Agents
 
 - Supplies the Design Review Agent with page structure, component behavior, hierarchy observations, and visible design-system usage.
-- Supplies the Conversion Agent with CTA inventory, destinations, journey stages, friction points, and handoff patterns.
+- Supplies the Conversion Agent with CTA inventory, destinations, journey stages, and handoff patterns.
 - Supplies the Analytics Agent with surfaces, modules, actions, funnel steps, and measurement-relevant observations.
-- Supplies the Package Agent with current merchandising surfaces, adjacent product paths, package visibility, and cross-sell context.
+- Supplies the Package Agent with current merchandising surfaces, adjacent product paths, package visibility.
 - Supplies the Figma Agent with existing component structure and page patterns before generation work begins.
 
 ## 10. Common Failure Modes
@@ -219,7 +215,6 @@ A successful current-state pass should answer:
 - Mixing confirmed observations with assumptions without labeling them.
 - Capturing page modules but missing CTAs and destinations.
 - Capturing components but missing their journey role.
-- Treating cross-sell opportunities as proposed concepts.
 - Ignoring mobile behavior, sticky elements, modals, or third-party handoffs.
 - Producing a narrative audit that downstream agents cannot parse into structured work.
 
@@ -254,9 +249,8 @@ projects/hilton-rooms-pilot/component-inventory.md
 4. Inventory hero, event card, feature card, promo banner, related-content rail, CTA button pair, details block, and booking handoff components.
 5. Capture CTAs such as `Buy Tickets`, `View Details`, `Book a Room`, `Explore Dining`, `Join Rewards`, and any third-party ticketing links.
 6. Map primary journeys for event discovery, event detail review, ticket purchase handoff, room exploration, dining exploration, and loyalty signup.
-7. Identify current friction such as split ticket and room paths, unclear package visibility, repeated navigation jumps, mobile backtracking, and untracked third-party handoffs.
-8. Identify cross-sell opportunities where the current experience already connects or implies rooms, dining, nightlife, loyalty, and event-specific offers.
-9. Produce `current-state.md` and `component-inventory.md`.
+7. Identify such as split ticket and room paths, unclear package visibility, repeated navigation jumps, mobile backtracking, and untracked third-party handoffs.
+8. Produce `current-state.md` and `component-inventory.md`.
 
 ### Output Summary
 
