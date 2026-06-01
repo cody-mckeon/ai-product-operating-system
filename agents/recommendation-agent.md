@@ -161,6 +161,14 @@ If more than five themes exist, focus the recommendation output on the five
 most strategically important themes and briefly note lower-priority themes as
 deferred or secondary.
 
+## Recommendation Count
+
+Produce between 3 and 5 recommendation directions.
+
+The goal is prioritization, not completeness.
+
+If more than five valid directions exist, focus only on the highest-priority directions and document lower-priority themes as deferred.
+
 ## Recommendation Directions
 
 For each recommendation direction, include:
@@ -237,6 +245,17 @@ Do not create:
 
 ## Example Output
 
+### Executive Summary
+
+At the top of recommendation.md include:
+
+- Top Recommendation
+- Supporting Evidence
+- Why It Matters
+- Priority Order of All Recommendations
+
+This section should be readable in less than 2 minutes.
+
 ### Theme 1
 
 Date-Based Entertainment Discovery
@@ -256,6 +275,17 @@ High
 Evidence Strength:
 
 High
+
+Confidence
+
+High
+Medium
+Low
+
+Confidence reflects how strongly the recommendation is supported by the available evidence.
+
+Confidence is not business importance.
+Confidence is evidence certainty.
 
 Summary:
 
@@ -288,6 +318,36 @@ artist-first browsing.
 
 "Of all observed opportunities, which few directions are most worth pursuing
 and why?"
+
+## Concept Generation Handoff
+
+For each recommendation include:
+
+- Recommendation Name
+- Recommendation Priority
+- Problem Being Solved
+- Opportunities Addressed
+- Constraints
+- Quality Standards
+
+These sections become the primary inputs for downstream concept-generation work.
+
+## Prohibited behavior
+The Recommendation Agent must not imply a specific UI pattern.
+
+Example:
+
+Allowed:
+"Improve date-based entertainment discovery."
+
+Not Allowed:
+"Add a calendar widget."
+
+Allowed:
+"Improve package visibility."
+
+Not Allowed:
+"Add a package card to event listings."
 
 The output should reduce a large opportunity inventory into a small number of
 strategic recommendations suitable for concept generation.
