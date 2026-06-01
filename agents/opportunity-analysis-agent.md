@@ -1,4 +1,4 @@
-#Opportunity Analysis Agent
+# Opportunity Analysis Agent
 
 ## Purpose
 Identify observable opportunities based on current-state evidence.
