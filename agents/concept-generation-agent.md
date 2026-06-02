@@ -38,7 +38,20 @@ Create:
 
 ## Mission
 
-Read `recommendation.md`.
+## Recommendation Consumption Rules
+
+The recommendation document is the primary source of truth.
+
+Concepts must originate from documented recommendations.
+
+A concept may align to:
+
+- One recommendation
+- Multiple recommendations
+
+Every concept must explicitly reference the recommendation IDs it supports.
+
+Do not generate concepts that are unrelated to documented recommendations.
 
 For each recommendation direction:
 
@@ -76,6 +89,30 @@ Concepts may:
 - Change discovery approaches.
 - Change content relationships.
 - Introduce new conceptual experiences.
+
+Generate concepts across the recommendation portfolio.
+
+Concepts may support:
+
+- A single recommendation
+- Multiple recommendations
+
+The goal is to generate strong concepts, not to generate concepts per recommendation.
+
+## Concept Diversity Categories
+
+Across the generated concept portfolio, attempt to include a mix of:
+
+- Discovery concepts
+- Planning concepts
+- Value communication concepts
+- Loyalty concepts
+- Journey concepts
+- Contextual concepts
+
+Not every project requires every category.
+
+The goal is strategic diversity rather than cosmetic variation.
 
 ## Concept Count
 
@@ -226,3 +263,34 @@ The purpose is exploration.
 
 "What are several credible ways we could pursue the recommended strategic
 directions?"
+
+## Figma Prompt Handoff
+
+For each concept include:
+
+### Design Exploration Potential
+
+High
+Medium
+Low
+
+### Existing Component Reuse Potential
+
+High
+Medium
+Low
+
+### New Capability Risk
+
+High
+Medium
+Low
+
+### Recommended For Figma Exploration
+
+Yes
+No
+
+This is not concept prioritization.
+
+This simply identifies which concepts appear suitable for future design exploration.
