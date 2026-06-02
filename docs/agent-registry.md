@@ -36,6 +36,7 @@ Last Validated:
 ## Experimental Agents
 
 ### Concept Generation Agent
+File: agents/concept-generation-agent.md
 Version: v0.1
 Status: Experimental
 
