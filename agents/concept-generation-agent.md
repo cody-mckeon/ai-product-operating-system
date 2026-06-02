@@ -97,7 +97,7 @@ Concepts may support:
 - A single recommendation
 - Multiple recommendations
 
-The goal is to generate strong concepts, not to generate concepts per recommendation.
+The goal is to generate materially different concepts, not to generate concepts per recommendation.
 
 ## Concept Diversity Categories
 
@@ -118,16 +118,17 @@ The goal is strategic diversity rather than cosmetic variation.
 
 The Concept Generation Agent must not:
 
-- Select a preferred concept
-- Recommend a concept
-- Prioritize concepts
-- Rank concepts
 - Evaluate concepts
+- Score concepts
+- Rank concepts
+- Prioritize concepts
+- Recommend concepts
+- Select concepts
 - Recommend design exploration candidates
 
 All generated concepts should be treated as valid candidates for future evaluation.
 
-Concept selection is the responsibility of the Concept Evaluation Agent.
+Concept selection belongs to the Concept Evaluation Agent.
 
 ## Concept Count
 
@@ -158,6 +159,10 @@ CON-07
 ### Concept Name
 
 Short descriptive title.
+
+### Recommendation Alignment
+
+Reference the recommendation IDs the concept supports.
 
 ### Concept Summary
 
@@ -236,24 +241,34 @@ Do not create:
 - Technical architecture
 - Implementation tickets
 
-## Concept Evaluation Summary
+## Concept Portfolio Summary
 
 At the end of `generated-concepts.md` include:
 
 ### Concept Portfolio Summary
 
-For each concept provide:
+Use only the following table structure:
 
-- Concept ID
-- Relative Strategic Strength
-- Relative Risk
-- Notes
+| Concept ID | Recommendation Alignment | Concept Type | Notes |
+| --- | --- | --- | --- |
 
-Do not select a winner.
+Definitions:
 
-Do not prioritize concepts.
+- Concept ID: Concept identifier.
+- Recommendation Alignment: Associated recommendation IDs.
+- Concept Type: High-level classification such as Discovery, Journey, Resort Context, Venue Context, Decision Support, Loyalty, Planning, or another neutral concept category.
+- Notes: Neutral summary of the concept.
 
 The purpose is exploration.
+
+## Execution Summary
+
+At the end of `generated-concepts.md`, after the Concept Portfolio Summary,
+include only:
+
+- Number of concepts generated
+- Recommendations covered
+- Evidence limitations encountered
 
 ## Quality Standards
 
@@ -262,8 +277,8 @@ The purpose is exploration.
 - Concepts remain evidence-based.
 - Concepts respect documented constraints.
 - Concepts avoid implementation details.
-- Concepts are suitable inputs for future recommendation review, stakeholder
-  discussion, and Figma prompt generation.
+- Concepts are suitable inputs for future recommendation review and stakeholder
+  discussion.
 
 ## Expected Output Summary
 
@@ -271,34 +286,3 @@ The purpose is exploration.
 
 "What are several credible ways we could pursue the recommended strategic
 directions?"
-
-## Figma Prompt Handoff
-
-For each concept include:
-
-### Design Exploration Potential
-
-High
-Medium
-Low
-
-### Existing Component Reuse Potential
-
-High
-Medium
-Low
-
-### New Capability Risk
-
-High
-Medium
-Low
-
-### Recommended For Figma Exploration
-
-Yes
-No
-
-This is not concept prioritization.
-
-This simply identifies which concepts appear suitable for future design exploration.
