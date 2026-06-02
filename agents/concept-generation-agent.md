@@ -114,6 +114,21 @@ Not every project requires every category.
 
 The goal is strategic diversity rather than cosmetic variation.
 
+## Concept Neutrality Rule
+
+The Concept Generation Agent must not:
+
+- Select a preferred concept
+- Recommend a concept
+- Prioritize concepts
+- Rank concepts
+- Evaluate concepts
+- Recommend design exploration candidates
+
+All generated concepts should be treated as valid candidates for future evaluation.
+
+Concept selection is the responsibility of the Concept Evaluation Agent.
+
 ## Concept Count
 
 Generate:
@@ -135,20 +150,14 @@ Format:
 CON-01
 CON-02
 CON-03
+CON-04
+CON-05
+CON-06
+CON-07
 
 ### Concept Name
 
 Short descriptive title.
-
-### Recommendation Alignment
-
-Reference:
-
-REC-01
-REC-02
-REC-03
-
-and explain alignment.
 
 ### Concept Summary
 
@@ -236,7 +245,6 @@ At the end of `generated-concepts.md` include:
 For each concept provide:
 
 - Concept ID
-- Recommendation Alignment
 - Relative Strategic Strength
 - Relative Risk
 - Notes
