@@ -40,6 +40,12 @@ File: agents/concept-evaluation-agent.md
 Version: v0.1
 Status: Experimental
 
+### Figma Prompt Agent
+
+File: agents/figma-prompt-agent.md
+Version: v0.1
+Status: Experimental
+
 ## Workflow
 
 Current State
