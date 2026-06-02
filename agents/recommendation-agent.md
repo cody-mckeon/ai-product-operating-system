@@ -177,6 +177,20 @@ For each recommendation direction, include:
 
 A concise strategic direction name.
 
+### Recommendation ID
+
+Format:
+
+REC-01
+REC-02
+REC-03
+REC-04
+REC-05
+
+Recommendation IDs must be unique within the project.
+
+These IDs become the primary reference mechanism for downstream agents.
+
 ### Summary
 
 A short explanation of the direction and why it matters.
@@ -213,6 +227,49 @@ or cross-functional alignment required before concept generation.
 
 The standards future concept work must meet to preserve the intent of the
 recommendation.
+
+### Concept Generation Input
+
+Provide a structured handoff for downstream concept-generation work.
+
+Include:
+
+#### Focus Area
+
+The strategic area represented by this recommendation.
+
+#### Design Freedom
+
+High
+Medium
+Low
+
+High = broad solution exploration allowed.
+
+Medium = exploration should remain close to observed constraints.
+
+Low = exploration must remain tightly constrained by business or operational realities.
+
+#### Must Preserve
+
+Critical qualities future concepts should not break.
+
+Examples:
+
+- Entertainment remains the primary browsing context.
+- Existing booking paths remain discoverable.
+- Mobile usability remains intact.
+
+#### Must Avoid
+
+Known pitfalls future concepts should avoid.
+
+Examples:
+
+- Inventing package inventory.
+- Inventing loyalty benefits.
+- Inventing operational capabilities.
+- Introducing unsupported claims.
 
 ## Recommendation Requirements
 
