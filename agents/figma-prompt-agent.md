@@ -110,6 +110,52 @@ For each selected concept include:
 
 ### Concept Name
 
+### Exploration Type
+
+Classify each selected concept as exactly one of:
+
+- Discovery
+- Planning
+- Confidence
+- Context
+- Continuity
+- Value Communication
+
+Definitions:
+
+Discovery
+
+- Helps guests find relevant content, events, experiences, or options.
+
+Planning
+
+- Helps guests organize a future visit, trip, schedule, or itinerary.
+
+Confidence
+
+- Helps guests understand actions, choices, requirements, support paths, or
+  decision-making information.
+
+Context
+
+- Helps guests understand relationships among experiences, categories,
+  destinations, or broader visit considerations.
+
+Continuity
+
+- Helps guests maintain orientation, progress, or understanding across a longer
+  journey.
+
+Value Communication
+
+- Helps guests understand benefits, differentiation, or reasons to engage while
+  remaining grounded in validated information.
+
+Every selected concept must receive exactly one Exploration Type.
+
+Within each generated concept section, include `### Exploration Type` and
+explain why the concept was classified into that category.
+
 ### Design Objective
 
 What design exploration should attempt to learn.
@@ -145,10 +191,45 @@ Generate a structured Figma Make prompt including:
 - Context
 - Goal
 - Audience
+- Exploration Type
 - Design intent
 - Existing component reuse
 - Constraints
 - Desired exploration outcomes
+
+Within the Figma Make prompt, include:
+
+Exploration Type:
+
+[Type]
+
+Explain how the exploration type should influence the design exploration.
+
+Examples:
+
+Discovery
+
+- Explore ways to help guests find relevant experiences.
+
+Planning
+
+- Explore ways to help guests organize future decisions.
+
+Confidence
+
+- Explore ways to improve understanding and decision confidence.
+
+Context
+
+- Explore ways to connect related information and experiences.
+
+Continuity
+
+- Explore ways to maintain orientation and journey flow.
+
+Value Communication
+
+- Explore ways to communicate validated value propositions.
 
 The prompt should be written as a copy-paste-ready Figma Make instruction.
 
@@ -161,6 +242,11 @@ Prompts should:
 - Include audience context.
 - Include component reuse guidance.
 - Include constraints.
+- Exploration Type must be explicitly stated.
+- Every concept must have exactly one Exploration Type.
+- Exploration Type must align with the documented concept intent.
+- Exploration Type should support future orchestration and filtering across
+  pilots.
 - Encourage exploration.
 - Avoid prescribing final solutions.
 
@@ -201,9 +287,15 @@ List:
 
 - Concept ID
 - Concept Name
+- Exploration Type
 - Audience
 - Reuse Potential
 - Design Exploration Goal
+
+Use this structure:
+
+| Concept ID | Concept Name | Exploration Type | Audience | Reuse Potential | Design Exploration Goal |
+| --- | --- | --- | --- | --- | --- |
 
 Do not evaluate concepts.
 
