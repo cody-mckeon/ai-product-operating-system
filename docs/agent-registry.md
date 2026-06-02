@@ -43,8 +43,8 @@ Status: Experimental
 ### Figma Prompt Agent
 
 File: agents/figma-prompt-agent.md
-Version: v0.1
-Status: Experimental
+Version: v0.2
+Status: Validated
 
 ## Workflow
 

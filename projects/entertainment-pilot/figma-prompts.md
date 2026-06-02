@@ -29,6 +29,16 @@ CON-01
 
 Entertainment Trip Context
 
+## Exploration Type
+
+Context
+
+This concept is classified as Context because it helps guests understand the
+relationship between entertainment interest, event timing, venue information,
+global resort categories, and broader visit considerations. It should not be
+treated as Value Communication unless specific package, loyalty, offer, or
+benefit claims are validated.
+
 ## Design Objective
 
 Explore how entertainment interest can be framed as part of a broader Resorts
@@ -101,6 +111,9 @@ Explore ways to help guests understand how an entertainment-led visit could rela
 Audience:
 Guests considering shows, nightclub events, dayclub events, tickets, tables, venue booking, or a broader Resorts World visit around entertainment timing.
 
+Exploration Type:
+Context. Explore ways to connect related information and experiences so guests can understand how entertainment interest relates to broader visit considerations. This type should guide the exploration toward relationship-mapping and contextual framing, not package, loyalty, or offer claims.
+
 Design intent:
 Explore a high-confidence planning context around event interest. The work should surface relationships among entertainment timing, verified venue information, and broader resort planning categories only where those relationships are documented or clearly marked as placeholders for validation. Encourage multiple exploratory directions rather than one final solution.
 
@@ -121,6 +134,15 @@ CON-03
 ## Concept Name
 
 Action Confidence Guide
+
+## Exploration Type
+
+Confidence
+
+This concept is classified as Confidence because it helps guests understand
+actions, choices, requirements, support paths, and decision-making information
+before selecting tickets, tables, booking, learn-more, FAQ, chat, phone, VIP,
+or support paths.
 
 ## Design Objective
 
@@ -195,6 +217,9 @@ Explore how design can help guests understand which action or support path fits 
 Audience:
 Guests comparing entertainment options who may need to choose between tickets, table service, booking, event details, venue information, FAQ answers, chat, or phone support.
 
+Exploration Type:
+Confidence. Explore ways to improve understanding and decision confidence so guests can distinguish action types, support paths, and validated decision-critical information before acting.
+
 Design intent:
 Explore decision-support patterns that clarify intent, not implementation. Help guests distinguish among action types and understand where validated decision-critical information could appear. Include VIP and premium clarity only as an exploration area that requires verified content.
 
@@ -215,6 +240,15 @@ CON-05
 ## Concept Name
 
 Entertainment Journey Continuity
+
+## Exploration Type
+
+Continuity
+
+This concept is classified as Continuity because it helps guests maintain
+orientation, progress, and understanding across a long entertainment journey
+that spans event discovery, timing, venue context, FAQ, support, footer
+information, and broader resort context.
 
 ## Design Objective
 
@@ -294,6 +328,9 @@ Explore how guests can stay oriented across the entertainment journey as they mo
 Audience:
 Desktop and mobile guests browsing entertainment options who need to connect event choices with supporting information across a long page.
 
+Exploration Type:
+Continuity. Explore ways to maintain orientation and journey flow as guests move across event discovery, supporting information, venue context, FAQ, support paths, and validated resort context.
+
 Design intent:
 Explore the Entertainment page as a connected decision journey rather than isolated sections. Help guests understand what information supports the next decision and how event browsing relates to lower-page venue, FAQ, support, and validated resort-value content. Encourage multiple exploratory directions and keep the work at the design-brief level.
 
@@ -309,11 +346,11 @@ Show how design might explore continuity across the long Entertainment journey w
 
 ## Figma Exploration Portfolio
 
-| Concept ID | Concept Name | Audience | Reuse Potential | Design Exploration Goal |
-| --- | --- | --- | --- | --- |
-| CON-01 | Entertainment Trip Context | Guests considering an entertainment-led Resorts World visit. | Medium: reusable event, navigation, content, venue, and footer components are documented, but resort-value claims require validation. | Explore how entertainment interest can connect to broader visit planning without inventing packages, loyalty benefits, offers, or operational promises. |
-| CON-03 | Action Confidence Guide | Guests choosing among tickets, tables, booking, learn-more, FAQ, chat, phone, VIP, or support paths. | High: reusable event-card, CTA, FAQ, support, venue, footer, and chat components are documented. | Explore how design can clarify action and support confidence using only validated commercial and operational facts. |
-| CON-05 | Entertainment Journey Continuity | Desktop and mobile guests moving through the long Entertainment page. | High: reusable navigation, hero, listing, card, venue, FAQ, footer, and chat components are documented. | Explore how the page can feel like a connected decision journey across discovery, venue context, FAQ, support, and validated resort-value information. |
+| Concept ID | Concept Name | Exploration Type | Audience | Reuse Potential | Design Exploration Goal |
+| --- | --- | --- | --- | --- | --- |
+| CON-01 | Entertainment Trip Context | Context | Guests considering an entertainment-led Resorts World visit. | Medium: reusable event, navigation, content, venue, and footer components are documented, but resort-value claims require validation. | Explore how entertainment interest can connect to broader visit planning without inventing packages, loyalty benefits, offers, or operational promises. |
+| CON-03 | Action Confidence Guide | Confidence | Guests choosing among tickets, tables, booking, learn-more, FAQ, chat, phone, VIP, or support paths. | High: reusable event-card, CTA, FAQ, support, venue, footer, and chat components are documented. | Explore how design can clarify action and support confidence using only validated commercial and operational facts. |
+| CON-05 | Entertainment Journey Continuity | Continuity | Desktop and mobile guests moving through the long Entertainment page. | High: reusable navigation, hero, listing, card, venue, FAQ, footer, and chat components are documented. | Explore how the page can feel like a connected decision journey across discovery, venue context, FAQ, support, and validated resort-value information. |
 
 ## Missing Inputs And Limitations
 
