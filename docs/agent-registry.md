@@ -46,6 +46,12 @@ File: agents/figma-prompt-agent.md
 Version: v0.2
 Status: Validated
 
+### Telemetry Agent
+
+File: agents/telemetry-agent.md
+Version: v0.1
+Status: Experimental
+
 ## Workflow
 
 Current State
