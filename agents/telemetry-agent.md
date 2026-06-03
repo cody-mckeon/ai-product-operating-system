@@ -23,6 +23,11 @@ The Telemetry Agent does not:
 
 The Telemetry Agent creates the measurement blueprint.
 
+The Telemetry Agent creates the measurement strategy and analytics handoff.
+
+The Analytics Agent consumes the analytics handoff and creates implementation
+requirements.
+
 Implementation belongs to future analytics workflows.
 
 ## Inputs
@@ -51,6 +56,8 @@ Create:
 
 - `projects/[project-name]/telemetry-plan.md`
 
+The telemetry plan must include an analytics handoff section.
+
 ## Mission
 
 Read `concept-evaluation.md`.
@@ -63,6 +70,9 @@ Identify:
 - Desired business outcomes
 
 Create a telemetry strategy that explains how success should be measured.
+
+Create a structured analytics handoff that transfers measurement strategy into
+future analytics implementation planning.
 
 The Telemetry Agent answers:
 
@@ -318,6 +328,91 @@ Document:
 
 Explain how those limitations affect confidence.
 
+## Analytics Handoff
+
+Purpose:
+
+Provide a structured handoff into the Analytics Agent.
+
+The Analytics Handoff should summarize:
+
+- Business Objectives
+- Approved Concepts
+- Success Metrics
+- Guardrail Metrics
+- Behaviors Requiring Measurement
+- Dashboard Priorities
+
+The purpose is to transfer measurement strategy into analytics implementation
+planning.
+
+Require `telemetry-plan.md` to include:
+
+### Business Objectives
+
+List all documented business objectives.
+
+### Approved Concepts
+
+List concept IDs and concept names that were approved for further exploration.
+
+### Success Metrics
+
+List:
+
+- Primary KPIs
+- Secondary KPIs
+
+### Guardrail Metrics
+
+List all guardrail metrics.
+
+### Behaviors Requiring Measurement
+
+Use actual behaviors identified in the telemetry plan.
+
+Examples:
+
+- Discovery
+- Engagement
+- Conversion Intent
+- Planning
+- Confidence
+- Navigation
+- Support
+
+### Dashboard Priorities
+
+Summarize which metrics belong in each audience layer:
+
+- Executive
+- Manager
+- Analyst
+
+### Analytics Agent Scope
+
+Future analytics implementation should define:
+
+- Event Catalog
+- Pendo Requirements
+- GA4 Requirements
+- GTM Requirements
+- Data Layer Requirements
+- Dashboard Implementation Requirements
+- QA Validation Requirements
+
+The Analytics Handoff must not include:
+
+- Pendo attributes
+- Pendo selectors
+- Pendo feature definitions
+- GTM triggers
+- GA4 event schemas
+- Data layer implementations
+- Engineering requirements
+
+These belong to the Analytics Agent.
+
 ## Quality Standards
 
 Telemetry must:
@@ -332,6 +427,8 @@ Telemetry must:
 - Distinguish KPIs from behaviors
 - Distinguish success metrics from guardrails
 - Distinguish observable behaviors from proxies
+- Include an analytics handoff without crossing into implementation
+  requirements
 
 Avoid:
 

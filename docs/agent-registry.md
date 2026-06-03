@@ -61,6 +61,9 @@ Status: Validated
 File: agents/telemetry-agent.md
 Version: v0.1
 Status: Experimental
+Outputs:
+- telemetry-plan.md
+- analytics handoff section
 
 ## Workflow
 
@@ -78,6 +81,10 @@ Concept Evaluation
 ↓
 Figma Prompt
 ↓
+Design Review
+↓
 Telemetry
+↓
+Analytics
 ↓
 Pilot Brief
