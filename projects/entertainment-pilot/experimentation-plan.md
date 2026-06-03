@@ -86,6 +86,48 @@ support ownership, CTA destination rules, and downstream state visibility
 remain dependencies. Implementation complexity is expected to be Medium to
 High, but this plan does not define implementation.
 
+### Dependencies
+
+- Design Review Approved: Satisfied. EXP-03: Question-Driven Planning Context
+  is approved for further exploration in `design-review.md`.
+- Analytics Readiness = Medium or High: Satisfied. Analytics readiness is
+  Medium across Pendo, GA4, GTM, dashboards, and QA.
+- Telemetry Complete: Satisfied. `telemetry-plan.md` is available and defines
+  the relevant KPIs, guardrails, hypotheses, dashboard blueprint, and analytics
+  handoff.
+- Analytics Requirements Complete: Satisfied.
+  `analytics-requirements.md` defines the required events, platforms,
+  dashboards, QA validation requirements, and implementation risks.
+- QA Validation Requirements Defined: Satisfied. QA validation requirements are
+  defined for `event_commercial_action_select`,
+  `venue_booking_action_select`, `cta_path_select`, `faq_interaction`,
+  `support_action_select`, and `friction_signal_observed`.
+- Event Catalog Defined: Satisfied. Required event catalog entries are defined
+  in `analytics-requirements.md`.
+- Pendo Requirements Defined: Satisfied. Pendo feature requirements exist for
+  event card actions, venue booking, CTA path selection, FAQ interaction,
+  support selection, and friction signals.
+- Stakeholder Approval Received: Unknown. Product, analytics, marketing,
+  support operations, entertainment ownership, and leadership review are
+  identified, but explicit approval evidence was not provided.
+
+### Execution Readiness
+
+Nearly Ready
+
+Rationale: Major measurement artifacts are present and the strongest design
+direction is approved for further exploration. Minor to moderate dependencies
+remain around stakeholder approval, FAQ answer governance, support ownership,
+CTA destination interpretation, and downstream commercial path visibility.
+
+### Can Run
+
+Can Run: No
+
+Rationale: Required measurement is defined, but stakeholder approval and
+operational content ownership are not confirmed. The experiment should move
+into operational planning only after those dependencies are resolved.
+
 ### Concept Alignment
 
 - CON-03: Action Confidence Guide
@@ -251,6 +293,50 @@ package, offer, loyalty, dining, rooms, and adjacent resort claims require
 business validation. Implementation complexity is likely High due to
 cross-functional dependencies.
 
+### Dependencies
+
+- Design Review Approved: Partially Satisfied. EXP-01:
+  Event-Anchored Timeline Context is conditionally approved, and EXP-04:
+  Multi-Event Weekend View is conditionally approved. No resort-context
+  direction is fully approved without content refinement.
+- Analytics Readiness = Medium or High: Satisfied. Analytics readiness is
+  Medium across Pendo, GA4, GTM, dashboards, and QA.
+- Telemetry Complete: Satisfied. `telemetry-plan.md` defines resort-context
+  KPIs, guardrails, hypotheses, dashboard blueprint, and analytics handoff.
+- Analytics Requirements Complete: Satisfied.
+  `analytics-requirements.md` defines `resort_context_engagement`,
+  `resort_pathway_select`, and `context_commercial_continuation`.
+- QA Validation Requirements Defined: Satisfied. QA validation requirements
+  are defined for resort-context engagement, resort pathway selection, and
+  context-to-commercial continuation.
+- Event Catalog Defined: Satisfied. Required resort-context event catalog
+  entries are defined.
+- Pendo Requirements Defined: Satisfied. Pendo requirements are defined for
+  resort context engagement, resort pathway selection, and commercial
+  continuation.
+- Stakeholder Approval Received: Not Satisfied. Explicit approval from rooms,
+  dining, offers, loyalty, resort-content, entertainment, product, analytics,
+  marketing, and leadership stakeholders was not provided.
+- Validated Resort-Value Relationships: Not Satisfied. Package, offer, loyalty,
+  dining, room, and broader resort relationship rules were not provided.
+
+### Execution Readiness
+
+Not Ready
+
+Rationale: Measurement artifacts exist, but significant business-rule and
+stakeholder dependencies remain unresolved. The experiment cannot responsibly
+move into operational planning until validated resort-value relationships and
+approvals are available.
+
+### Can Run
+
+Can Run: No
+
+Rationale: Required measurement is defined, but the experiment depends on
+validated resort-context content and cross-functional approval that are not
+present in the available artifacts.
+
 ### Concept Alignment
 
 - CON-01: Entertainment Trip Context
@@ -415,6 +501,52 @@ Rollout readiness is Medium because responsive behavior, mobile continuity,
 and lower-page state evidence are incomplete. Implementation complexity may be
 Medium to High depending on the future design expression.
 
+### Dependencies
+
+- Design Review Approved: Partially Satisfied. EXP-03 is approved for further
+  exploration and related continuity directions are conditionally approved, but
+  no complete journey-continuity rollout direction is fully approved.
+- Analytics Readiness = Medium or High: Satisfied. Analytics readiness is
+  Medium across Pendo, GA4, GTM, dashboards, and QA.
+- Telemetry Complete: Satisfied. `telemetry-plan.md` defines
+  cross-section journey continuation, lower-page support engagement, discovery
+  control engagement, guardrails, and dashboard blueprint.
+- Analytics Requirements Complete: Satisfied.
+  `analytics-requirements.md` defines `cross_section_navigation`,
+  `lower_page_support_engagement`, `discovery_control_use`,
+  `orientation_control_use`, and `journey_friction_pattern`.
+- QA Validation Requirements Defined: Satisfied. QA validation requirements
+  are defined for cross-section navigation, lower-page support engagement,
+  discovery controls, orientation controls, and journey friction.
+- Event Catalog Defined: Satisfied. Required journey-continuity event catalog
+  entries are defined.
+- Pendo Requirements Defined: Satisfied. Pendo requirements are defined for
+  page section navigation, lower-page support engagement, event listing
+  controls, orientation controls, and journey friction signals.
+- Stakeholder Approval Received: Unknown. Product, analytics, marketing,
+  design, support operations, and leadership review are identified, but
+  approval evidence was not provided.
+- Mobile And Section Mapping Confirmed: Partially Satisfied. Analytics
+  requirements define source and destination metadata, but mobile anchor
+  behavior, full mobile states, scroll-linked behavior, and section exposure
+  are incomplete.
+
+### Execution Readiness
+
+Nearly Ready
+
+Rationale: Measurement coverage is defined and concept confidence is high, but
+section mapping, mobile continuity evidence, audience segmentation, and
+stakeholder approval need refinement before operational planning.
+
+### Can Run
+
+Can Run: No
+
+Rationale: The experiment has sufficient measurement direction, but dependency
+status is only partially satisfied for design readiness, mobile behavior, and
+section mapping.
+
 ### Concept Alignment
 
 - CON-05: Entertainment Journey Continuity
@@ -577,6 +709,48 @@ CON-01, CON-03, and CON-05. Measurement confidence is Medium because
 controls, date-picker states, result states, empty states, and post-filter
 states are not confirmed. Rollout readiness is Low to Medium because this is
 best used to learn before committing to a larger design direction.
+
+### Dependencies
+
+- Design Review Approved: Partially Satisfied. Date and visit-window
+  directions are conditionally approved, but the date/mobile discovery concept
+  was not selected as a Tier 1 design exploration concept.
+- Analytics Readiness = Medium or High: Satisfied. Analytics readiness is
+  Medium across Pendo, GA4, GTM, dashboards, and QA.
+- Telemetry Complete: Satisfied. `telemetry-plan.md` defines Discovery Control
+  Engagement and related continuity metrics.
+- Analytics Requirements Complete: Satisfied.
+  `analytics-requirements.md` defines `discovery_control_use` and
+  `orientation_control_use`.
+- QA Validation Requirements Defined: Satisfied. QA validation requirements are
+  defined for discovery controls and orientation controls.
+- Event Catalog Defined: Satisfied. Required discovery and orientation event
+  catalog entries are defined.
+- Pendo Requirements Defined: Satisfied. Pendo requirements are defined for
+  event listing controls and orientation controls.
+- Stakeholder Approval Received: Unknown. Product, analytics, design,
+  marketing, and leadership review are identified, but approval evidence was
+  not provided.
+- Mobile State Evidence Complete: Not Satisfied. Opened mobile controls,
+  date-picker states, calendar states, empty states, loading states,
+  post-filter states, and post-load-more states were not provided.
+
+### Execution Readiness
+
+Not Ready
+
+Rationale: Measurement artifacts exist, but the experiment is a discovery
+study with significant evidence gaps around mobile controls, result states,
+and post-control behavior. Additional preparation is required before
+operational planning.
+
+### Can Run
+
+Can Run: No
+
+Rationale: Required measurement is partly defined, but the available artifacts
+do not provide enough state evidence to run the study cleanly through a future
+orchestration workflow.
 
 ### Concept Alignment
 
@@ -909,31 +1083,60 @@ limitations.
 
 ## Experimentation Handoff
 
-### Experiments Ready To Run
+### Ready To Run
+
+None.
+
+Rationale: No proposed experiment currently has `Execution Readiness: Ready`
+and `Can Run: Yes`. All experiments depend on unresolved approval,
+operational ownership, business-rule validation, mobile-state evidence, or
+measurement confirmation.
+
+### Nearly Ready
 
 - EXP-001: Question-Driven Action Confidence Validation
-- EXP-002: Entertainment-to-Resort Context Validation
-
-These experiments are the strongest candidates for future operational planning.
-They should not be run until the required analytics implementation is
-confirmed, operational content ownership is validated, and experiment
-operations confirms execution readiness.
-
-### Experiments Requiring Refinement
-
 - EXP-003: Connected Entertainment Journey Validation
 
-This experiment requires refinement around section definitions, mobile
-continuity evidence, source/destination mapping, and audience segmentation
-before execution.
+Rationale: These experiments have substantial measurement support and strong
+concept or design confidence, but `Can Run: No` until remaining dependencies
+are resolved.
 
-### Experiments Requiring Additional Measurement
+Dependency status summary:
 
+- EXP-001 has satisfied analytics, telemetry, event catalog, Pendo, dashboard,
+  and QA dependencies, but stakeholder approval, FAQ governance, support
+  ownership, and CTA destination interpretation are unresolved.
+- EXP-003 has satisfied analytics and telemetry dependencies, but design
+  readiness, mobile continuity evidence, section mapping, audience
+  segmentation, and stakeholder approval remain partially satisfied or
+  unknown.
+
+Can Run status:
+
+- EXP-001: Can Run: No
+- EXP-003: Can Run: No
+
+### Blocked
+
+- EXP-002: Entertainment-to-Resort Context Validation
 - EXP-004: Date and Mobile Discovery Continuity Study
 
-This experiment requires additional confidence in mobile control availability,
-date-picker states, result states, empty/loading states, and post-control
-behavior before it can become a stronger validation experiment.
+Rationale: These experiments have significant unresolved dependencies that
+block operational planning.
+
+Blocking dependencies:
+
+- EXP-002 requires validated resort-value relationships and explicit approval
+  from relevant resort, entertainment, product, marketing, analytics, and
+  leadership stakeholders before it can run.
+- EXP-004 requires additional mobile-state evidence, date-picker state
+  evidence, result-state evidence, and post-control behavior confidence before
+  it can run.
+
+Can Run status:
+
+- EXP-002: Can Run: No
+- EXP-004: Can Run: No
 
 ### Recommended Execution Order
 
@@ -973,8 +1176,12 @@ This experimentation plan:
 - Includes experiment classification.
 - Includes experiment priority.
 - Includes decision ownership.
+- Includes dependency mapping.
+- Includes execution readiness.
+- Includes machine-readable run status.
 - Includes guardrail metrics.
 - Includes rollout guidance.
+- Supports future orchestration workflows.
 - Remains implementation agnostic.
 
 ## Expected Output Summary
