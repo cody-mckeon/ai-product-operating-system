@@ -180,6 +180,88 @@ Explain the priority rationale.
 Experiment priority should support future Pilot Orchestrator sequencing and
 prioritization.
 
+### Dependencies
+
+Document requirements that must be satisfied before the experiment can run.
+
+Examples:
+
+- Design Review Approved
+- Analytics Readiness = Medium or High
+- Telemetry Complete
+- Analytics Requirements Complete
+- QA Validation Requirements Defined
+- Event Catalog Defined
+- Pendo Requirements Defined
+- Stakeholder Approval Received
+
+Dependencies should be grounded in available project artifacts.
+
+Do not invent dependencies.
+
+For each dependency identify whether it is:
+
+- Satisfied
+- Partially Satisfied
+- Not Satisfied
+- Unknown
+
+Explain the dependency status using available project evidence.
+
+### Execution Readiness
+
+Classify execution readiness as:
+
+- Ready
+- Nearly Ready
+- Not Ready
+
+Definitions:
+
+Ready:
+
+- All major dependencies are satisfied.
+- The experiment could reasonably move into operational planning.
+
+Nearly Ready:
+
+- Minor dependencies remain unresolved.
+- The experiment is close to operational planning readiness.
+
+Not Ready:
+
+- Significant dependencies remain unresolved.
+- Additional preparation is required before operational planning.
+
+Explain the readiness rationale.
+
+### Can Run
+
+Classify as:
+
+- Yes
+- No
+
+Purpose:
+
+Provide a machine-readable signal for future Pilot Orchestrator workflows.
+
+Can Run should be determined by:
+
+- Dependency status
+- Readiness assessment
+- Availability of required measurement
+
+Use the format:
+
+Can Run: Yes
+
+or
+
+Can Run: No
+
+Explain the rationale.
+
 ### Concept Alignment
 
 ### Business Objective Alignment
@@ -352,21 +434,62 @@ Create a handoff section for future operational execution.
 
 Include:
 
-### Experiments Ready To Run
+### Ready To Run
 
-List experiments with sufficient analytics readiness, measurement confidence,
-concept confidence, and rollout readiness.
+Group experiments where:
 
-### Experiments Requiring Refinement
+- Execution Readiness is Ready
+- Major dependencies are satisfied
+- Can Run is Yes
 
-List experiments that need clearer hypothesis framing, audience definition,
-rollout guidance, decision ownership, or concept alignment before execution.
+Include:
 
-### Experiments Requiring Additional Measurement
+- Experiments ready for operational planning
+- Dependency status summary
+- Success metrics
+- Guardrails
+- Rollout recommendations
+- Decision rules
+- Decision ownership
+- Can Run status
 
-List experiments that cannot be reasonably measured using the approved
-analytics requirements without additional measurement definition or analytics
-implementation requirements.
+Provide rationale.
+
+### Nearly Ready
+
+Group experiments where:
+
+- Execution Readiness is Nearly Ready
+- Minor dependencies remain unresolved or partially satisfied
+- Can Run is No until dependencies are resolved
+
+Include:
+
+- Experiments close to operational planning readiness
+- Unresolved dependencies
+- Required refinement
+- Required measurement confirmation
+- Can Run status
+
+Provide rationale.
+
+### Blocked
+
+Group experiments where:
+
+- Execution Readiness is Not Ready
+- Significant dependencies remain unresolved
+- Can Run is No
+
+Include:
+
+- Experiments blocked from operational planning
+- Blocking dependencies
+- Missing measurement requirements
+- Missing artifact requirements
+- Can Run status
+
+Provide rationale.
 
 ### Recommended Execution Order
 
@@ -382,6 +505,9 @@ Include:
 - Guardrails
 - Rollout recommendations
 - Decision rules
+- Dependency status
+- Execution readiness
+- Can Run status
 
 Do not implement experiments.
 
@@ -401,8 +527,12 @@ Experimentation plans must:
 - Include experiment classification
 - Include experiment priority
 - Include decision ownership
+- Include dependency mapping
+- Include execution readiness
+- Include machine-readable run status
 - Include guardrail metrics
 - Include rollout guidance
+- Support future orchestration workflows
 - Remain implementation agnostic
 
 ## Expected Output Summary

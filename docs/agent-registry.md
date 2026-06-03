@@ -42,6 +42,16 @@ Outputs documented: Yes
 Review structure documented: Yes
 Approval status documented: Yes
 
+### Experimentation Agent
+
+File: agents/experimentation-agent.md
+Version: v1.1
+Status: Stable
+Enhancements:
+- Dependency Mapping
+- Execution Readiness
+- Orchestrator Compatibility
+
 ## Experimental Agents
 
 ### Concept Evaluation Agent
@@ -70,12 +80,6 @@ Outputs:
 File: agents/analytics-agent.md
 Version: v0.1
 Status: Experimental
-
-### Experimentation Agent
-
-File: agents/experimentation-agent.md
-Version: v0.2
-Status: Ready For Validation
 
 ## Workflow
 
