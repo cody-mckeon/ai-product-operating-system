@@ -118,6 +118,16 @@ Document:
 - BO-02
 - BO-03
 
+For each business objective include:
+
+### Concept Alignment
+
+Associated Concept IDs:
+
+- CON-01
+- CON-03
+- CON-05
+
 Derive objectives from:
 
 - Recommendations
@@ -135,6 +145,7 @@ Include:
 - KPI Name
 - Definition
 - Why It Matters
+- Concept Alignment
 
 ### Secondary KPIs
 
@@ -143,6 +154,17 @@ Include:
 - KPI Name
 - Definition
 - Why It Matters
+- Concept Alignment
+
+### Concept Alignment
+
+For each KPI document the associated concept IDs.
+
+Example:
+
+- CON-01
+- CON-03
+- CON-05
 
 ## Guardrail Metrics
 
@@ -188,6 +210,17 @@ Each hypothesis must include:
 - Expected behavior change
 - Success criteria
 - Associated KPI
+- Concept Alignment
+
+### Concept Alignment
+
+For each hypothesis document the associated concept IDs.
+
+Example:
+
+- CON-01
+- CON-03
+- CON-05
 
 Example:
 
@@ -243,6 +276,23 @@ Examples:
 - Friction
 - Cross-Experience Exploration
 
+### Dashboard Priority
+
+For each dashboard section classify the intended audience priority:
+
+- Executive
+- Manager
+- Analyst
+
+Examples:
+
+- Primary Conversion
+  Priority: Executive
+- Discovery
+  Priority: Manager
+- Friction
+  Priority: Analyst
+
 Do not create actual dashboards.
 
 ## Leadership Success Criteria
@@ -274,6 +324,8 @@ Telemetry must:
 
 - Trace back to approved concepts
 - Trace back to recommendations
+- Include concept alignment for business objectives, KPIs, and hypotheses
+- Prioritize dashboard sections by intended audience
 - Remain implementation agnostic
 - Remain leadership-readable
 - Focus on measurable outcomes
