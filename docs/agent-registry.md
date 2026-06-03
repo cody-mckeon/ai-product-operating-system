@@ -71,6 +71,12 @@ File: agents/analytics-agent.md
 Version: v0.1
 Status: Experimental
 
+### Experimentation Agent
+
+File: agents/experimentation-agent.md
+Version: v0.1
+Status: Experimental
+
 ## Workflow
 
 Current State
@@ -93,4 +99,6 @@ Telemetry
 ↓
 Analytics
 ↓
-Pilot Brief
+Experimentation
+↓
+Pilot Orchestrator
