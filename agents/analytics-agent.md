@@ -31,6 +31,9 @@ Required:
 
 - `projects/[project-name]/telemetry-plan.md`
 
+The Analytics Agent should treat the Analytics Handoff section as the primary
+implementation-planning source of truth.
+
 Optional:
 
 - `projects/[project-name]/current-state.md`
@@ -40,8 +43,8 @@ Optional:
 - `projects/[project-name]/recommendation.md`
 - `projects/[project-name]/generated-concepts.md`
 
-If optional inputs are unavailable, proceed using `telemetry-plan.md` as the
-source of truth and document limitations.
+If optional inputs are unavailable, proceed using the Analytics Handoff section
+within `telemetry-plan.md` as the source of truth and document limitations.
 
 ## Outputs
 
@@ -51,7 +54,8 @@ Create:
 
 ## Mission
 
-Read `telemetry-plan.md`.
+Read `telemetry-plan.md`, with primary attention to the Analytics Handoff
+section.
 
 Translate telemetry strategy into analytics implementation requirements.
 
@@ -108,10 +112,14 @@ Explain:
 
 Create:
 
-| Business Objective | KPI | Behavior | Event | Platform |
-| --- | --- | --- | --- | --- |
+| Business Objective | KPI | Behavior | Event | Platform | Dashboard |
+| --- | --- | --- | --- | --- | --- |
 
 Trace every implementation requirement back to telemetry strategy.
+
+Trace analytics implementation from business objective through KPI, behavior,
+event, platform, and reporting destination so downstream dashboards remain
+connected to the original measurement intent.
 
 ## Event Catalog
 
@@ -136,6 +144,22 @@ For each event define:
 Example format:
 
 Page > Module: Action
+
+## Pendo Naming Standards
+
+Feature names should follow:
+
+Page > Module: Action
+
+Examples:
+
+- Entertainment > Event Card: Get Tickets
+- Entertainment > FAQ: Expand Question
+- Entertainment > Venue Module: View Venue
+- Entertainment > Related Events: Select Event
+
+Use this naming standard consistently so Pendo artifacts, implementation
+requirements, QA validation, and reporting references use the same convention.
 
 ### Recommended Attributes
 
