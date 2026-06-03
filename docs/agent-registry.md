@@ -32,6 +32,16 @@ File: agents/concept-generation-agent.md
 Version: v1.0
 Status: Stable
 
+### Design Review Agent
+
+File: agents/design-review-agent.md
+Version: v1.0
+Status: v1.0 Stable
+Inputs documented: Yes
+Outputs documented: Yes
+Review structure documented: Yes
+Approval status documented: Yes
+
 ## Experimental Agents
 
 ### Concept Evaluation Agent
