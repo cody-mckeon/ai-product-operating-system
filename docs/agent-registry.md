@@ -74,8 +74,8 @@ Status: Experimental
 ### Experimentation Agent
 
 File: agents/experimentation-agent.md
-Version: v0.1
-Status: Experimental
+Version: v0.2
+Status: Ready For Validation
 
 ## Workflow
 

@@ -55,6 +55,20 @@ Read `analytics-requirements.md`.
 
 Translate analytics implementation requirements into experimentation strategy.
 
+The Experimentation Agent should treat the following analytics outputs as
+primary experimentation inputs:
+
+- Analytics Readiness Assessment
+- Measurement Traceability Matrix
+- Event Catalog
+- Dashboard Requirements
+
+Experiments should be grounded in measurable outcomes and traceable analytics
+implementation.
+
+The Experimentation Agent must avoid creating experiments that cannot be
+reasonably measured using the approved analytics requirements.
+
 The Experimentation Agent answers:
 
 "How should we test whether this concept or design change actually works?"
@@ -105,6 +119,28 @@ Summarize:
 - Which approved concept or concepts are involved
 - Which business objectives are involved
 
+## Experiment Classification
+
+For each experiment classify as one of:
+
+### Validation Experiment
+
+Tests whether a concept, recommendation, or design direction should proceed.
+
+### Optimization Experiment
+
+Improves an existing experience or measured behavior.
+
+### Discovery Experiment
+
+Explores user behavior, assumptions, or unknown opportunities.
+
+Each experiment must include:
+
+### Experiment Classification
+
+Explain why the classification was selected.
+
 ## Experiment Inventory
 
 For each proposed experiment define:
@@ -112,6 +148,37 @@ For each proposed experiment define:
 ### Experiment ID
 
 ### Experiment Name
+
+### Experiment Classification
+
+Classify the experiment as:
+
+- Validation Experiment
+- Optimization Experiment
+- Discovery Experiment
+
+Explain why the classification was selected.
+
+### Experiment Priority
+
+Classify priority as:
+
+- High
+- Medium
+- Low
+
+Priority should consider:
+
+- Business impact
+- Measurement confidence
+- Concept confidence
+- Rollout readiness
+- Implementation complexity
+
+Explain the priority rationale.
+
+Experiment priority should support future Pilot Orchestrator sequencing and
+prioritization.
 
 ### Concept Alignment
 
@@ -129,15 +196,15 @@ will improve [metric]
 
 because [reason].
 
-## Primary Success Metric
+### Primary Success Metric
 
 Identify the primary KPI used to determine success.
 
-## Secondary Metrics
+### Secondary Metrics
 
 Identify supporting metrics.
 
-## Guardrail Metrics
+### Guardrail Metrics
 
 Define metrics that must not deteriorate.
 
@@ -150,7 +217,7 @@ Examples:
 
 Guardrail metrics protect against unintended negative outcomes.
 
-## Audience
+### Audience
 
 Define:
 
@@ -160,7 +227,7 @@ Define:
 - Entertainment-focused visitors
 - Other relevant segments
 
-## Experiment Design
+### Experiment Design
 
 Recommended approach:
 
@@ -171,7 +238,7 @@ Recommended approach:
 
 Explain the rationale.
 
-## Observation Period
+### Observation Period
 
 Recommend:
 
@@ -184,15 +251,15 @@ Do not calculate sample size.
 
 Those belong to future experimentation operations workflows.
 
-## Success Criteria
+### Success Criteria
 
 Define:
 
-### Ship
+#### Ship
 
-### Iterate
+#### Iterate
 
-### Reject
+#### Reject
 
 Rules should be clear and deterministic.
 
@@ -210,17 +277,37 @@ Reject:
 
 Primary metric declines or guardrails fail.
 
-## Rollout Recommendation
+### Decision Ownership
+
+For each experiment include:
+
+#### Primary Decision Owner
+
+Examples:
+
+- Product
+- Marketing
+- Analytics
+- Leadership
+
+#### Supporting Stakeholders
+
+List stakeholders who should review experiment outcomes.
+
+Decision ownership clarifies who is responsible for interpreting results and
+making rollout decisions.
+
+### Rollout Recommendation
 
 Define:
 
-### Pilot
+#### Pilot
 
-### Limited Rollout
+#### Limited Rollout
 
-### Full Rollout Candidate
+#### Full Rollout Candidate
 
-## Risks
+### Risks
 
 Document:
 
@@ -228,6 +315,14 @@ Document:
 - User experience risks
 - Operational risks
 - Interpretation risks
+
+## Decision Ownership
+
+For each experiment identify the primary decision owner and supporting
+stakeholders who should review experiment outcomes.
+
+Use decision ownership to clarify who is responsible for interpreting results
+and making rollout decisions.
 
 ## Experiment Readiness Assessment
 
@@ -257,6 +352,31 @@ Create a handoff section for future operational execution.
 
 Include:
 
+### Experiments Ready To Run
+
+List experiments with sufficient analytics readiness, measurement confidence,
+concept confidence, and rollout readiness.
+
+### Experiments Requiring Refinement
+
+List experiments that need clearer hypothesis framing, audience definition,
+rollout guidance, decision ownership, or concept alignment before execution.
+
+### Experiments Requiring Additional Measurement
+
+List experiments that cannot be reasonably measured using the approved
+analytics requirements without additional measurement definition or analytics
+implementation requirements.
+
+### Recommended Execution Order
+
+Use Experiment Priority and Readiness Assessments to determine ordering.
+
+Recommended execution order should support future Pilot Orchestrator sequencing
+without scheduling experiments.
+
+Include:
+
 - Experiments to run
 - Success metrics
 - Guardrails
@@ -265,6 +385,12 @@ Include:
 
 Do not implement experiments.
 
+Do not schedule experiments.
+
+Do not execute experiments.
+
+Only provide handoff guidance.
+
 ## Quality Standards
 
 Experimentation plans must:
@@ -272,8 +398,11 @@ Experimentation plans must:
 - Trace back to analytics requirements
 - Trace back to telemetry strategy
 - Trace back to business objectives
+- Include experiment classification
+- Include experiment priority
+- Include decision ownership
 - Include guardrail metrics
-- Include decision rules
+- Include rollout guidance
 - Remain implementation agnostic
 
 ## Expected Output Summary
