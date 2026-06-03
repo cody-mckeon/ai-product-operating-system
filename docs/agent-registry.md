@@ -65,6 +65,12 @@ Outputs:
 - telemetry-plan.md
 - analytics handoff section
 
+### Analytics Agent
+
+File: agents/analytics-agent.md
+Version: v0.1
+Status: Experimental
+
 ## Workflow
 
 Current State
