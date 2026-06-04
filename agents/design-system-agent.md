@@ -104,6 +104,7 @@ This document captures the normalized design language and includes:
 - Design Debt
 - Design System Coverage Assessment
 - Source Of Truth Classification
+- Design System Version Assessment
 - Design System Readiness Assessment
 - Future Component Library Candidates
 
@@ -121,6 +122,7 @@ This document captures the evidence trail behind design-system conclusions and i
 - Unknowns and gaps
 - Coverage assessment evidence
 - Source of truth classification evidence
+- Version assessment evidence
 - Future audit notes
 
 Every material conclusion in `design-system.md` must be traceable to evidence in `design-evidence.md`.
@@ -321,7 +323,30 @@ Examples:
 
 Use the most reliable available source for each area. If a design area has conflicting or incomplete sources, document the conflict and assign the confidence level accordingly.
 
-### Step 16: Assess Design System Readiness
+### Step 16: Assess Design System Version
+
+Create a Design System Version Assessment that assigns a documentation maturity version to each major design-system area.
+
+Example:
+
+- Brand Foundation: v1.0
+- Typography: v0.8
+- Color System: v1.0
+- Components: v0.4
+- Responsive: v0.5
+
+Version numbers should communicate documentation maturity, not release status. Use evidence quality, completeness, source-of-truth clarity, and observed coverage to determine the version.
+
+Recommended interpretation:
+
+- v1.0: Well documented, evidence-backed, and reliable for future work.
+- v0.8: Mostly documented with minor gaps or limited unresolved evidence.
+- v0.5: Partially documented with meaningful gaps.
+- v0.4 or lower: Barely documented, inconsistent, or weakly evidenced.
+
+Each version must include a short rationale and evidence reference so leadership can quickly understand which parts of the design system are mature and which remain underdocumented.
+
+### Step 17: Assess Design System Readiness
 
 Create a Design System Readiness Assessment using High, Medium, or Low for:
 
@@ -334,7 +359,7 @@ Create a Design System Readiness Assessment using High, Medium, or Low for:
 
 Each rating must include a short rationale and evidence reference.
 
-### Step 17: Identify Future Component Library Candidates
+### Step 18: Identify Future Component Library Candidates
 
 Create a Future Component Library Candidates section with:
 
@@ -345,7 +370,7 @@ Create a Future Component Library Candidates section with:
 
 Candidates should come from observed reuse, not imagined future needs.
 
-### Step 18: Create Design Evidence Artifact
+### Step 19: Create Design Evidence Artifact
 
 Create `design-evidence.md` with tables or structured sections that connect conclusions to evidence.
 
@@ -361,6 +386,7 @@ Recommended evidence fields:
 - Source Of Truth
 - Confidence Level
 - Coverage Level
+- Version Assessment
 - Notes or Limitations
 
 Confidence levels:
@@ -484,6 +510,19 @@ Example structure:
 | Buttons | Inspect Exports | Production screenshots | High | Inspect export confirms measurable properties. |
 | Cards | Production Screenshots | Current-state documentation | Medium | Structure observed, exact spacing unknown. |
 
+## Design System Version Assessment
+
+Assign a documentation maturity version to each major design-system area.
+
+Example structure:
+
+| Design Area | Version | Maturity Rationale | Evidence Reference | Notes |
+| --- | --- | --- | --- | --- |
+| Brand Foundation | v1.0 | Brand guidance is complete and directly documented. | Brand Guidelines | Ready for downstream use. |
+| Typography | v0.8 | Hierarchy is documented, but exact production measurements are incomplete. | Brand Guidelines, Production Screenshots | Inspect export needed for full confidence. |
+| Components | v0.4 | Reusable patterns are observed but not fully specified. | Production Screenshots | Component states and measurements are missing. |
+| Responsive | v0.5 | Desktop and mobile evidence exists, but tablet behavior is unclear. | Desktop screenshots, Mobile screenshots | Tablet evidence needed. |
+
 ## Design System Readiness Assessment
 
 Use High, Medium, or Low for:
@@ -520,8 +559,8 @@ Document missing brand sections, screenshots, inspect exports, devices, flows, o
 
 Use this structure where possible:
 
-| Design Area | Component / Pattern | Source Screenshot | Source Inspect Export | Observed Properties | Conclusion Supported | Source Of Truth | Confidence Level | Coverage Level | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Design Area | Component / Pattern | Source Screenshot | Source Inspect Export | Observed Properties | Conclusion Supported | Source Of Truth | Confidence Level | Coverage Level | Version Assessment | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 ### Component Evidence
 
@@ -545,6 +584,10 @@ Document the evidence behind Brand Coverage, Desktop Coverage, Tablet Coverage, 
 
 Document why each design area was assigned its source of truth, including conflicts, missing evidence, or supporting sources.
 
+### Version Assessment Evidence
+
+Document why each design area received its documentation maturity version, including evidence strength, completeness, source-of-truth clarity, and unresolved gaps.
+
 ## 10. Quality Standards
 
 - Trace conclusions to evidence.
@@ -553,6 +596,7 @@ Document why each design area was assigned its source of truth, including confli
 - Document confidence levels.
 - Document coverage levels.
 - Classify source of truth by design area.
+- Assign documentation maturity versions by design area.
 - Identify gaps.
 - Remain documentation focused.
 - Separate documented rules from observed patterns.
