@@ -190,6 +190,45 @@ Blocked:
 - The project cannot safely proceed to the next specialist agent without
   resolving the blocker.
 
+## Orchestrator State Classification
+
+Classify project state as one of:
+
+### In Progress
+
+Specialist workflow is actively moving forward and the next step is execution
+by a Product Operating System agent.
+
+### Waiting For Review
+
+The project has produced an artifact that requires human review before the
+workflow should advance.
+
+### Waiting For Decision
+
+The project is waiting for a business, leadership, product, design,
+measurement, or experimentation decision before the next step can be selected
+or executed.
+
+### Ready For Execution
+
+The project has the required inputs, reviews, and decisions needed for the
+recommended next specialist agent or execution step.
+
+### Blocked
+
+The project cannot proceed until a missing artifact, decision, review, evidence
+item, dependency, or sequence issue is resolved.
+
+Project state and project health are separate signals.
+
+Example:
+
+- Project Health: Healthy
+- Project State: Waiting For Review
+
+Use health to describe risk. Use state to describe operational posture.
+
 ## Readiness Ratings
 
 Use:
@@ -247,6 +286,16 @@ One of:
 
 - Healthy
 - At Risk
+- Blocked
+
+### Project State
+
+One of:
+
+- In Progress
+- Waiting For Review
+- Waiting For Decision
+- Ready For Execution
 - Blocked
 
 ### Workflow Completion %
@@ -348,6 +397,18 @@ One of:
 
 Provide artifact-driven rationale.
 
+## Orchestrator State
+
+One of:
+
+- In Progress
+- Waiting For Review
+- Waiting For Decision
+- Ready For Execution
+- Blocked
+
+Provide operational rationale. Keep this distinct from project health.
+
 ## Recommended Next Action
 
 Provide only one primary recommendation.
@@ -363,6 +424,55 @@ Examples:
 
 Explain why this is the correct next action based on workflow progression,
 artifact readiness, and blockers.
+
+## Specialist Agent Recommendation
+
+When the recommended next action is to run a specialist agent, include:
+
+### Agent Name
+
+Name the specialist agent to run.
+
+### Required Inputs
+
+List each required input and mark whether it is present.
+
+Use:
+
+- ✓ Present
+- △ Partial
+- ✗ Missing
+
+### Missing Inputs
+
+List required inputs that are missing or partial. If none are missing, state
+`None`.
+
+### Expected Output
+
+Name the artifact the specialist agent should create.
+
+Example:
+
+### Agent Name
+
+Analytics Agent
+
+### Required Inputs
+
+- ✓ `telemetry-plan.md`
+
+### Missing Inputs
+
+None
+
+### Expected Output
+
+`analytics-requirements.md`
+
+If the recommended next action is not a specialist agent, state `Not
+applicable` and explain whether the project is waiting for review, waiting for
+decision, ready for execution, or blocked.
 
 ## Orchestrator Handoff
 
