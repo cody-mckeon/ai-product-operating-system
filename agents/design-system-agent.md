@@ -102,6 +102,8 @@ This document captures the normalized design language and includes:
 - Responsive Patterns
 - Accessibility Observations
 - Design Debt
+- Design System Coverage Assessment
+- Source Of Truth Classification
 - Design System Readiness Assessment
 - Future Component Library Candidates
 
@@ -117,6 +119,8 @@ This document captures the evidence trail behind design-system conclusions and i
 - Observed properties
 - Confidence levels
 - Unknowns and gaps
+- Coverage assessment evidence
+- Source of truth classification evidence
 - Future audit notes
 
 Every material conclusion in `design-system.md` must be traceable to evidence in `design-evidence.md`.
@@ -292,7 +296,32 @@ Document design debt as evidence-based gaps, inconsistencies, undocumented varia
 
 Design debt should remain documentation focused. Do not convert design debt into redesign concepts, implementation plans, telemetry plans, or analytics requirements.
 
-### Step 14: Assess Design System Readiness
+### Step 14: Assess Design System Coverage
+
+Create a Design System Coverage Assessment using High, Medium, or Low for:
+
+- Brand Coverage
+- Desktop Coverage
+- Tablet Coverage
+- Mobile Coverage
+- Component Coverage
+- Inspect Coverage
+
+Each coverage rating must evaluate whether the available evidence is sufficient to trust the documented design-system conclusions. Coverage should measure evidence sufficiency, not design quality.
+
+### Step 15: Classify Sources Of Truth
+
+Create a Source Of Truth Classification section that identifies the strongest source of truth for each design area.
+
+Examples:
+
+- Typography: Brand Guidelines
+- Buttons: Inspect Exports
+- Cards: Production Screenshots
+
+Use the most reliable available source for each area. If a design area has conflicting or incomplete sources, document the conflict and assign the confidence level accordingly.
+
+### Step 16: Assess Design System Readiness
 
 Create a Design System Readiness Assessment using High, Medium, or Low for:
 
@@ -305,7 +334,7 @@ Create a Design System Readiness Assessment using High, Medium, or Low for:
 
 Each rating must include a short rationale and evidence reference.
 
-### Step 15: Identify Future Component Library Candidates
+### Step 17: Identify Future Component Library Candidates
 
 Create a Future Component Library Candidates section with:
 
@@ -316,7 +345,7 @@ Create a Future Component Library Candidates section with:
 
 Candidates should come from observed reuse, not imagined future needs.
 
-### Step 16: Create Design Evidence Artifact
+### Step 18: Create Design Evidence Artifact
 
 Create `design-evidence.md` with tables or structured sections that connect conclusions to evidence.
 
@@ -329,7 +358,9 @@ Recommended evidence fields:
 - Source Inspect Export
 - Observed Properties
 - Conclusion Supported
+- Source Of Truth
 - Confidence Level
+- Coverage Level
 - Notes or Limitations
 
 Confidence levels:
@@ -430,6 +461,29 @@ For each card type:
 
 ## Design Debt
 
+## Design System Coverage Assessment
+
+Use High, Medium, or Low for:
+
+- Brand Coverage
+- Desktop Coverage
+- Tablet Coverage
+- Mobile Coverage
+- Component Coverage
+- Inspect Coverage
+
+## Source Of Truth Classification
+
+For each design area, document the strongest available source of truth.
+
+Example structure:
+
+| Design Area | Source Of Truth | Supporting Evidence | Confidence Level | Notes |
+| --- | --- | --- | --- | --- |
+| Typography | Brand Guidelines | Production screenshots | High | Exact production measurements unavailable. |
+| Buttons | Inspect Exports | Production screenshots | High | Inspect export confirms measurable properties. |
+| Cards | Production Screenshots | Current-state documentation | Medium | Structure observed, exact spacing unknown. |
+
 ## Design System Readiness Assessment
 
 Use High, Medium, or Low for:
@@ -466,8 +520,8 @@ Document missing brand sections, screenshots, inspect exports, devices, flows, o
 
 Use this structure where possible:
 
-| Design Area | Component / Pattern | Source Screenshot | Source Inspect Export | Observed Properties | Conclusion Supported | Confidence Level | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| Design Area | Component / Pattern | Source Screenshot | Source Inspect Export | Observed Properties | Conclusion Supported | Source Of Truth | Confidence Level | Coverage Level | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 ### Component Evidence
 
@@ -483,12 +537,22 @@ For each documented component:
 
 List evidence needed to improve documentation confidence.
 
+### Coverage Assessment Evidence
+
+Document the evidence behind Brand Coverage, Desktop Coverage, Tablet Coverage, Mobile Coverage, Component Coverage, and Inspect Coverage ratings.
+
+### Source Of Truth Classification Evidence
+
+Document why each design area was assigned its source of truth, including conflicts, missing evidence, or supporting sources.
+
 ## 10. Quality Standards
 
 - Trace conclusions to evidence.
 - Avoid inventing design rules.
 - Avoid guessing measurements.
 - Document confidence levels.
+- Document coverage levels.
+- Classify source of truth by design area.
 - Identify gaps.
 - Remain documentation focused.
 - Separate documented rules from observed patterns.
