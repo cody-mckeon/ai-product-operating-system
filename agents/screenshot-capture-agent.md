@@ -20,6 +20,7 @@ Required:
 Optional:
 
 - Output Directory
+- Lazy-load settings
 
 If no output directory is provided, store screenshots under:
 
@@ -94,10 +95,42 @@ Use Playwright to capture evidence.
 Required behavior:
 
 - Capture full-page screenshots.
-- Wait for network idle before capture.
+- Wait for network idle before capture or log a warning when network idle does not complete in time.
+- Perform pre-capture lazy-loaded content handling before capture.
 - Use basic error handling for page navigation and screenshot failures.
 - Capture failures in logs.
 - Continue processing remaining URLs when one URL fails.
+
+### Lazy-Loaded Content Handling
+
+The Screenshot Capture Agent performs a pre-capture page traversal to encourage loading of:
+
+- Lazy-loaded images
+- Deferred modules
+- Below-the-fold content
+
+This improves screenshot completeness and Design System evidence quality.
+
+Default lazy-load settings:
+
+| Setting | Default |
+| --- | --- |
+| `lazy_load_enabled` | `true` |
+| `scroll_delay_ms` | `250` |
+| `bottom_wait_ms` | `3000` |
+| `top_wait_ms` | `1000` |
+
+The pre-capture traversal should:
+
+- Determine page height.
+- Incrementally scroll from top to bottom.
+- Pause briefly during scrolling.
+- Wait after reaching the bottom of the page.
+- Wait for image loading where possible.
+- Return to the top of the page.
+- Wait again before screenshot capture.
+
+If scrolling fails, the agent should log a warning and continue the capture attempt.
 
 ## 9. Workflow
 
@@ -123,6 +156,7 @@ For each URL:
 
 - Open the page in a desktop viewport.
 - Wait for network idle.
+- Run lazy-loaded content handling.
 - Record HTTP status, final URL, and redirect state.
 - Save a full-page screenshot as `[page]-desktop-full.png`.
 - Record metadata.
@@ -133,6 +167,7 @@ For each URL:
 
 - Open the page in a mobile viewport.
 - Wait for network idle.
+- Run lazy-loaded content handling.
 - Record HTTP status, final URL, and redirect state.
 - Save a full-page screenshot as `[page]-mobile-full.png`.
 - Record metadata.
@@ -142,6 +177,13 @@ For each URL:
 Write `metadata.json` after the capture run.
 
 Write `capture.log` with run start, run end, successful captures, and failures.
+
+The log should also indicate:
+
+- Lazy-load pass started.
+- Scroll completed.
+- Screenshot captured.
+- Lazy-load warnings when scrolling fails.
 
 ## 10. Quality Standards
 

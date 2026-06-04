@@ -36,6 +36,12 @@ The preferred manifest format is:
 ```json
 {
   "project": "design-system-pilot",
+  "settings": {
+    "lazy_load_enabled": true,
+    "scroll_delay_ms": 250,
+    "bottom_wait_ms": 3000,
+    "top_wait_ms": 1000
+  },
   "urls": [
     {
       "page": "homepage",
@@ -44,6 +50,34 @@ The preferred manifest format is:
   ]
 }
 ```
+
+The `settings` object is optional. Defaults are used when settings are omitted.
+
+## Lazy-Loaded Content
+
+Before each screenshot, the tool can perform a pre-capture traversal to encourage lazy-loaded assets and below-the-fold modules to load:
+
+```text
+Page load
+Network idle attempt
+Incremental scroll to bottom
+Bottom wait
+Image completion wait
+Scroll back to top
+Top wait
+Screenshot
+```
+
+Default settings:
+
+| Setting | Default |
+| --- | --- |
+| `lazy_load_enabled` | `true` |
+| `scroll_delay_ms` | `250` |
+| `bottom_wait_ms` | `3000` |
+| `top_wait_ms` | `1000` |
+
+The capture log records when the lazy-load pass starts, when scrolling completes, and when the screenshot is captured. If traversal fails, the warning is logged and the screenshot attempt continues.
 
 The URL file may be an array of strings:
 
@@ -91,4 +125,4 @@ screenshots/
 `-- capture.log
 ```
 
-`metadata.json` records URL, page name, device, timestamp, viewport, screenshot path, HTTP status, final URL, redirect state, and capture status. Failures are also written to `capture.log`.
+`metadata.json` records URL, page name, device, timestamp, viewport, screenshot path, HTTP status, final URL, redirect state, lazy-load traversal status, network-idle status, and capture status. Failures are also written to `capture.log`.

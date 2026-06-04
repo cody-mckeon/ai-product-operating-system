@@ -17,6 +17,15 @@ const DEVICES = [
   },
 ];
 
+const DEFAULT_CAPTURE_SETTINGS = {
+  lazyLoadEnabled: true,
+  scrollDelayMs: 250,
+  bottomWaitMs: 3000,
+  topWaitMs: 1000,
+  networkIdleTimeoutMs: 15000,
+  navigationTimeoutMs: 60000,
+};
+
 function parseArgs(argv) {
   const args = {};
 
@@ -39,6 +48,56 @@ function parseArgs(argv) {
   }
 
   return args;
+}
+
+function parseBoolean(value, fallback) {
+  if (value === undefined) {
+    return fallback;
+  }
+
+  if (typeof value === "boolean") {
+    return value;
+  }
+
+  return !["0", "false", "no", "off"].includes(String(value).toLowerCase());
+}
+
+function parseInteger(value, fallback) {
+  if (value === undefined) {
+    return fallback;
+  }
+
+  const parsed = Number.parseInt(value, 10);
+  return Number.isFinite(parsed) ? parsed : fallback;
+}
+
+function normalizeSettings(settings = {}, args = {}) {
+  return {
+    lazyLoadEnabled: parseBoolean(
+      args.lazyLoadEnabled ?? args["lazy-load-enabled"] ?? settings.lazy_load_enabled ?? settings.lazyLoadEnabled,
+      DEFAULT_CAPTURE_SETTINGS.lazyLoadEnabled,
+    ),
+    scrollDelayMs: parseInteger(
+      args.scrollDelayMs ?? args["scroll-delay-ms"] ?? settings.scroll_delay_ms ?? settings.scrollDelayMs,
+      DEFAULT_CAPTURE_SETTINGS.scrollDelayMs,
+    ),
+    bottomWaitMs: parseInteger(
+      args.bottomWaitMs ?? args["bottom-wait-ms"] ?? settings.bottom_wait_ms ?? settings.bottomWaitMs,
+      DEFAULT_CAPTURE_SETTINGS.bottomWaitMs,
+    ),
+    topWaitMs: parseInteger(
+      args.topWaitMs ?? args["top-wait-ms"] ?? settings.top_wait_ms ?? settings.topWaitMs,
+      DEFAULT_CAPTURE_SETTINGS.topWaitMs,
+    ),
+    networkIdleTimeoutMs: parseInteger(
+      args.networkIdleTimeoutMs ?? args["network-idle-timeout-ms"] ?? settings.network_idle_timeout_ms ?? settings.networkIdleTimeoutMs,
+      DEFAULT_CAPTURE_SETTINGS.networkIdleTimeoutMs,
+    ),
+    navigationTimeoutMs: parseInteger(
+      args.navigationTimeoutMs ?? args["navigation-timeout-ms"] ?? settings.navigation_timeout_ms ?? settings.navigationTimeoutMs,
+      DEFAULT_CAPTURE_SETTINGS.navigationTimeoutMs,
+    ),
+  };
 }
 
 function usage() {
@@ -124,6 +183,7 @@ async function readManifest(filePath) {
   return {
     project: manifest.project,
     entries: normalizeEntries(manifest.urls),
+    settings: normalizeSettings(manifest.settings),
   };
 }
 
@@ -131,7 +191,67 @@ async function appendLog(logPath, message) {
   await fs.appendFile(logPath, `${new Date().toISOString()} ${message}\n`, "utf8");
 }
 
-async function capturePage({ browser, outputRoot, logPath, entry, device }) {
+async function waitForImages(page, timeout = 10000) {
+  await page.waitForFunction(
+    () => Array.from(document.images).every((image) => image.complete),
+    undefined,
+    { timeout },
+  );
+}
+
+async function traversePageForLazyLoad({ page, logPath, entry, device, settings }) {
+  if (!settings.lazyLoadEnabled) {
+    return {
+      enabled: false,
+      scrollCompleted: false,
+    };
+  }
+
+  await appendLog(logPath, `lazy-load pass started ${entry.page} ${device.name}`);
+
+  try {
+    const pageHeight = await page.evaluate(() => {
+      return Math.max(
+        document.body.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.clientHeight,
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight,
+      );
+    });
+    const viewportHeight = page.viewportSize()?.height || device.viewport.height;
+    const stepSize = Math.max(1, Math.floor(viewportHeight * 0.75));
+
+    for (let scrollPosition = 0; scrollPosition < pageHeight; scrollPosition += stepSize) {
+      await page.evaluate((position) => window.scrollTo({ top: position, behavior: "instant" }), scrollPosition);
+      await page.waitForTimeout(settings.scrollDelayMs);
+    }
+
+    await page.evaluate(() => window.scrollTo({ top: document.body.scrollHeight, behavior: "instant" }));
+    await page.waitForTimeout(settings.bottomWaitMs);
+    await waitForImages(page).catch(() => {});
+    await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+    await page.waitForTimeout(settings.topWaitMs);
+    await waitForImages(page).catch(() => {});
+    await appendLog(logPath, `scroll completed ${entry.page} ${device.name}`);
+
+    return {
+      enabled: true,
+      scrollCompleted: true,
+      pageHeight,
+    };
+  } catch (error) {
+    await appendLog(logPath, `warning lazy-load pass failed ${entry.page} ${device.name}: ${error.message}`);
+
+    return {
+      enabled: true,
+      scrollCompleted: false,
+      error: error.message,
+    };
+  }
+}
+
+async function capturePage({ browser, outputRoot, logPath, entry, device, settings }) {
   const pageDirectory = path.join(outputRoot, entry.page);
   const screenshotFile = `${entry.page}-${device.name}-full.png`;
   const screenshotPath = path.join(pageDirectory, screenshotFile);
@@ -147,20 +267,40 @@ async function capturePage({ browser, outputRoot, logPath, entry, device }) {
   const page = await context.newPage();
   let response = null;
   let finalUrl = entry.url;
+  let networkIdleReached = false;
+  let lazyLoad = {
+    enabled: settings.lazyLoadEnabled,
+    scrollCompleted: false,
+  };
 
   try {
     response = await page.goto(entry.url, {
-      waitUntil: "networkidle",
-      timeout: 60000,
+      waitUntil: "domcontentloaded",
+      timeout: settings.navigationTimeoutMs,
     });
     finalUrl = page.url();
+
+    try {
+      await page.waitForLoadState("networkidle", { timeout: settings.networkIdleTimeoutMs });
+      networkIdleReached = true;
+    } catch (error) {
+      await appendLog(logPath, `warning network idle timed out ${entry.page} ${device.name}: ${error.message}`);
+    }
+
+    lazyLoad = await traversePageForLazyLoad({
+      page,
+      logPath,
+      entry,
+      device,
+      settings,
+    });
 
     await page.screenshot({
       path: screenshotPath,
       fullPage: true,
     });
 
-    await appendLog(logPath, `captured ${entry.page} ${device.name} ${entry.url}`);
+    await appendLog(logPath, `screenshot captured ${entry.page} ${device.name} ${entry.url}`);
 
     return {
       url: entry.url,
@@ -172,6 +312,8 @@ async function capturePage({ browser, outputRoot, logPath, entry, device }) {
       redirected: finalUrl !== entry.url,
       viewport: device.viewport,
       screenshotPath,
+      networkIdleReached,
+      lazyLoad,
       status: "captured",
     };
   } catch (error) {
@@ -188,6 +330,8 @@ async function capturePage({ browser, outputRoot, logPath, entry, device }) {
       redirected: finalUrl !== entry.url,
       viewport: device.viewport,
       screenshotPath,
+      networkIdleReached,
+      lazyLoad,
       status: "failed",
       error: error.message,
     };
@@ -211,6 +355,7 @@ async function main() {
   const manifestPath = args.manifest ? path.resolve(cwd, args.manifest) : null;
   const manifest = manifestPath ? await readManifest(manifestPath) : null;
   const projectName = slugify(args.project || manifest.project);
+  const settings = normalizeSettings(manifest?.settings, args);
   const urlsPath = args.urls ? path.resolve(cwd, args.urls) : null;
   const outputRoot = args.output
     ? path.resolve(cwd, args.output)
@@ -227,6 +372,7 @@ async function main() {
     projectName,
     outputRoot,
     generatedAt: new Date().toISOString(),
+    settings,
     captures: [],
   };
 
@@ -241,6 +387,7 @@ async function main() {
           logPath,
           entry,
           device,
+          settings,
         });
 
         metadata.captures.push(result);
