@@ -88,6 +88,13 @@ Version: v0.1
 Status: Experimental
 Purpose: Discover and document the existing design language.
 
+### Screenshot Capture Agent
+
+File: agents/screenshot-capture-agent.md
+Version: v0.1
+Status: Experimental
+Purpose: Collect visual evidence for Design System workflows.
+
 ### Pilot Orchestrator Agent
 
 File: agents/pilot-orchestrator-agent.md

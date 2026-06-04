@@ -1,0 +1,16 @@
+{
+  "name": "screenshot-capture",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Capture full-page desktop and mobile screenshots as project evidence.",
+  "type": "module",
+  "bin": {
+    "screenshot-capture": "./src/capture.js"
+  },
+  "scripts": {
+    "capture": "node src/capture.js"
+  },
+  "dependencies": {
+    "playwright": "^1.44.0"
+  }
+}
