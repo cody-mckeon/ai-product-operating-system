@@ -11,7 +11,13 @@ npx playwright install chromium
 
 ## Usage
 
-Pass a project name and a JSON file containing URLs.
+Pass a manifest with a project name and URLs:
+
+```bash
+python3 tools/screenshot-capture/capture.py --manifest projects/design-system-pilot/urls.json
+```
+
+Or call the Node CLI with a project name and a JSON file containing URLs.
 
 ```bash
 npm run capture -- --project rwlv-live-package-pilot --urls urls.json
@@ -24,6 +30,20 @@ npm run capture -- --project rwlv-live-package-pilot --urls urls.json --output .
 ```
 
 ## URL Input
+
+The preferred manifest format is:
+
+```json
+{
+  "project": "design-system-pilot",
+  "urls": [
+    {
+      "page": "homepage",
+      "url": "https://example.com/"
+    }
+  ]
+}
+```
 
 The URL file may be an array of strings:
 

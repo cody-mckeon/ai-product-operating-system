@@ -1,0 +1,310 @@
+{
+  "projectName": "design-system-pilot",
+  "outputRoot": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots",
+  "generatedAt": "2026-06-04T22:26:59.037Z",
+  "captures": [
+    {
+      "url": "https://www.rwlasvegas.com/",
+      "pageName": "homepage",
+      "device": "desktop",
+      "timestamp": "2026-06-04T22:27:00.046Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/",
+      "redirected": false,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/homepage/homepage-desktop-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/",
+      "pageName": "homepage",
+      "device": "mobile",
+      "timestamp": "2026-06-04T22:27:04.948Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/",
+      "redirected": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/homepage/homepage-mobile-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/entertainment/",
+      "pageName": "entertainment",
+      "device": "desktop",
+      "timestamp": "2026-06-04T22:27:09.291Z",
+      "httpStatus": null,
+      "finalUrl": "https://www.rwlasvegas.com/entertainment/",
+      "redirected": false,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/entertainment/entertainment-desktop-full.png",
+      "status": "failed",
+      "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.rwlasvegas.com/entertainment/\", waiting until \"networkidle\"\u001b[22m\n"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/entertainment/",
+      "pageName": "entertainment",
+      "device": "mobile",
+      "timestamp": "2026-06-04T22:28:09.701Z",
+      "httpStatus": null,
+      "finalUrl": "https://www.rwlasvegas.com/entertainment/",
+      "redirected": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/entertainment/entertainment-mobile-full.png",
+      "status": "failed",
+      "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.rwlasvegas.com/entertainment/\", waiting until \"networkidle\"\u001b[22m\n"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/dining/",
+      "pageName": "dining",
+      "device": "desktop",
+      "timestamp": "2026-06-04T22:29:10.188Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/dining/",
+      "redirected": false,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/dining/dining-desktop-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/dining/",
+      "pageName": "dining",
+      "device": "mobile",
+      "timestamp": "2026-06-04T22:29:14.479Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/dining/",
+      "redirected": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/dining/dining-mobile-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/stay/",
+      "pageName": "rooms",
+      "device": "desktop",
+      "timestamp": "2026-06-04T22:29:18.342Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/stay/",
+      "redirected": false,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/rooms/rooms-desktop-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/stay/",
+      "pageName": "rooms",
+      "device": "mobile",
+      "timestamp": "2026-06-04T22:29:22.971Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/stay/",
+      "redirected": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/rooms/rooms-mobile-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/special-offers/",
+      "pageName": "offers",
+      "device": "desktop",
+      "timestamp": "2026-06-04T22:29:27.548Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/special-offers/",
+      "redirected": false,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/offers/offers-desktop-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/special-offers/",
+      "pageName": "offers",
+      "device": "mobile",
+      "timestamp": "2026-06-04T22:29:31.672Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/special-offers/",
+      "redirected": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/offers/offers-mobile-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/experiences/",
+      "pageName": "experiences",
+      "device": "desktop",
+      "timestamp": "2026-06-04T22:29:35.341Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/experiences/",
+      "redirected": false,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/experiences/experiences-desktop-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/experiences/",
+      "pageName": "experiences",
+      "device": "mobile",
+      "timestamp": "2026-06-04T22:29:38.709Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/experiences/",
+      "redirected": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/experiences/experiences-mobile-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/pools/",
+      "pageName": "pools",
+      "device": "desktop",
+      "timestamp": "2026-06-04T22:29:41.655Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/pools/",
+      "redirected": false,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/pools/pools-desktop-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/pools/",
+      "pageName": "pools",
+      "device": "mobile",
+      "timestamp": "2026-06-04T22:29:44.995Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/pools/",
+      "redirected": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/pools/pools-mobile-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/health-wellness/",
+      "pageName": "wellness",
+      "device": "desktop",
+      "timestamp": "2026-06-04T22:29:47.997Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/health-wellness/",
+      "redirected": false,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/wellness/wellness-desktop-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/health-wellness/",
+      "pageName": "wellness",
+      "device": "mobile",
+      "timestamp": "2026-06-04T22:29:55.395Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/health-wellness/",
+      "redirected": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/wellness/wellness-mobile-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/meeting-events/",
+      "pageName": "meetings-events",
+      "device": "desktop",
+      "timestamp": "2026-06-04T22:30:01.899Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/meeting-events/",
+      "redirected": false,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/meetings-events/meetings-events-desktop-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/meeting-events/",
+      "pageName": "meetings-events",
+      "device": "mobile",
+      "timestamp": "2026-06-04T22:30:05.940Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/meeting-events/",
+      "redirected": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/meetings-events/meetings-events-mobile-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/gaming/",
+      "pageName": "gaming",
+      "device": "desktop",
+      "timestamp": "2026-06-04T22:30:08.939Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/gaming/",
+      "redirected": false,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/gaming/gaming-desktop-full.png",
+      "status": "captured"
+    },
+    {
+      "url": "https://www.rwlasvegas.com/gaming/",
+      "pageName": "gaming",
+      "device": "mobile",
+      "timestamp": "2026-06-04T22:30:12.156Z",
+      "httpStatus": 200,
+      "finalUrl": "https://www.rwlasvegas.com/gaming/",
+      "redirected": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPath": "/Users/cody.mckeon/Documents/ai-ops/ai-product-operating-system/projects/design-system-pilot/screenshots/gaming/gaming-mobile-full.png",
+      "status": "captured"
+    }
+  ],
+  "completedAt": "2026-06-04T22:30:15.908Z"
+}

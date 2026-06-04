@@ -44,8 +44,10 @@ function parseArgs(argv) {
 function usage() {
   return [
     "Usage:",
+    "  node src/capture.js --manifest <manifest.json> [--project <project-name>] [--output <directory>]",
     "  npm run capture -- --project <project-name> --urls <urls.json> [--output <directory>]",
     "",
+    "Manifest input should include project and urls fields.",
     "URL input may be an array of strings or objects with page and url fields.",
   ].join("\n");
 }
@@ -70,12 +72,9 @@ function inferPageName(url) {
   return slugify(pathname.split("/").filter(Boolean).pop());
 }
 
-async function readUrlList(filePath) {
-  const contents = await fs.readFile(filePath, "utf8");
-  const entries = JSON.parse(contents);
-
+function normalizeEntries(entries) {
   if (!Array.isArray(entries)) {
-    throw new Error("URL file must contain a JSON array.");
+    throw new Error("URL input must contain a JSON array.");
   }
 
   return entries.map((entry) => {
@@ -95,6 +94,37 @@ async function readUrlList(filePath) {
 
     throw new Error("Each URL entry must be a string or an object with a url field.");
   });
+}
+
+async function readJson(filePath) {
+  const contents = await fs.readFile(filePath, "utf8");
+  return JSON.parse(contents);
+}
+
+async function readUrlList(filePath) {
+  const entries = await readJson(filePath);
+  return normalizeEntries(entries);
+}
+
+async function readManifest(filePath) {
+  const manifest = await readJson(filePath);
+
+  if (!manifest || typeof manifest !== "object" || Array.isArray(manifest)) {
+    throw new Error("Manifest must be a JSON object.");
+  }
+
+  if (!manifest.project) {
+    throw new Error("Manifest must include a project field.");
+  }
+
+  if (!manifest.urls) {
+    throw new Error("Manifest must include a urls field.");
+  }
+
+  return {
+    project: manifest.project,
+    entries: normalizeEntries(manifest.urls),
+  };
 }
 
 async function appendLog(logPath, message) {
@@ -169,7 +199,7 @@ async function capturePage({ browser, outputRoot, logPath, entry, device }) {
 async function main() {
   const args = parseArgs(process.argv.slice(2));
 
-  if (!args.project || !args.urls) {
+  if (!args.manifest && (!args.project || !args.urls)) {
     console.error(usage());
     process.exitCode = 1;
     return;
@@ -178,8 +208,10 @@ async function main() {
   const cwd = process.cwd();
   const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
   const repositoryRoot = path.resolve(scriptDirectory, "../../..");
-  const projectName = slugify(args.project);
-  const urlsPath = path.resolve(cwd, args.urls);
+  const manifestPath = args.manifest ? path.resolve(cwd, args.manifest) : null;
+  const manifest = manifestPath ? await readManifest(manifestPath) : null;
+  const projectName = slugify(args.project || manifest.project);
+  const urlsPath = args.urls ? path.resolve(cwd, args.urls) : null;
   const outputRoot = args.output
     ? path.resolve(cwd, args.output)
     : path.resolve(repositoryRoot, "projects", projectName, "screenshots");
@@ -190,7 +222,7 @@ async function main() {
   await fs.writeFile(logPath, "", "utf8");
   await appendLog(logPath, `run started for ${projectName}`);
 
-  const entries = await readUrlList(urlsPath);
+  const entries = manifest ? manifest.entries : await readUrlList(urlsPath);
   const metadata = {
     projectName,
     outputRoot,

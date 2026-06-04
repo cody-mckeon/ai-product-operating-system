@@ -1,0 +1,28 @@
+2026-06-04T22:26:59.030Z run started for design-system-pilot
+2026-06-04T22:27:04.910Z captured homepage desktop https://www.rwlasvegas.com/
+2026-06-04T22:27:09.254Z captured homepage mobile https://www.rwlasvegas.com/
+2026-06-04T22:28:09.607Z failed entertainment desktop https://www.rwlasvegas.com/entertainment/: page.goto: Timeout 60000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.rwlasvegas.com/entertainment/", waiting until "networkidle"[22m
+
+2026-06-04T22:29:10.137Z failed entertainment mobile https://www.rwlasvegas.com/entertainment/: page.goto: Timeout 60000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.rwlasvegas.com/entertainment/", waiting until "networkidle"[22m
+
+2026-06-04T22:29:14.471Z captured dining desktop https://www.rwlasvegas.com/dining/
+2026-06-04T22:29:18.337Z captured dining mobile https://www.rwlasvegas.com/dining/
+2026-06-04T22:29:22.946Z captured rooms desktop https://www.rwlasvegas.com/stay/
+2026-06-04T22:29:27.540Z captured rooms mobile https://www.rwlasvegas.com/stay/
+2026-06-04T22:29:31.656Z captured offers desktop https://www.rwlasvegas.com/special-offers/
+2026-06-04T22:29:35.335Z captured offers mobile https://www.rwlasvegas.com/special-offers/
+2026-06-04T22:29:38.703Z captured experiences desktop https://www.rwlasvegas.com/experiences/
+2026-06-04T22:29:41.649Z captured experiences mobile https://www.rwlasvegas.com/experiences/
+2026-06-04T22:29:44.988Z captured pools desktop https://www.rwlasvegas.com/pools/
+2026-06-04T22:29:47.990Z captured pools mobile https://www.rwlasvegas.com/pools/
+2026-06-04T22:29:55.367Z captured wellness desktop https://www.rwlasvegas.com/health-wellness/
+2026-06-04T22:30:01.883Z captured wellness mobile https://www.rwlasvegas.com/health-wellness/
+2026-06-04T22:30:05.935Z captured meetings-events desktop https://www.rwlasvegas.com/meeting-events/
+2026-06-04T22:30:08.935Z captured meetings-events mobile https://www.rwlasvegas.com/meeting-events/
+2026-06-04T22:30:12.144Z captured gaming desktop https://www.rwlasvegas.com/gaming/
+2026-06-04T22:30:15.463Z captured gaming mobile https://www.rwlasvegas.com/gaming/
+2026-06-04T22:30:15.910Z run completed for design-system-pilot
