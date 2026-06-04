@@ -81,6 +81,13 @@ File: agents/analytics-agent.md
 Version: v0.1
 Status: Experimental
 
+### Design System Agent
+
+File: agents/design-system-agent.md
+Version: v0.1
+Status: Experimental
+Purpose: Discover and document the existing design language.
+
 ### Pilot Orchestrator Agent
 
 File: agents/pilot-orchestrator-agent.md
@@ -97,6 +104,8 @@ Enhancements:
 Current State
 ↓
 Component Inventory
+↓
+Design System
 ↓
 Opportunity Analysis
 ↓
