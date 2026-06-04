@@ -18,6 +18,10 @@ Healthy
 
 Waiting For Review
 
+### Workflow Milestone
+
+Experimentation Complete
+
 ### Workflow Completion %
 
 100%
@@ -206,6 +210,29 @@ The project has completed the registered specialist workflow and now needs
 human review, stakeholder approval, and pilot approval before execution can
 proceed.
 
+## Workflow Milestone
+
+Experimentation Complete
+
+This is the highest milestone supported by the available project artifacts.
+The project has completed the required artifacts for discovery, strategy,
+design, measurement, and experimentation:
+
+- Discovery Complete: `current-state.md` and `component-inventory.md` are
+  present.
+- Strategy Complete: `opportunities.md` and `recommendation.md` are present.
+- Design Complete: `generated-concepts.md`, `concept-evaluation.md`,
+  `figma-prompts.md`, and `design-review.md` are present.
+- Measurement Complete: `telemetry-plan.md` and
+  `analytics-requirements.md` are present.
+- Experimentation Complete: `experimentation-plan.md` is present.
+
+The milestone should not advance to Pilot Approved because documented pilot
+approval is not available. It should not advance to Pilot Active or Pilot
+Complete because documented pilot execution, active experiment or rollout,
+pilot completion, experiment outcomes, and final recommendation evidence are
+not available.
+
 ## Recommended Next Action
 
 Request Pilot Approval.
@@ -228,6 +255,14 @@ specialist agent. No missing registered artifact requires a specialist-agent
 handoff at this time.
 
 ## Orchestrator Handoff
+
+### Current Milestone
+
+Experimentation Complete
+
+### Next Milestone
+
+Pilot Approved
 
 ### Ready To Execute
 
