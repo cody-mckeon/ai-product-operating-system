@@ -81,6 +81,13 @@ File: agents/analytics-agent.md
 Version: v0.1
 Status: Experimental
 
+### Pilot Orchestrator Agent
+
+File: agents/pilot-orchestrator-agent.md
+Version: v0.1
+Status: Experimental
+Purpose: Workflow orchestration and project state management.
+
 ## Workflow
 
 Current State
