@@ -1,0 +1,45 @@
+{
+  "project": "design-system-pilot",
+  "urls": [
+    {
+      "page": "homepage",
+      "url": "https://www.rwlasvegas.com/"
+    },
+    {
+      "page": "entertainment",
+      "url": "https://www.rwlasvegas.com/entertainment/"
+    },
+    {
+      "page": "dining",
+      "url": "https://www.rwlasvegas.com/dining/"
+    },
+    {
+      "page": "rooms",
+      "url": "https://www.rwlasvegas.com/stay/"
+    },
+    {
+      "page": "offers",
+      "url": "https://www.rwlasvegas.com/special-offers/"
+    },
+    {
+      "page": "experiences",
+      "url": "https://www.rwlasvegas.com/experiences/"
+    },
+    {
+      "page": "pools",
+      "url": "https://www.rwlasvegas.com/pools/"
+    },
+    {
+      "page": "wellness",
+      "url": "https://www.rwlasvegas.com/health-wellness/"
+    },
+    {
+      "page": "meetings-events",
+      "url": "https://www.rwlasvegas.com/meeting-events/"
+    },
+    {
+      "page": "gaming",
+      "url": "https://www.rwlasvegas.com/gaming/"
+    }
+  ]
+}
