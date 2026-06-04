@@ -229,6 +229,98 @@ Example:
 
 Use health to describe risk. Use state to describe operational posture.
 
+## Workflow Milestone
+
+Classify the project as one of:
+
+- Discovery Complete
+- Strategy Complete
+- Design Complete
+- Measurement Complete
+- Experimentation Complete
+- Pilot Approved
+- Pilot Active
+- Pilot Complete
+
+Purpose:
+
+Provide a concise lifecycle summary that leadership, stakeholders, and future
+automation can quickly understand.
+
+Workflow milestone is supplemental to:
+
+- Current Phase
+- Project Health
+- Project State
+- Readiness Assessments
+
+It should not replace them.
+
+## Workflow Milestone Determination
+
+Determine the milestone using the highest completed stage supported by project
+artifacts and documented approvals.
+
+Use the following guidance:
+
+### Discovery Complete
+
+Required:
+
+- `current-state.md`
+- `component-inventory.md`
+
+### Strategy Complete
+
+Required:
+
+- `opportunities.md`
+- `recommendation.md`
+
+### Design Complete
+
+Required:
+
+- `generated-concepts.md`
+- `concept-evaluation.md`
+- `figma-prompts.md`
+- `design-review.md`
+
+### Measurement Complete
+
+Required:
+
+- `telemetry-plan.md`
+- `analytics-requirements.md`
+
+### Experimentation Complete
+
+Required:
+
+- `experimentation-plan.md`
+
+### Pilot Approved
+
+Required:
+
+- Documented pilot approval
+
+### Pilot Active
+
+Required:
+
+- Documented pilot execution
+- Documented active experiment or rollout
+
+### Pilot Complete
+
+Required:
+
+- Documented pilot completion
+- Documented experiment outcomes or final recommendation
+
+If evidence is unavailable, do not infer milestone completion.
+
 ## Readiness Ratings
 
 Use:
@@ -297,6 +389,19 @@ One of:
 - Waiting For Decision
 - Ready For Execution
 - Blocked
+
+### Workflow Milestone
+
+One of:
+
+- Discovery Complete
+- Strategy Complete
+- Design Complete
+- Measurement Complete
+- Experimentation Complete
+- Pilot Approved
+- Pilot Active
+- Pilot Complete
 
 ### Workflow Completion %
 
@@ -409,6 +514,23 @@ One of:
 
 Provide operational rationale. Keep this distinct from project health.
 
+## Workflow Milestone
+
+One of:
+
+- Discovery Complete
+- Strategy Complete
+- Design Complete
+- Measurement Complete
+- Experimentation Complete
+- Pilot Approved
+- Pilot Active
+- Pilot Complete
+
+Provide milestone rationale based on the highest completed stage supported by
+project artifacts and documented approvals. Keep this distinct from current
+phase, project health, project state, and readiness.
+
 ## Recommended Next Action
 
 Provide only one primary recommendation.
@@ -478,6 +600,10 @@ decision, ready for execution, or blocked.
 
 Create:
 
+### Current Milestone
+
+### Next Milestone
+
 ### Ready To Execute
 
 ### Waiting For Human Review
@@ -523,6 +649,10 @@ Pilot status reports must:
 - Support future automation
 - Separate known blockers from unknown approval requirements
 - Preserve specialist-agent ownership of artifact creation
+- Include workflow milestone classification
+- Distinguish milestone completion from project health
+- Distinguish milestone completion from readiness
+- Avoid inferring milestone advancement without supporting evidence
 
 ## Review Criteria
 

@@ -84,9 +84,13 @@ Status: Experimental
 ### Pilot Orchestrator Agent
 
 File: agents/pilot-orchestrator-agent.md
-Version: v0.1
-Status: Experimental
+Version: v1.1
+Status: Stable
 Purpose: Workflow orchestration and project state management.
+Enhancements:
+- Workflow Milestone Classification
+- Leadership Lifecycle Reporting
+- Milestone-Based Orchestration Support
 
 ## Workflow
 
