@@ -103,8 +103,8 @@ function normalizeSettings(settings = {}, args = {}) {
 function usage() {
   return [
     "Usage:",
-    "  node src/capture.js --manifest <manifest.json> [--project <project-name>] [--output <directory>]",
-    "  npm run capture -- --project <project-name> --urls <urls.json> [--output <directory>]",
+    "  node src/capture.js --manifest <manifest.json> [--project <project-name>] [--output <directory>] [--debug]",
+    "  npm run capture -- --project <project-name> --urls <urls.json> [--output <directory>] [--debug]",
     "",
     "Manifest input should include project and urls fields.",
     "URL input may be an array of strings or objects with page and url fields.",
@@ -191,6 +191,93 @@ async function appendLog(logPath, message) {
   await fs.appendFile(logPath, `${new Date().toISOString()} ${message}\n`, "utf8");
 }
 
+function formatDebugError(error) {
+  return error.message.split("\n")[0];
+}
+
+async function logDebug(logPath, message) {
+  await appendLog(logPath, `DEBUG ${message}`);
+}
+
+function attachDebugLogging({ page, logPath, entry, device }) {
+  const requestState = {
+    total: 0,
+    failed: 0,
+    pending: new Set(),
+  };
+
+  page.on("console", (message) => {
+    appendLog(
+      logPath,
+      `DEBUG CONSOLE ${entry.page} ${device.name} ${message.type()}: ${message.text()}`,
+    ).catch(() => {});
+  });
+
+  page.on("pageerror", (error) => {
+    appendLog(
+      logPath,
+      `DEBUG PAGEERROR ${entry.page} ${device.name}: ${formatDebugError(error)}`,
+    ).catch(() => {});
+  });
+
+  page.on("request", (request) => {
+    requestState.total += 1;
+    requestState.pending.add(request);
+  });
+
+  page.on("requestfinished", (request) => {
+    requestState.pending.delete(request);
+  });
+
+  page.on("requestfailed", (request) => {
+    requestState.failed += 1;
+    requestState.pending.delete(request);
+    appendLog(
+      logPath,
+      [
+        `DEBUG REQUEST FAILED ${entry.page} ${device.name}`,
+        request.method(),
+        request.url(),
+        request.failure()?.errorText || "unknown error",
+      ].join(" | "),
+    ).catch(() => {});
+  });
+
+  return requestState;
+}
+
+async function logDebugFrames({ page, logPath, entry, device }) {
+  await logDebug(logPath, `FRAMES ${entry.page} ${device.name} count=${page.frames().length}`);
+
+  for (const frame of page.frames()) {
+    await logDebug(
+      logPath,
+      `FRAME ${entry.page} ${device.name} name="${frame.name()}" url="${frame.url()}"`,
+    );
+  }
+}
+
+async function logDebugNetworkSummary({ logPath, entry, device, requestState }) {
+  await logDebug(
+    logPath,
+    [
+      `NETWORK SUMMARY ${entry.page} ${device.name}`,
+      `total=${requestState.total}`,
+      `failed=${requestState.failed}`,
+      `pending=${requestState.pending.size}`,
+    ].join(" | "),
+  );
+
+  if (requestState.pending.size > 0) {
+    for (const request of Array.from(requestState.pending).slice(0, 25)) {
+      await logDebug(
+        logPath,
+        `PENDING REQUEST ${entry.page} ${device.name} ${request.method()} ${request.url()}`,
+      );
+    }
+  }
+}
+
 async function waitForImages(page, timeout = 10000) {
   await page.waitForFunction(
     () => Array.from(document.images).every((image) => image.complete),
@@ -251,7 +338,7 @@ async function traversePageForLazyLoad({ page, logPath, entry, device, settings 
   }
 }
 
-async function capturePage({ browser, outputRoot, logPath, entry, device, settings }) {
+async function capturePage({ browser, outputRoot, logPath, entry, device, settings, debug }) {
   const pageDirectory = path.join(outputRoot, entry.page);
   const screenshotFile = `${entry.page}-${device.name}-full.png`;
   const screenshotPath = path.join(pageDirectory, screenshotFile);
@@ -265,6 +352,7 @@ async function capturePage({ browser, outputRoot, logPath, entry, device, settin
   });
 
   const page = await context.newPage();
+  const requestState = debug ? attachDebugLogging({ page, logPath, entry, device }) : null;
   let response = null;
   let finalUrl = entry.url;
   let networkIdleReached = false;
@@ -274,17 +362,38 @@ async function capturePage({ browser, outputRoot, logPath, entry, device, settin
   };
 
   try {
+    if (debug) {
+      await logDebug(logPath, `START NAVIGATION ${entry.page} ${device.name}`);
+      await logDebug(logPath, `URL ${entry.url}`);
+      await logDebug(logPath, "NAVIGATION STRATEGY waitUntil=domcontentloaded");
+      await logDebug(logPath, `TIMESTAMP ${new Date().toISOString()}`);
+    }
+
     response = await page.goto(entry.url, {
       waitUntil: "domcontentloaded",
       timeout: settings.navigationTimeoutMs,
     });
     finalUrl = page.url();
 
-    try {
-      await page.waitForLoadState("networkidle", { timeout: settings.networkIdleTimeoutMs });
-      networkIdleReached = true;
-    } catch (error) {
-      await appendLog(logPath, `warning network idle timed out ${entry.page} ${device.name}: ${error.message}`);
+    if (debug) {
+      await logDebug(logPath, `DOM CONTENT LOADED REACHED ${entry.page} ${device.name}`);
+      await logDebug(logPath, `DOM CONTENT LOADED ${new Date().toISOString()}`);
+      await page.waitForTimeout(5000);
+      await logDebug(logPath, `POST LOAD WAIT COMPLETE ${entry.page} ${device.name}`);
+
+      try {
+        await page.waitForLoadState("load", { timeout: 1 });
+        await logDebug(logPath, `LOAD EVENT ${new Date().toISOString()}`);
+      } catch {
+        await logDebug(logPath, `LOAD EVENT not reached before post-load check ${entry.page} ${device.name}`);
+      }
+    } else {
+      try {
+        await page.waitForLoadState("networkidle", { timeout: settings.networkIdleTimeoutMs });
+        networkIdleReached = true;
+      } catch (error) {
+        await appendLog(logPath, `warning network idle timed out ${entry.page} ${device.name}: ${error.message}`);
+      }
     }
 
     lazyLoad = await traversePageForLazyLoad({
@@ -295,10 +404,20 @@ async function capturePage({ browser, outputRoot, logPath, entry, device, settin
       settings,
     });
 
+    if (debug) {
+      await logDebugFrames({ page, logPath, entry, device });
+      await logDebugNetworkSummary({ logPath, entry, device, requestState });
+      await logDebug(logPath, `SCREENSHOT START ${new Date().toISOString()}`);
+    }
+
     await page.screenshot({
       path: screenshotPath,
       fullPage: true,
     });
+
+    if (debug) {
+      await logDebug(logPath, `SCREENSHOT COMPLETE ${new Date().toISOString()}`);
+    }
 
     await appendLog(logPath, `screenshot captured ${entry.page} ${device.name} ${entry.url}`);
 
@@ -356,6 +475,7 @@ async function main() {
   const manifest = manifestPath ? await readManifest(manifestPath) : null;
   const projectName = slugify(args.project || manifest.project);
   const settings = normalizeSettings(manifest?.settings, args);
+  const debug = parseBoolean(args.debug, false);
   const urlsPath = args.urls ? path.resolve(cwd, args.urls) : null;
   const outputRoot = args.output
     ? path.resolve(cwd, args.output)
@@ -366,6 +486,9 @@ async function main() {
   await fs.mkdir(outputRoot, { recursive: true });
   await fs.writeFile(logPath, "", "utf8");
   await appendLog(logPath, `run started for ${projectName}`);
+  if (debug) {
+    await logDebug(logPath, "DEBUG MODE ENABLED");
+  }
 
   const entries = manifest ? manifest.entries : await readUrlList(urlsPath);
   const metadata = {
@@ -388,6 +511,7 @@ async function main() {
           entry,
           device,
           settings,
+          debug,
         });
 
         metadata.captures.push(result);

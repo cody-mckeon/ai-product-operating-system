@@ -17,6 +17,7 @@ def main():
     parser.add_argument("--scroll-delay-ms", help="Delay between incremental scroll steps.")
     parser.add_argument("--bottom-wait-ms", help="Wait time after reaching the bottom of the page.")
     parser.add_argument("--top-wait-ms", help="Wait time after returning to the top of the page.")
+    parser.add_argument("--debug", action="store_true", help="Write detailed navigation and request diagnostics.")
 
     args = parser.parse_args()
     script_dir = Path(__file__).resolve().parent
@@ -34,6 +35,9 @@ def main():
 
     if args.output:
         command.extend(["--output", args.output])
+
+    if args.debug:
+        command.append("--debug")
 
     for option in [
         "lazy_load_enabled",

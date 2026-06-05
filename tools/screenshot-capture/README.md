@@ -23,6 +23,12 @@ Or call the Node CLI with a project name and a JSON file containing URLs.
 npm run capture -- --project rwlv-live-package-pilot --urls urls.json
 ```
 
+Run diagnostic capture logging with `--debug`:
+
+```bash
+python3 tools/screenshot-capture/capture.py --manifest projects/design-system-pilot/urls.json --debug
+```
+
 Optionally override the output root:
 
 ```bash
@@ -78,6 +84,25 @@ Default settings:
 | `top_wait_ms` | `1000` |
 
 The capture log records when the lazy-load pass starts, when scrolling completes, and when the screenshot is captured. If traversal fails, the warning is logged and the screenshot attempt continues.
+
+## Debug Mode
+
+`--debug` writes detailed timing and browser diagnostics to `capture.log` without changing screenshot output paths or metadata fields.
+
+Debug mode records:
+
+- Navigation start, URL, and strategy.
+- DOM content loaded timing.
+- Load event status.
+- Post-load wait completion.
+- Console messages.
+- Page errors.
+- Failed requests.
+- Frame names and URLs.
+- Total, failed, and pending request counts before screenshot.
+- Screenshot start and completion timing.
+
+In debug mode, navigation waits for `domcontentloaded`, pauses for 5000ms, then continues through the existing pre-capture flow. This is intended for temporary diagnosis of pages with long-running analytics, polling, iframes, or deferred scripts.
 
 The URL file may be an array of strings:
 
