@@ -383,6 +383,146 @@ to:
 Do not name, quote, excerpt, or visually imply publication-specific content
 unless the source material and usage rights are documented in approved inputs.
 
+## Benefit Validation Experience Requirements
+
+The purpose of this section is to ensure that benefit-validation concepts
+remain benefit-validation experiences when translated into design exploration
+prompts.
+
+Apply these requirements whenever the concept category, selected concept,
+design review, recommendation, or supporting patterns contain any of:
+
+- Benefit Validation
+- Confidence Building
+- Value Communication
+- Proof-Based Evaluation
+- Package Differentiation
+
+When these requirements apply, the generated Figma Make prompt must explicitly
+instruct Figma Make to preserve benefit-level proof relationships rather than
+separating proof into standalone content blocks.
+
+### Rule 1: Validation Must Live With The Benefit
+
+When a concept includes editorial validation, third-party validation, expert
+review, guest evidence, operational proof, or other credibility signals, the
+validation must appear adjacent to the specific benefit it supports.
+
+Preferred structure:
+
+Benefit
+↓
+What's Included
+↓
+Why It Matters
+↓
+Validation / Proof
+
+Avoid:
+
+Benefit
+Benefit
+Benefit
+Benefit
+↓
+Editorial Recognition Section
+
+The agent should treat validation as supporting evidence for a benefit rather
+than as a separate content destination.
+
+### Rule 2: Benefit Validation Is Preferred Over Testimonial Aggregation
+
+When a concept is classified as a Benefit Validation Experience, design
+exploration should focus on helping guests understand and evaluate individual
+benefits.
+
+Do not default to:
+
+- Testimonial carousels
+- Review walls
+- Press logo collections
+- Generic quote galleries
+
+Unless explicitly required by the recommendation or design review.
+
+The preferred pattern is:
+
+Benefit
+↓
+Context
+↓
+Validation
+↓
+Decision Support
+
+Rather than:
+
+Quote
+Quote
+Quote
+Quote
+
+### Rule 3: Preserve Benefit-Level Proof Hierarchy
+
+When editorial validation exists, each primary benefit should be explored using
+a consistent hierarchy:
+
+- What's Included
+- Why It Matters
+- Validation Evidence
+- Terms / Constraints
+
+The hierarchy should help a guest answer:
+
+- What is included?
+- Why should I care?
+- Why should I believe it?
+- What conditions apply?
+
+### Rule 4: Comparison Moments Should Be Explored
+
+For package concepts, the prompt should encourage exploration of comparison
+moments that help guests understand differentiation.
+
+Examples:
+
+- Standard Room vs Package
+- Included vs Purchased Separately
+- General Access vs Included Access
+- Typical Stay vs Package Stay
+
+Do not frame comparison as aggressive sales messaging.
+
+Frame comparison as decision support.
+
+### Rule 5: Existing Page Integration Takes Priority
+
+When the selected concept is intended to be inserted into an existing page:
+
+- Treat the concept as a module.
+- Preserve upstream content.
+- Preserve downstream CTAs.
+- Preserve surrounding page structure.
+
+Do not redesign the entire page unless Design Review explicitly recommends a
+page-level exploration.
+
+Prompt language should clearly state:
+
+"This concept is an inserted module within an existing experience, not a
+standalone marketing landing page."
+
+### Rule 6: Editorial Validation Placement
+
+When editorial validation has been approved and is available:
+
+Validation should appear inside the benefit card or benefit section it supports.
+
+Do not create a dedicated Editorial Recognition section unless the Design Review
+Agent explicitly recommends one.
+
+Benefit validation is preferred over testimonial aggregation.
+
 ## Figma Prompt Structure
 
 For each approved design direction or supporting pattern include:
@@ -440,6 +580,13 @@ implementation.
 Document known business, content, operational, legal, visual, placement, and
 source-governance constraints.
 
+### Benefit Validation Experience Requirements
+
+When applicable, document how the prompt should preserve benefit-level proof
+relationships, place validation adjacent to the specific benefit it supports,
+avoid testimonial aggregation, maintain the benefit proof hierarchy, explore
+decision-support comparison moments, and preserve existing page structure.
+
 ### Figma Make Prompt
 
 Generate a copy-paste-ready Figma Make prompt.
@@ -461,12 +608,16 @@ Every generated prompt must include:
 - Supporting Patterns
 - Existing Component Reuse
 - Constraints
+- Benefit Validation Experience Requirements, when applicable
 - Desired Learning Outcome
 - Design Risks To Explore
 - Success Criteria
 
 The Experience Integration Context fields must appear before visual exploration
 instructions begin in the Figma Make prompt.
+
+When Benefit Validation Experience Requirements apply, those requirements must
+appear before visual exploration instructions begin in the Figma Make prompt.
 
 The prompt should explain what the design exploration is trying to learn, not
 merely what it should render.
@@ -501,6 +652,13 @@ Prompts should:
   validation.
 - Design exploration should test whether embedded validation improves trust and
   comprehension.
+- When the concept category includes Benefit Validation, Confidence Building,
+  Value Communication, Proof-Based Evaluation, or Package Differentiation,
+  include explicit prompt language preserving benefit-level proof relationships.
+- For applicable package concepts, include comparison moments as decision
+  support rather than aggressive sales messaging.
+- For inserted modules, clearly state that the concept is an inserted module
+  within an existing experience, not a standalone marketing landing page.
 
 ## Common Failure Modes
 
@@ -512,6 +670,12 @@ Avoid:
   value.
 - Treating editorial recognition as decoration rather than decision-support
   information.
+- Aggregating proof into press logo collections, review walls, quote galleries,
+  or testimonial carousels when benefit-level validation is the approved
+  experience pattern.
+- Redesigning the entire page when the selected concept is an inserted module.
+- Breaking the relationship between what is included, why it matters,
+  validation evidence, and terms or constraints.
 
 ## Example Direction
 
