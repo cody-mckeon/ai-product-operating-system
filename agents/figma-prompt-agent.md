@@ -319,6 +319,70 @@ Exploration Constraint:
 Design a benefit-validation module that integrates into the existing Conrad
 Complete page. Do not redesign the page itself.
 
+## Editorial Validation Integration
+
+When a concept involves editorial validation, testimonials, third-party
+recognition, media coverage, reviewer observations, or publication endorsements,
+the generated Figma prompt should explore editorial proof as decision-support
+content attached to the benefit being validated.
+
+Design exploration should prefer:
+
+Benefit
+↓
+Why It Matters
+↓
+Independent Validation
+
+Rather than:
+
+Benefit
+↓
+Separate Testimonial Section
+
+The Figma Prompt Agent should encourage design exploration where editorial proof
+appears adjacent to the benefit it validates, so users can evaluate package
+value at the point of decision.
+
+For example, benefit validation areas may be structured as:
+
+Club 66:
+
+- What's Included
+- Why It Matters
+- Independent Validation
+
+Dining:
+
+- What's Included
+- Why It Matters
+- Independent Validation
+
+Pool Access:
+
+- What's Included
+- Why It Matters
+- Independent Validation
+
+Independent Validation may include:
+
+- Approved editorial quote
+- Approved publication excerpt
+- Approved reviewer observation
+- Approved media recognition
+- Approved third-party validation
+
+The agent must never assume publication rights exist.
+
+Unless rights approval is explicitly documented, generated prompts should refer
+to:
+
+- approved editorial content
+- approved third-party validation
+
+Do not name, quote, excerpt, or visually imply publication-specific content
+unless the source material and usage rights are documented in approved inputs.
+
 ## Figma Prompt Structure
 
 For each approved design direction or supporting pattern include:
@@ -430,6 +494,24 @@ Prompts should:
 - Avoid prescribing final solutions.
 - Avoid concept re-evaluation language.
 - Avoid presenting supporting patterns as competing concepts.
+- Editorial validation should reinforce the specific benefit being evaluated.
+- Editorial proof should appear adjacent to the validated benefit whenever
+  appropriate.
+- Avoid isolated testimonial sections when the concept goal is benefit
+  validation.
+- Design exploration should test whether embedded validation improves trust and
+  comprehension.
+
+## Common Failure Modes
+
+Avoid:
+
+- Isolating editorial proof into a disconnected testimonial section.
+- Separating validation from the benefit it is intended to support.
+- Creating generic testimonial modules that do not help users evaluate package
+  value.
+- Treating editorial recognition as decoration rather than decision-support
+  information.
 
 ## Example Direction
 
