@@ -1,683 +1,854 @@
-# Experience Translation
+## Experience Translation
 
-## Selected Concept Summary
+### Selected Concept Summary
 
-The approved direction is CON-03: Benefit Validation Experience. Future design exploration should help guests understand why Conrad Complete is credible, premium, and relevant by turning its inclusions into an evidence-backed decision experience.
+The approved concept is CON-03: Benefit Validation Experience.
 
-CON-01: Editorial Feature Experience and CON-02: Guided Package Fit Experience should influence the design, but they should not become separate competing directions. Editorial recognition should support trust inside the benefit-validation experience. Fit guidance should help guests understand when the package is most relevant without turning the surface into a quiz or comparison tool.
+In plain language, the experience should help guests understand why Conrad Complete is a credible premium package, not just a longer list of inclusions. The design should turn Club 66 access, dining, pool access, nightlife, valet, and booking handoff into a decision-ready story: what is included, why it matters, what evidence supports it, and what conditions or terms keep the claim honest.
 
-## User Problem Being Solved
+CON-01: Editorial Feature Experience and CON-02: Guided Package Fit Experience should influence the work without becoming separate concepts. WSJ recognition should appear only as governed press recognition inside the benefit-validation experience. Fit guidance should help guests understand when Conrad Complete is likely to be most valuable without becoming a quiz, calculator, selector, or broad comparison surface.
 
-Guests can see that Conrad Complete includes Club 66 access, dining, pool access, nightlife, and valet, but they may not immediately understand why those inclusions justify a premium package decision. They need help connecting a list of benefits to a confident stay choice: what matters, what is externally supported, and whether the package fits their trip.
+### User Problem Being Solved
 
-## Core Experience Pattern
+Guests can see that Conrad Complete includes premium benefits, but they may still struggle to decide whether those benefits make the package credible, distinctive, and worth considering. They need help translating the package from "many things are included" into "these are the specific premium moments that may make this stay better for me."
+
+The review therefore treats the selected concept as a confidence-building experience for package understanding. The goal is not to make a louder promotion. The goal is to make the existing offer feel clearer, better evidenced, and easier to evaluate.
+
+### Core Experience Pattern
 
 Benefit Evidence Matrix.
 
-The core pattern should present the most important Conrad Complete benefits as a small set of decision-ready proof units. Each unit should explain the benefit, why it matters to the guest, what source or onsite evidence supports it, and any terms or fit considerations that keep the claim accurate.
+The central pattern should organize Conrad Complete benefits into a small set of evidence-backed proof units. Each unit should clarify:
 
-## Supporting Experience Patterns
+- The benefit.
+- Why it matters to the guest.
+- What source, onsite context, or current package detail supports it.
+- What terms, fit notes, or availability conditions should remain visible.
+- What action or detail link helps the guest continue evaluating.
 
-- Governed editorial recognition moment: a restrained WSJ/source-context treatment that validates the package story without becoming a generic testimonial.
-- Lightweight fit guidance: simple cues that clarify who is likely to value the package most, especially guests who will use Club 66 and dining inclusions.
-- Inclusion detail support: links or expandable detail areas for menus, Club 66 access, pool, nightlife, valet, and operating terms.
-- Source-aware proof bridge: stronger emphasis on Club 66 and dining because they are the clearest bridges between package content and editorial evidence.
-- Terms-aware package qualification: visible reminders that access, operating nights, menus, and participation must remain current.
+Club 66 and dining should receive the strongest hierarchy because they are the clearest bridges between the existing package content and the available WSJ editorial source. Pool, nightlife, valet, and other benefits should support the package story without receiving equal proof weight unless later evidence justifies it.
 
-## Trust Strategy
+### Supporting Experience Patterns
 
-Trust should come from specificity, not volume. The experience should clearly identify Conrad Complete inclusions, use WSJ editorial validation only in approved press-recognition form, and tie proof to the benefits with the strongest evidence alignment. It should avoid fabricated quotes, award-like language, anonymous testimonial framing, stale pricing implications, and broad claims that every guest will receive equal value.
+- Governed editorial recognition moment: A restrained source-context treatment that references WSJ validation only in an approved form and only where it supports package understanding.
+- Lightweight fit guidance: A small confidence layer that helps guests understand when the package is most relevant, especially for stays where they will use lounge and dining benefits.
+- Inclusion detail support: Progressive detail for menus, restaurant participation, Club 66 access, pool benefits, Zouk operating nights, valet, and offer terms.
+- Source-aware proof bridge: A pattern that ties editorial validation to specific experience areas rather than treating press as generic praise.
+- Booking confidence handoff: A restrained summary near the package action that connects the strongest benefit proof to the existing `BOOK NOW` path.
 
-## Information Hierarchy Strategy
+### Trust Strategy
 
-First, guests should understand the plain-language promise: Conrad Complete is a premium inclusive package built around lounge access, dining, pool, nightlife, and valet.
+Trust should come from specificity, source context, and restraint. The experience should make clear that Conrad Complete is a package with concrete benefits, not an undefined luxury claim. It should distinguish brand-authored package content from external editorial validation and avoid unsupported language.
 
-Second, they should see the highest-confidence proof bridges: Club 66 and dining. These should receive more visual and content weight than lower-evidence inclusions.
+The design should not fabricate quotes, rankings, endorsements, awards, savings claims, or operational guarantees. Direct WSJ excerpts, logos, article titles, author attribution, or paraphrased article claims should be used only after legal, brand, and publication-usage guidance approves them. Until then, visual exploration should include placeholders for governed press recognition rather than final press copy.
 
-Third, they should see fit and terms context: when the package is most useful, what depends on operating rules, and where to inspect menus or details.
+### Information Hierarchy Strategy
 
-Finally, the booking action should remain available as the natural next step after package understanding, not as a pressure point before trust is established.
+First, guests should understand the package promise: Conrad Complete is a premium inclusive package built around lounge access, dining, pool, nightlife, and valet.
 
-## Conversion Strategy
+Second, they should see the strongest proof bridges: Club 66 and dining. These should anchor the experience because they have the clearest evidence alignment and the most useful premium specificity.
 
-Conversion should feel like concierge guidance. The primary action can remain the existing package booking handoff, but it should follow a clearer explanation of benefits and proof. Secondary actions should support confidence, such as reviewing menus or learning about Club 66. The design should not introduce fake urgency, overstate savings, or push booking before the guest understands fit.
+Third, guests should see supporting inclusions and fit context. Pool access, nightlife, valet, terms, restaurant participation, menu links, operating nights, and usage considerations should support the decision without crowding the primary story.
 
-# Placement Exploration
+Fourth, the booking action should feel like the next natural step after understanding, not a pressure tactic before confidence has been earned.
 
-## Surface
+### Conversion Strategy
 
-Conrad Complete Package Surface
+Conversion should feel like concierge guidance. The existing package booking action can remain the primary conversion path, but the page should earn the click by helping guests understand the package first. Secondary actions should support confidence, such as viewing lunch and dinner menus, learning more about Club 66, or reviewing terms.
 
-## User Context
+The experience should avoid fake urgency, universal value claims, aggressive savings framing, or overconfident editorial language. The best conversion path is a clear package story that makes the guest feel oriented and respected.
 
-The user is actively evaluating Conrad Complete as a premium inclusive package. They are trying to understand what is included, why the inclusions matter, whether the package is credible, and whether it is worth moving into booking.
+## Placement Exploration
 
-## Benefits
+### Candidate Placement 1
 
-- Strongest alignment with the selected Benefit Validation Experience.
-- Places proof at the moment when package understanding and trust matter most.
-- Lets Club 66, dining, pool, nightlife, valet, terms, and booking action work together as one decision surface.
-- Supports reuse of existing package content, menu links, and the current package `BOOK NOW` handoff.
+### Surface
 
-## Risks
+Conrad Complete Package Surface.
 
-- Information overload if every inclusion receives equal weight.
-- Visual hierarchy cannot be validated without screenshots.
-- Canonical surface is still uncertain because Conrad Complete content was observed on Summer Offers, while the dedicated Conrad Complete URL was not directly reviewable.
+### User Context
 
-## Priority
+The guest is actively evaluating Conrad Complete. They are trying to understand what is included, whether the package feels premium and credible, and whether it is worth moving into booking.
 
-High
+### Benefits
 
-## Surface
+- Best alignment with the selected Benefit Validation Experience.
+- Places proof at the exact moment when package understanding matters.
+- Lets Club 66, dining, pool, nightlife, valet, terms, menus, and booking action operate as one decision surface.
+- Supports reuse of existing package copy, inclusion structure, menu links, value framing, and `BOOK NOW` handoff.
+- Gives future Figma prompting a clear primary screen: the package decision surface.
 
-Offer Detail Surface
+### Risks
 
-## User Context
+- The canonical Conrad Complete URL remains unclear because current text evidence observed the package on Summer Offers while the dedicated URL was not directly reviewable.
+- The design could become dense if every inclusion receives equal visual weight.
+- No usable screenshots or mobile captures are available, so visual prominence and responsive order must be explored rather than assumed.
 
-The user is browsing seasonal offers and comparing whether Conrad Complete deserves attention among other promotions. They are trying to decide which offer is relevant before committing to package details.
+### Priority
 
-## Benefits
+High.
 
-- Captures users while they are already in offer-discovery mode.
-- Can introduce benefit validation before the user reaches booking.
-- May be the most practical near-term location if Summer Offers remains the observed live surface for Conrad Complete content.
+### Candidate Placement 2
 
-## Risks
+### Surface
 
-- The selected concept could be diluted if surrounding offers compete for attention.
-- Press validation could feel premature if the user has not yet chosen to inspect Conrad Complete.
-- Dense proof content may disrupt a broader promotional browsing page.
+Summer Offers / Offer Detail Surface.
 
-## Priority
+### User Context
 
-High
+The guest is browsing offers and deciding which promotion deserves attention. Conrad Complete is one offer among broader seasonal content.
 
-## Surface
+### Benefits
 
-Club 66 Section
+- Current evidence shows Conrad Complete content on the Summer Offers page, making this the most observed practical package host.
+- Captures guests while they are already comparing offers.
+- Can introduce benefit validation before booking without requiring a new upstream brand page.
+- Reuses existing offer-module patterns and anchor navigation if those are present visually.
 
-## User Context
+### Risks
 
-The user is learning about Club 66 and trying to understand lounge access, breakfast, social hour, views, and service benefits. They may be deciding whether Club 66 makes the package feel distinctive.
+- The selected concept may be diluted by surrounding offers.
+- A detailed proof experience may interrupt offer browsing if placed too high or made too large.
+- Press recognition could feel premature before the guest has chosen to inspect Conrad Complete.
 
-## Benefits
+### Priority
 
-- Strong evidence bridge because Club 66 is one of the clearest selected-concept anchors.
-- Lets the experience connect a specific premium benefit to package value.
-- Can support deeper trust for users who click from Conrad Complete into Club 66 detail.
+High.
 
-## Risks
+### Candidate Placement 3
+
+### Surface
+
+Club 66 Section.
+
+### User Context
+
+The guest is learning about lounge access, breakfast, social hour, drinks, light bites, Strip views, and premium service context. They may be checking whether Club 66 makes Conrad Complete feel distinctive.
+
+### Benefits
+
+- Strong proof bridge because Club 66 is one of the most credible and specific selected-concept anchors.
+- Gives the design a natural place for deeper benefit detail.
+- Can support guests who move from Conrad Complete into more specific Club 66 evaluation.
+
+### Risks
 
 - Weak as the primary placement because Club 66 is only one part of Conrad Complete.
-- Could make the package feel lounge-led while underplaying dining, pool, nightlife, and valet.
-- Users may miss the broader package decision if validation lives too deeply in a sub-surface.
+- Could overframe the package as lounge-led and underplay dining, pool, nightlife, and valet.
+- Users who never click into Club 66 may miss the validation experience.
 
-## Priority
+### Priority
 
-Medium
+Medium.
 
-## Surface
+### Candidate Placement 4
 
-Booking Handoff Area
+### Surface
 
-## User Context
+Booking Handoff Area.
 
-The user has reviewed package information and is near the decision to click `BOOK NOW`. They are trying to confirm that the package is credible and worth carrying into the booking engine.
+### User Context
 
-## Benefits
+The guest has reviewed package information and is close to clicking `BOOK NOW`. They are deciding whether their confidence is strong enough to continue into the booking engine.
+
+### Benefits
 
 - Reinforces confidence at the moment of action.
-- Keeps the booking CTA connected to the reasons to choose Conrad Complete.
-- Can summarize the strongest proof without forcing the user to re-read the whole package module.
+- Can summarize the strongest proof without requiring the guest to reread the full package story.
+- Creates a clear future handoff to conversion and analytics agents.
 
-## Risks
+### Risks
 
 - Could feel like last-second persuasion if the trust foundation has not already been established.
-- May overload the CTA area with proof, terms, and action competing for attention.
-- Booking handoff details are only partially reviewed.
+- May crowd the CTA area with proof, terms, and action competing for attention.
+- Booking-flow and booking-engine evidence is incomplete.
 
-## Priority
+### Priority
 
-Medium
+Medium.
 
-## Surface
+### Candidate Placement 5
 
-Conrad Landing Page
+### Surface
 
-## User Context
+Conrad Landing Page.
 
-The user is orienting to Conrad Las Vegas rooms, suites, brand positioning, and booking options. They may not yet be evaluating Conrad Complete specifically.
+### User Context
 
-## Benefits
+The guest is orienting to Conrad Las Vegas rooms, suites, brand positioning, and general booking paths. They may not yet be evaluating Conrad Complete.
 
-- High-visibility upstream placement.
-- Could support broader Conrad trust and introduce the package as a premium stay option.
-- May help users discover Conrad Complete earlier in the journey.
+### Benefits
 
-## Risks
+- High-visibility upstream surface.
+- Could help users discover Conrad Complete earlier.
+- May support broader Conrad trust if expressed as a small package teaser.
+
+### Risks
 
 - Weak context for detailed benefit validation.
-- Trust proof may feel premature before the user has shown package intent.
 - Could distract from room and suite discovery.
+- Press recognition may feel disconnected from the package decision if shown too early.
 
-## Priority
+### Priority
 
-Low
+Low.
 
-## Surface
+### Candidate Placement 6
 
-Booking Engine Surface
+### Surface
 
-## User Context
+Booking Engine Surface.
 
-The user is comparing rates, packages, and availability in a transactional environment. They are deciding whether to select Conrad Complete or another booking option.
+### User Context
 
-## Benefits
+The guest is comparing rates, availability, packages, and transactional details. They are deciding whether to select Conrad Complete or another booking option.
 
-- High-intent decision point.
-- Could reduce uncertainty when the package appears alongside rate options.
-- Useful future extension for conversion confidence.
+### Benefits
 
-## Risks
+- Very high-intent decision point.
+- Could reduce uncertainty when Conrad Complete appears beside rates or packages.
+- Useful future extension once booking constraints are known.
 
-- Platform flexibility is unknown.
-- Full booking-flow states were not captured.
-- May be too late to teach the full benefit-validation story.
+### Risks
 
-## Priority
+- Booking-engine platform flexibility is unknown.
+- Full booking states were not captured.
+- This surface may be too late to teach the full benefit-validation story.
 
-Low
+### Priority
 
-## Placement Recommendation
+Low.
 
-### Primary Placement
+### Placement Recommendation
 
-Conrad Complete Package Surface, including the observed Summer Offers Conrad Complete module until the canonical dedicated package surface is confirmed.
+#### Primary Placement
 
-### Secondary Placement
+Conrad Complete Package Surface, using the observed Summer Offers Conrad Complete module as the practical starting point until the canonical dedicated package surface is confirmed.
 
-Offer Detail Surface, with Club 66 Section as a supporting deep-link or proof extension.
+#### Secondary Placement
 
-### Deferred Placements
+Summer Offers / Offer Detail Surface, with Club 66 Section as a supporting proof extension rather than a competing primary surface.
 
-- Booking Handoff Area
-- Conrad Landing Page
-- Booking Engine Surface
+#### Deferred Placements
 
-### Why
+- Booking Handoff Area.
+- Conrad Landing Page.
+- Booking Engine Surface.
 
-The selected concept is about helping guests validate Conrad Complete as a package decision. The experience should therefore live first where the guest is already evaluating the package, not upstream on the general Conrad landing page or downstream inside an incompletely reviewed booking flow. Offer detail and Club 66 placements can support discovery and deeper proof, but they should not become the primary design exploration until the package surface has established the benefit-validation structure.
+#### Why
 
-# Component Exploration
+The selected concept is about helping guests validate Conrad Complete as a package decision. The experience should therefore live first where guests are already evaluating the package. The package surface gives design exploration enough context to explain benefits, place governed editorial recognition, preserve terms, support fit nuance, and maintain a clear booking path.
 
-## Direction Name
+The secondary placement should remain close to offer discovery because current evidence shows Conrad Complete on Summer Offers. Club 66 should support the proof system as a deeper benefit surface, but it should not become the main concept because the package is larger than lounge access.
 
-Benefit Evidence Matrix
+## Component Exploration
 
-## Description
+### Direction 1
 
-A structured package module that groups Conrad Complete inclusions into evidence-backed benefit cards or rows. Each benefit explains what is included, why it matters, and what confidence signal supports it. Club 66 and dining receive the strongest emphasis.
-
-## Placement
-
-Primary placement on the Conrad Complete package module within the Summer Offers or canonical Conrad Complete surface. Secondary use may appear near booking-adjacent package details after the canonical surface is confirmed.
-
-## Reuse Opportunities
-
-Reuse existing Conrad Complete inclusion content, menu links, package value language, Club 66 references, and the current `BOOK NOW` handoff. This likely extends existing offer/inclusion module patterns rather than requiring a fully new page architecture.
-
-## Benefits
-
-- Makes the package easier to understand.
-- Keeps selected concept as the organizing logic.
-- Lets stronger proof bridges receive stronger hierarchy.
-- Supports future visual exploration without finalizing component styling.
-
-## Risks
-
-- Could become too dense if every inclusion receives equal treatment.
-- Requires current package terms and approved source language.
-- Needs visual screenshots to validate spacing, prominence, and mobile behavior.
-
-## Direction Name
-
-Editorial Proof Bridge
-
-## Description
-
-A compact press-recognition component that introduces WSJ validation in source-aware language, then connects that recognition to the specific package benefits with the strongest alignment.
-
-## Placement
-
-Within or adjacent to the benefit evidence area, ideally near Club 66 and dining rather than as a standalone hero or generic testimonial.
-
-## Reuse Opportunities
-
-Reuse existing trust-signal areas, press-room conventions, source attribution patterns, and editorial asset metadata if approved. Avoid custom testimonial styling unless brand/legal guidance supports it.
-
-## Benefits
-
-- Adds external credibility without replacing package content.
-- Keeps editorial validation governed and specific.
-- Helps stakeholders picture how press proof supports the package decision.
-
-## Risks
-
-- Cannot use direct WSJ excerpts, logos, or article framing without approval.
-- Could overtake the package story if placed too prominently.
-- Could imply endorsement if language is not carefully governed.
-
-## Direction Name
-
-Fit Guidance Panel
-
-## Description
-
-A lightweight decision-support panel that describes the kinds of stays most likely to benefit from Conrad Complete. It should frame fit in plain language, such as guests planning to use Club 66, dining, pool, nightlife, or valet, without making the package feel exclusionary.
-
-## Placement
-
-After the core benefits and before or near the booking action, where it can support decision confidence without interrupting discovery.
-
-## Reuse Opportunities
-
-Reuse existing package terms areas, informational callouts, and booking-support copy patterns. This should be a small support component, not a new selector system.
-
-## Benefits
-
-- Preserves right-guest nuance from the selected concept.
-- Reduces overclaiming risk.
-- Gives non-design stakeholders a clear way to understand package qualification.
-
-## Risks
-
-- Could feel like friction if placed too early.
-- Could weaken conversion if written as a warning instead of guidance.
-- Needs package owner review to avoid inaccurate eligibility or usage language.
-
-## Direction Name
-
-Inclusion Detail Drawer
-
-## Description
-
-A progressive disclosure pattern for benefits that need detail, such as restaurant participation, menu links, Club 66 access, pool inclusions, nightclub operating nights, and valet terms.
-
-## Placement
-
-Inside the Conrad Complete module or immediately below the primary benefit evidence area.
-
-## Reuse Opportunities
-
-Reuse existing menu links, package inclusion copy, offer terms, and any established accordion or detail patterns from the site.
-
-## Benefits
-
-- Keeps the main surface composed while preserving detail.
-- Supports guests who need proof before booking.
-- Helps avoid clutter in mobile layouts.
-
-## Risks
-
-- Important caveats may be hidden if disclosure states are poorly designed.
-- Requires accessible expanded/collapsed states.
-- Measurement readiness depends on tracking detail interactions later.
-
-## Direction Name
-
-Booking Confidence Handoff
-
-## Description
-
-A restrained transition component that summarizes the most decision-relevant package proof before guests click into booking. It should confirm what guests are choosing and why it may be worth considering.
-
-## Placement
-
-Near the package `BOOK NOW` action and potentially in booking-engine package details, subject to platform constraints.
-
-## Reuse Opportunities
-
-Reuse the existing booking CTA, package summary copy, and known booking-engine package references.
-
-## Benefits
-
-- Connects package understanding to the existing conversion path.
-- Can reduce uncertainty at the decision moment.
-- Creates a clear future handoff to conversion and analytics work.
-
-## Risks
-
-- Booking-engine flexibility is unconfirmed.
-- Could become premature because booking-flow evidence is incomplete.
-- Should not lead the first visual exploration until the canonical package surface is resolved.
-
-# Design Exploration Recommendation
-
-## Primary Exploration Direction
+### Direction Name
 
 Benefit Evidence Matrix.
 
-## Secondary Exploration Direction
+### Description
+
+A structured package module that groups Conrad Complete inclusions into evidence-backed benefit rows or cards. Each proof unit explains what the guest receives, why it matters, and what confidence signal supports it. Club 66 and dining should anchor the first layer, with pool, nightlife, valet, and other inclusions arranged as supporting benefits.
+
+### Placement
+
+Primary placement on the Conrad Complete Package Surface. Secondary placement may be adapted inside the Summer Offers offer detail area.
+
+### Reuse Opportunities
+
+Reuse existing Conrad Complete inclusion copy, current value framing, menu links, Club 66 references, restaurant names, offer terms, and the existing `BOOK NOW` handoff. Reuse existing offer-module or inclusion-list structures where possible, adapting hierarchy rather than inventing a wholly new page pattern.
+
+### Benefits
+
+- Best expression of the selected concept.
+- Makes a long inclusion list easier to evaluate.
+- Creates clear hierarchy between strongest proof bridges and supporting benefits.
+- Gives Figma Prompt generation a concrete but still flexible component direction.
+- Supports future measurement of benefit-level engagement.
+
+### Risks
+
+- Can become visually heavy if every benefit is treated as equally important.
+- Needs approved source language before editorial proof can become final copy.
+- Requires desktop and mobile exploration to avoid clutter.
+
+### Direction 2
+
+### Direction Name
 
 Editorial Proof Bridge.
 
-## Why
+### Description
 
-The Benefit Evidence Matrix should be explored first on the Conrad Complete Package Surface because that is where the user is already deciding whether the package is credible and worth considering. The pattern best expresses the selected concept because it turns Conrad Complete from a list of inclusions into a decision-ready package story. It can make Club 66 and dining feel more credible, preserve fit nuance, and keep the booking path visible without pressuring the guest.
+A compact press-recognition component that introduces WSJ validation in source-aware language and connects it to specific benefits with strong evidence alignment. It should feel like governed editorial context, not a generic testimonial, customer quote, badge, award, or rating.
 
-The Editorial Proof Bridge should be the secondary direction because WSJ validation is valuable but governed. It should support the benefit matrix, not dominate it. This pairing gives designers a clear visual exploration path: first place the experience on the package decision surface, then organize the package around validated benefits, then add press recognition where it strengthens trust.
+### Placement
 
-# Design Risk Assessment
+Within or adjacent to the Benefit Evidence Matrix, especially near Club 66 and dining. It should not be used as a standalone hero unless later stakeholder and legal guidance explicitly supports that treatment.
 
-## Highest Risks
+### Reuse Opportunities
 
-- Source governance risk: WSJ attribution, excerpt use, logo use, and paraphrase rules are not approved in the available inputs.
-- Surface certainty risk: the dedicated Conrad Complete URL was not directly reviewable, so the observed Summer Offers package module is the practical primary surface until the canonical package surface is confirmed.
-- Visual hierarchy risk: no usable screenshots or mobile captures were available, so spacing, prominence, responsive order, and visual density cannot be validated.
-- Content accuracy risk: package terms, restaurant participation, menus, Club 66 access rules, operating nights, pool access, and valet details must remain current.
-- Density risk: a benefit validation experience could become too busy if every inclusion is treated as equally important proof.
+Reuse existing trust-signal areas, press-room conventions, editorial metadata patterns, and source-attribution treatments if available. If no component exists, adapt a restrained callout pattern rather than creating a loud testimonial card.
 
-## Risk Management Direction
+### Benefits
 
-Design exploration should start with a restrained package-surface layout that gives Club 66 and dining the strongest proof emphasis, keeps other inclusions supportive, and treats WSJ validation as a governed source-context layer. Visual exploration should include mobile and desktop states before any approval decision advances beyond concept-level design direction.
+- Adds external credibility without replacing package content.
+- Protects the difference between press recognition and testimonial language.
+- Makes the WSJ source useful while keeping package understanding primary.
 
-# Telemetry Planning Readiness
+### Risks
 
-## Readiness Recommendation
+- Direct excerpts, logos, article title usage, and author attribution are not approved in the available inputs.
+- Poor copy could imply endorsement, ranking, or award status.
+- Too much visual weight could make the package feel press-led instead of benefit-led.
 
-Conditionally Ready For Telemetry Planning.
+### Direction 3
 
-## Why
+### Direction Name
 
-The concept has clear measurable surfaces: package benefit engagement, menu-link engagement, Club 66 detail engagement, editorial-recognition engagement if approved, fit-guidance engagement, and package `BOOK NOW` handoff. These are strong enough for a future telemetry planning pass.
+Fit Guidance Panel.
 
-Readiness is conditional because the final placement, component treatment, source-usage rules, and booking-flow constraints are not yet confirmed. Telemetry planning should follow initial visual exploration of the primary package surface rather than precede it.
+### Description
 
-## Candidate Measurement Areas
+A lightweight support component that clarifies when Conrad Complete is likely to be most relevant. It should help guests self-identify whether they plan to use lounge access, dining, pool, nightlife, valet, and other inclusions enough for the package to make sense.
 
-- Benefit evidence interaction by inclusion type.
-- Club 66 proof engagement.
-- Dining/menu-link engagement.
-- Fit guidance engagement.
-- Editorial proof engagement, only if approved for use.
-- Package `BOOK NOW` handoff.
-- Drop-off between package understanding and booking action.
+### Placement
 
-## Not Ready For
+After the core benefits and before or near the booking action, where it can help decision confidence without interrupting initial package discovery.
 
-- Final analytics specification.
-- Event naming.
-- Dashboard design.
-- Booking-engine instrumentation decisions.
+### Reuse Opportunities
 
-# Review Findings
+Reuse existing terms blocks, informational callouts, package-qualification copy areas, or booking-support modules. Keep it as a short support layer rather than creating a new guided selector.
 
-## Exploration ID
+### Benefits
 
-DR-01
+- Preserves right-guest nuance from the selected concept.
+- Reduces risk of overclaiming.
+- Helps guests understand value without requiring exact comparison data.
 
-## Exploration Name
+### Risks
 
-Benefit Evidence Matrix
+- Could create friction if written like a warning.
+- Could drift into an unapproved guided-package-fit experience if overbuilt.
+- Needs package-owner review for party-size, eligibility, and usage assumptions.
 
-## Concept Alignment
+### Direction 4
 
-High. This direction directly translates CON-03 into an experience structure where package benefits are explained, validated, and qualified.
+### Direction Name
 
-## Approval Status
+Inclusion Detail Drawer.
 
-Approved For Further Exploration
+### Description
 
-## Strategic Clarity
+A progressive disclosure pattern for benefits that need detail, such as participating restaurants, lunch and dinner menus, Club 66 access rules, pool inclusions, Zouk operating nights, valet terms, and current offer restrictions.
 
-High
+### Placement
 
-## Guest Value
+Inside or immediately below the Benefit Evidence Matrix on the package surface.
 
-High
+### Reuse Opportunities
 
-## Business Value
+Reuse existing menu links, offer terms, package inclusion copy, Club 66 detail links, and any established accordion, drawer, or disclosure pattern from the site.
 
-High
+### Benefits
 
-## Brand Alignment
+- Keeps the primary package story composed while preserving necessary detail.
+- Helps guests who need proof before booking.
+- Supports mobile layouts by moving dense details behind intentional interaction.
 
-High
+### Risks
 
-## Component Reuse Quality
+- Important caveats can be hidden if disclosure labels are unclear.
+- Expanded and collapsed states need accessible interaction treatment.
+- Detail interaction should be measurable later, but this review should not define telemetry events.
 
-High
+### Direction 5
 
-## CTA Clarity
+### Direction Name
 
-Medium
+Booking Confidence Handoff.
 
-## Cognitive Load
+### Description
 
-Medium
+A restrained transition component that summarizes the strongest proof points near the package booking action. It should confirm what the guest is choosing and why it may be worth considering, while preserving the existing booking path.
 
-## Measurement Readiness
+### Placement
 
-Medium
+Near the package `BOOK NOW` action on the package surface. Potential future placement in booking-engine package details should wait until booking constraints are known.
 
-## Strengths
+### Reuse Opportunities
 
-- Makes Conrad Complete more understandable without changing the package.
-- Creates natural hierarchy between stronger and weaker evidence bridges.
-- Can reuse existing inclusion, menu, Club 66, and booking content.
+Reuse the existing package CTA, package summary content, offer terms link, and booking handoff copy. Avoid creating a new conversion module that competes with the current booking system.
 
-## Weaknesses
+### Benefits
 
-- Requires careful editing to avoid equal-weight benefit clutter.
-- Needs visual evidence to validate layout density and responsive behavior.
+- Connects package understanding to the next action.
+- Helps the CTA feel earned rather than pressured.
+- Creates a natural collaboration point for future Conversion and Analytics Agent review.
 
-## Risks
+### Risks
 
-- Over-explaining every inclusion could weaken premium pacing.
-- Unverified claims, terms, or WSJ usage could undermine trust.
+- Booking-engine flexibility is unknown.
+- If placed too early, it could compress the trust-building sequence.
+- Should not become the primary exploration before the package surface is resolved.
 
-## Recommendations
+## Design Exploration Recommendation
 
-Explore a composed package module where Club 66 and dining anchor the first proof layer, other inclusions support the package story, and the booking action follows the trust-building sequence.
+### Primary Exploration Direction
 
-## Exploration ID
+Benefit Evidence Matrix on the Conrad Complete Package Surface.
 
-DR-02
+### Secondary Exploration Direction
 
-## Exploration Name
+Editorial Proof Bridge supporting the Benefit Evidence Matrix, with Fit Guidance Panel as a subordinate support layer.
 
-Editorial Proof Bridge
+### Why
 
-## Concept Alignment
+The Benefit Evidence Matrix should lead future visual exploration because it most directly translates the selected concept into a tangible experience. It turns Conrad Complete from a list of inclusions into a composed decision surface where guests can understand the package, see the strongest evidence, inspect relevant details, and move toward booking with more confidence.
 
-High as a supporting pattern. It expresses CON-01 inside the selected Benefit Validation Experience without turning editorial recognition into the whole concept.
+The Editorial Proof Bridge should be explored second because the WSJ source is strategically valuable but governed. Press recognition should strengthen benefit validation, especially for Club 66 and dining, without taking over the page or implying unapproved endorsement. Fit Guidance should be included as a light support layer where it clarifies value honestly without becoming a separate guided experience.
 
-## Approval Status
+### Figma Prompt Readiness
 
-Conditionally Approved
+This design review is ready for Figma Prompt generation. The recommended prompt should ask for a Conrad Complete package decision surface, not a generic testimonial page. It should place a Benefit Evidence Matrix on the package surface, make Club 66 and dining the strongest proof anchors, include a governed press-recognition placeholder, preserve menu and terms details, and keep the existing booking action visually clear but unpressured.
 
-## Strategic Clarity
+## Review Findings
 
-High
+### Exploration ID
 
-## Guest Value
+DR-01.
 
-Medium
+### Exploration Name
 
-## Business Value
+Benefit Evidence Matrix.
 
-High
+### Concept Alignment
 
-## Brand Alignment
+High. This direction directly satisfies CON-03 by explaining, validating, and qualifying Conrad Complete benefits at the package decision moment.
 
-Medium
+### Approval Status
 
-## Component Reuse Quality
+Approved For Further Exploration.
 
-Medium
+### Strategic Clarity
 
-## CTA Clarity
+High.
 
-Low
+### Guest Value
 
-## Cognitive Load
+High.
 
-Low
+### Business Value
 
-## Measurement Readiness
+High.
 
-Medium
+### Brand Alignment
 
-## Strengths
+High.
 
-- Adds credible third-party context.
-- Helps avoid anonymous testimonial framing.
-- Supports trust at the package decision moment.
+### Component Reuse Quality
 
-## Weaknesses
+High.
 
-- Source rights and approved usage are unavailable.
-- It cannot carry the whole experience by itself.
+### CTA Clarity
 
-## Risks
+Medium.
 
-- May imply endorsement, ranking, or award status if copy is not governed.
-- May compete with package understanding if treated as a hero feature.
+### Cognitive Load
 
-## Recommendations
+Medium.
 
-Use only approved publication references, attribution, or paraphrase rules. Keep the component close to the evidence-backed benefits it validates.
+### Measurement Readiness
 
-## Exploration ID
+Medium.
 
-DR-03
+### Strengths
 
-## Exploration Name
+- Makes the selected concept tangible.
+- Uses the package surface where guest intent is strongest.
+- Gives Club 66 and dining appropriate proof weight.
+- Reuses existing inclusion content, menu links, terms, and booking action.
 
-Fit Guidance Panel
+### Weaknesses
 
-## Concept Alignment
+- Needs careful editing to prevent clutter.
+- Requires visual exploration to validate mobile order, spacing, and hierarchy.
 
-Medium to high. It supports the selected concept by preserving right-guest nuance, but it should remain subordinate to benefit validation.
+### Risks
 
-## Approval Status
+- Equal-weight treatment across every inclusion would weaken the premium story.
+- Unapproved editorial language or stale package details would undermine trust.
 
-Conditionally Approved
+### Recommendations
 
-## Strategic Clarity
+Explore a composed package module where Club 66 and dining anchor the first proof layer, other inclusions support the package story, and the booking action follows after the guest has enough context to understand the offer.
 
-Medium
+### Exploration ID
 
-## Guest Value
+DR-02.
 
-High
+### Exploration Name
 
-## Business Value
+Editorial Proof Bridge.
 
-Medium
+### Concept Alignment
 
-## Brand Alignment
+High as a supporting pattern. It expresses CON-01 inside the selected Benefit Validation Experience without allowing editorial recognition to become the whole concept.
 
-High
+### Approval Status
 
-## Component Reuse Quality
+Conditionally Approved.
 
-Medium
+### Strategic Clarity
 
-## CTA Clarity
+High.
 
-Medium
+### Guest Value
 
-## Cognitive Load
+Medium.
 
-Medium
+### Business Value
 
-## Measurement Readiness
+High.
 
-Medium
+### Brand Alignment
 
-## Strengths
+Medium.
 
-- Helps guests decide whether the package fits their stay.
-- Reduces risk of overbroad package claims.
-- Gives stakeholders an understandable bridge from strategy to content.
+### Component Reuse Quality
 
-## Weaknesses
+Medium.
 
-- Can feel like friction if overbuilt.
-- Needs careful content to avoid discouraging qualified guests.
+### CTA Clarity
 
-## Risks
+Low.
 
-- Could drift into a separate guided selector, which the selected concept does not approve for this phase.
+### Cognitive Load
 
-## Recommendations
+Low.
 
-Treat fit guidance as a small supporting layer after benefit proof, not as the primary interaction model.
+### Measurement Readiness
 
-# Portfolio Assessment
+Medium.
 
-## Approval Summary
+### Strengths
 
-Approved For Further Exploration
+- Adds credible external context.
+- Prevents the press asset from being miscast as a generic testimonial.
+- Supports the strongest benefit bridges.
 
-- DR-01
+### Weaknesses
 
-Conditionally Approved
+- Rights, attribution, excerpt, and logo guidance are unavailable.
+- The component cannot carry the full package decision alone.
 
-- DR-02
-- DR-03
+### Risks
 
-Not Recommended
+- Could imply endorsement, ranking, or award status if language is not governed.
+- Could compete with package understanding if placed too prominently.
 
-- None
+### Recommendations
 
-DR-01 is strongest because it is the clearest expression of the selected concept. DR-02 and DR-03 should influence future exploration but require governance, content, and placement constraints.
+Use the bridge as a restrained source-context layer near Club 66 and dining proof. Keep final wording placeholder-level until approved WSJ usage guidance is available.
 
-## Strongest Exploration Directions
+### Exploration ID
 
-- Benefit Evidence Matrix
-- Editorial Proof Bridge as a supporting component
+DR-03.
 
-## Moderate Exploration Directions
+### Exploration Name
 
-- Fit Guidance Panel
-- Inclusion Detail Drawer
-- Booking Confidence Handoff
+Fit Guidance Panel.
 
-## Weakest Exploration Directions
+### Concept Alignment
 
-No explored direction is rejected, but Booking Confidence Handoff should wait until booking-flow evidence and platform constraints are clearer.
+Medium to high. It supports CON-03 and CON-02 by preserving value-fit nuance, but it should remain subordinate to benefit validation.
 
-## Recommended For Further Design Iteration
+### Approval Status
 
-- Benefit Evidence Matrix
-- Editorial Proof Bridge
-- Inclusion Detail Drawer
+Conditionally Approved.
 
-## Recommended For Telemetry Planning
+### Strategic Clarity
 
-- Benefit evidence interactions
-- Menu-link engagement
-- Club 66 detail engagement
-- Press-recognition engagement if approved
-- Package `BOOK NOW` handoff
+Medium.
 
-Do not generate a telemetry plan in this phase.
+### Guest Value
 
-## Design Debt Observed
+High.
+
+### Business Value
+
+Medium.
+
+### Brand Alignment
+
+High.
+
+### Component Reuse Quality
+
+Medium.
+
+### CTA Clarity
+
+Medium.
+
+### Cognitive Load
+
+Medium.
+
+### Measurement Readiness
+
+Medium.
+
+### Strengths
+
+- Helps guests understand whether the package matches their stay.
+- Reduces overbroad value claims.
+- Keeps conversion confidence honest.
+
+### Weaknesses
+
+- Can feel like friction if placed too early or written too cautiously.
+- Needs current package rules and stakeholder review.
+
+### Risks
+
+- Could drift into a selector-led concept that the selected direction explicitly does not prioritize.
+
+### Recommendations
+
+Use fit guidance as a short support layer after the strongest benefits. Write it as helpful orientation, not as a warning or eligibility gate.
+
+### Exploration ID
+
+DR-04.
+
+### Exploration Name
+
+Inclusion Detail Drawer.
+
+### Concept Alignment
+
+Medium. It supports the selected concept by keeping details accessible, but it is an enabling component rather than the organizing pattern.
+
+### Approval Status
+
+Conditionally Approved.
+
+### Strategic Clarity
+
+Medium.
+
+### Guest Value
+
+High.
+
+### Business Value
+
+Medium.
+
+### Brand Alignment
+
+High.
+
+### Component Reuse Quality
+
+High.
+
+### CTA Clarity
+
+Medium.
+
+### Cognitive Load
+
+Medium.
+
+### Measurement Readiness
+
+Medium.
+
+### Strengths
+
+- Preserves detail without overloading the first view.
+- Reuses existing menu, terms, and inclusion content.
+- Helps mobile composition.
+
+### Weaknesses
+
+- Can hide important caveats.
+- Requires accessible states and clear labels.
+
+### Risks
+
+- If the drawer becomes the only place where terms appear, the experience may overpromise in the collapsed state.
+
+### Recommendations
+
+Use progressive disclosure for detail, but keep critical terms and availability constraints visible enough to preserve trust.
+
+### Exploration ID
+
+DR-05.
+
+### Exploration Name
+
+Booking Confidence Handoff.
+
+### Concept Alignment
+
+Medium. It supports the conversion end of CON-03, but it should follow package understanding rather than lead the experience.
+
+### Approval Status
+
+Conditionally Approved.
+
+### Strategic Clarity
+
+Medium.
+
+### Guest Value
+
+Medium.
+
+### Business Value
+
+High.
+
+### Brand Alignment
+
+Medium.
+
+### Component Reuse Quality
+
+Medium.
+
+### CTA Clarity
+
+High.
+
+### Cognitive Load
+
+Low.
+
+### Measurement Readiness
+
+Medium.
+
+### Strengths
+
+- Connects confidence to action.
+- Reuses existing booking handoff.
+- Gives future Conversion Agent work a clear place to refine CTA pacing.
+
+### Weaknesses
+
+- Booking-engine states and constraints are not fully reviewed.
+- It cannot establish the package story by itself.
+
+### Risks
+
+- Could feel like pressure if it appears before the benefit evidence.
+- Could overpromise if summary copy excludes terms.
+
+### Recommendations
+
+Place the handoff after benefit proof on the package surface. Defer booking-engine-specific design until platform constraints and booking states are captured.
+
+## Portfolio Assessment
+
+### Approval Summary
+
+Approved For Further Exploration.
+
+- DR-01.
+
+Conditionally Approved.
+
+- DR-02.
+- DR-03.
+- DR-04.
+- DR-05.
+
+Not Recommended.
+
+- None.
+
+DR-01 is approved because it is the clearest and most complete translation of the selected concept into a designable package experience. DR-02, DR-03, DR-04, and DR-05 are conditionally approved because they strengthen the selected direction but require governance, content accuracy, visual validation, or platform clarification before they can become final design direction.
+
+### Strongest Exploration Directions
+
+- DR-01: Benefit Evidence Matrix.
+- DR-02: Editorial Proof Bridge as a supporting trust layer.
+
+### Moderate Exploration Directions
+
+- DR-03: Fit Guidance Panel.
+- DR-04: Inclusion Detail Drawer.
+- DR-05: Booking Confidence Handoff.
+
+### Weakest Exploration Directions
+
+No explored direction is rejected. Booking Confidence Handoff is the weakest near-term direction because booking-flow evidence is incomplete and the selected concept needs package understanding before conversion reassurance.
+
+### Recommended For Further Design Iteration
+
+- Benefit Evidence Matrix on the Conrad Complete Package Surface.
+- Editorial Proof Bridge near Club 66 and dining proof.
+- Inclusion Detail Drawer for menus, terms, and benefit details.
+- Fit Guidance Panel as a small support layer.
+
+### Recommended For Telemetry Planning
+
+Conditionally ready after initial visual exploration. Candidate measurement areas include benefit evidence engagement, Club 66 proof engagement, dining and menu-link engagement, fit-guidance engagement, press-recognition engagement if approved, detail-drawer engagement, and package `BOOK NOW` handoff.
+
+This review does not generate a telemetry plan.
+
+### Design Debt Observed
 
 - Canonical Conrad Complete package surface remains unclear.
-- Screenshots and mobile states are unavailable.
-- WSJ quote usage, attribution, logo use, and excerpt rights are unavailable.
+- The dedicated Conrad Complete URL was not directly reviewable through available text extraction.
+- No usable screenshots or mobile captures are available.
+- No approved WSJ usage, attribution, logo, excerpt, or paraphrase guidance is available.
 - Booking-engine package states are only partially reviewed.
-- Existing component inventory is unavailable, so reuse recommendations are pattern-level rather than system-component-specific.
+- Existing component inventory is unavailable, so reuse recommendations remain pattern-level rather than mapped to named design-system components.
+- Package terms, restaurant participation, Club 66 access rules, operating nights, menu availability, and valet details require current validation.
 
-## Cross-Concept Findings
+### Cross-Concept Findings
 
-The selected concept should remain the primary source of truth. Editorial recognition and guided fit are valuable only when they strengthen benefit validation. Future visual exploration should make Conrad Complete feel credible, specific, premium, and easy to evaluate, while avoiding unsupported comparison, generic testimonial treatment, or final UI commitments before rights and visual evidence are available.
+The selected concept should remain the source of truth. Editorial recognition and guided fit are valuable only when they make benefit validation clearer. The design should avoid separate explorations for generic testimonials, broad comparison, premium itinerary storytelling, or booking-engine reassurance until the package surface has been resolved.
 
-# Limitations
+The strongest design path is a composed package decision surface that makes Conrad Complete feel specific, credible, premium, and easy to evaluate.
+
+## Collaboration Requests
+
+### Figma Prompt Agent
+
+Use this review as the source for Figma Prompt generation. Generate prompts for a Conrad Complete package decision surface with a Benefit Evidence Matrix, governed press-recognition placeholder, Club 66 and dining proof anchors, detail disclosure for terms and menus, fit nuance, and a restrained booking handoff.
+
+### Conversion Agent
+
+Review CTA pacing after the visual exploration exists. The conversion moment should support package understanding and avoid pressure.
+
+### Package Agent
+
+Validate package inclusion language, terms, participating venues, operating rules, and value-fit nuance before final copy is used.
+
+### Analytics Agent
+
+Assess measurement readiness after Figma exploration identifies the final component structure. Do not define final events from this review alone.
+
+### Design System Agent
+
+Map the recommended patterns to existing component conventions once component inventory or design-system evidence is available. Prioritize reuse of offer modules, inclusion lists, detail disclosures, trust callouts, and CTA patterns.
+
+## Governance Summary
+
+The recommended direction aligns with the operating system because it privileges composed clarity, honest proof, premium restraint, and conversion with respect. It keeps the guest oriented, protects source governance, and avoids turning editorial coverage into unsupported marketing pressure.
+
+The primary constraint is evidence quality. This review is ready for Figma Prompt generation, but later approval should depend on canonical surface confirmation, visual captures, mobile review, source-usage guidance, and package-owner validation.
+
+## Limitations
 
 This review used `outputs/selected-concept.md` as the primary source of truth, with `outputs/recommendation.md` and `outputs/current-state.md` as supporting evidence. No usable screenshots, mobile captures, approved WSJ usage guidance, component inventory, design rationale, design-review assets, stakeholder notes, or telemetry plan were available.
