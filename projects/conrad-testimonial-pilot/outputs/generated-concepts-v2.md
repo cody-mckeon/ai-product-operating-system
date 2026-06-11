@@ -10,14 +10,14 @@ Inputs reviewed:
 - `outputs/opportunity-analysis.md`
 - `outputs/recommendation.md`
 
-Repository state was pulled before execution. The required input files were verified as present and non-empty.
+Repository state was pulled before execution and was already up to date. The required input files were verified as present and non-empty. This run uses the enhanced Concept Generation Agent standard and intentionally does not rerun the Pilot Orchestrator, Current State Agent, Opportunity Analysis Agent, or Recommendation Agent.
 
-This output tests the enhanced Concept Generation Agent standard. Concepts are complete experience directions, not content strategies, proof-point variations, placements, or CTA strategies. This output does not generate designs, telemetry, analytics, or experimentation plans.
+These concepts are experience-level directions. They are not content variations, quote treatments, CTA variations, or isolated component ideas.
 
-## Concept Generation Guardrails
+## Source Constraints
 
-- Treat Wall Street Journal coverage as governed press recognition or editorial validation, not a generic customer testimonial.
-- Do not fabricate quotes, rankings, awards, scores, endorsements, or package claims.
+- Treat WSJ coverage as governed press recognition or editorial validation, not as a generic customer testimonial.
+- Do not fabricate quotes, rankings, awards, scores, endorsements, package inventory, or package rules.
 - Do not use direct article excerpts unless legal, brand, and publication usage guidance approve them.
 - Keep editorial validation tied to Conrad Complete and current package inclusions.
 - Preserve value-fit nuance around package terms, party size, current pricing, and guest usage.
@@ -38,71 +38,43 @@ Editorial Feature Experience
 
 ### Experience Concept
 
-Create a source-backed editorial feature experience within the Conrad Complete journey that gives WSJ coverage a clear, governed role in how guests understand the package.
-
-This concept turns third-party editorial validation into a dedicated experience moment rather than scattering recognition across proof points.
+Create a dedicated press-recognition experience inside the Conrad Complete decision journey. The experience gives WSJ editorial coverage a clearly governed role by explaining the source, why it matters, and how it relates to the package's premium experience.
 
 ### User Problem Solved
 
 Trust.
 
-Guests may discount the package story because it is currently brand-authored. This experience gives them a credible external source context while preserving editorial governance.
+Guests currently see a brand-authored package story but no observed onsite WSJ validation in extracted page text. This concept gives external editorial validation a visible, source-aware experience moment.
 
 ### Component Pattern
 
-Editorial Module
+Editorial Recognition Module
 
 ### Content Strategy
 
-Use approved editorial summary, source citation, article metadata, and optional approved excerpt if rights allow. Club 66 and dining can appear as supporting references, but the central content is the editorial source story.
-
-### Placement Strategy
-
-Place on the Conrad Complete package decision surface. Based on current evidence, the Summer Offers page is the observed host; the dedicated Conrad Complete URL should become the preferred candidate only if canonical behavior is confirmed.
+Use approved editorial summary, source attribution, article metadata, and optional approved excerpt only if usage rights allow. Club 66 and dining should appear as supporting relevance cues rather than as unrelated claims.
 
 ### Why It Is Different
 
-This concept makes editorial coverage the main experience. Other concepts use the WSJ source as supporting evidence inside a decision guide, benefit validation system, comparison aid, stay story, or booking reassurance moment.
-
-### Strategic Goal Supported
-
-Increase confidence by making third-party validation visible where guests evaluate Conrad Complete.
-
-### Experience Description
-
-Guests encounter a clearly attributed editorial feature that explains the relevance of WSJ coverage to Conrad Complete. The experience establishes what the source is, why it is relevant, and which package themes it supports, without implying endorsement, ranking, or award status.
+This concept makes the editorial source itself the central experience. Other concepts use editorial validation as supporting evidence inside fit guidance, benefit validation, comparison, narrative, or booking reassurance.
 
 ### Expected Guest Outcome
 
-Guests understand that Conrad Complete has credible external editorial validation.
+Guests understand that Conrad Complete has credible external editorial validation and can distinguish that validation from brand-authored marketing language.
 
 ### Expected Business Outcome
 
-Conrad Complete gains trust support without changing the offer or relying solely on brand-authored claims.
-
-### Benefits
-
-- Directly addresses the missing onsite WSJ validation.
-- Strong fit for governed press recognition.
-- Keeps source context intact.
-- Can work with summary-only usage if direct quotes are not approved.
-
-### Risks
-
-- Could imply endorsement if attribution is mishandled.
-- Requires legal and brand approval for publication references.
-- Could overpower package details if treated too broadly.
-- Depends on canonical package-surface confirmation.
+Conrad Complete gains trust support without changing the offer or creating source-misuse risk.
 
 ### Constraints
 
-- No unapproved quote, logo, ranking, award, or endorsement claim.
-- Package terms and inclusions must remain the operational truth.
-- Source usage must follow legal and brand guidance.
+- No unapproved quote, logo, ranking, award, or endorsement language.
+- Package terms and inclusions remain the operational truth.
+- Summer Offers is the observed host; the dedicated Conrad Complete URL still requires canonical confirmation.
 
 ### Evidence Alignment
 
-High. The recommendation explicitly favors governed press recognition or editorial validation, with the package decision surface as the highest-priority placement.
+High. Theme 1 explicitly recommends governed press recognition, and Opportunity 1 documents that editorial validation is not visible in observed page text.
 
 ## CON-02
 
@@ -118,71 +90,43 @@ Guided Package Fit Experience
 
 ### Experience Concept
 
-Create a guided fit experience that helps guests determine whether Conrad Complete matches their trip style, party composition, and likely use of package inclusions.
-
-Editorial validation supports the experience, but the core product idea is guest self-assessment.
+Create a guided decision-support experience that helps guests decide whether Conrad Complete fits their trip style, party composition, and expected use of inclusions.
 
 ### User Problem Solved
 
 Decision confidence and expectation mismatch.
 
-Guests may wonder whether the package is right for them, especially if value depends on using multiple inclusions and traveling with the right party composition.
+Guests may need help understanding whether the package premium makes sense for their own stay rather than assuming the package is equally valuable for every traveler.
 
 ### Component Pattern
 
-Guided Selector
+Guided Fit Selector
 
 ### Content Strategy
 
-Use current package terms, inclusion details, approved editorial validation, value-fit guidance, and plain-language eligibility context. WSJ coverage acts as reassurance, not the main organizing structure.
-
-### Placement Strategy
-
-Place near the package explanation and terms-adjacent content before the booking handoff. Booking-engine placement should remain deferred until platform constraints and booking-flow evidence are understood.
+Use current package terms, inclusion details, value-fit guidance, approved editorial validation, and plain-language eligibility context. WSJ coverage acts as reassurance, not as the organizing structure.
 
 ### Why It Is Different
 
-This concept is organized around the guest's fit decision. It competes with the Editorial Feature Experience because it prioritizes practical self-assessment over editorial credibility as the main experience.
-
-### Strategic Goal Supported
-
-Help guests make a better-qualified decision about whether Conrad Complete fits their intended stay.
-
-### Experience Description
-
-Guests move through a short conceptual guide that frames the package around likely use: dining plans, Club 66 interest, pool or nightlife relevance, party-size considerations, and current package rules. Approved press validation can reinforce that these benefits have external credibility, but the guide remains focused on the guest's own trip.
+This concept is organized around the guest's self-assessment. It competes with the Editorial Feature Experience because it prioritizes practical fit over source depth.
 
 ### Expected Guest Outcome
 
-Guests feel clearer about whether Conrad Complete is a good fit for them.
+Guests feel clearer about whether Conrad Complete is a strong match for their stay.
 
 ### Expected Business Outcome
 
 The package attracts better-qualified interest and reduces expectation mismatch.
 
-### Benefits
-
-- Directly supports right-guest value-fit nuance.
-- Helps avoid universal value claims.
-- Reduces guest confusion around package value.
-- Can remain useful even if WSJ quote rights are limited.
-
-### Risks
-
-- May feel less promotional than a press-first experience.
-- Requires current package rules, occupancy logic, and terms.
-- Poor wording could discourage guests who are actually a good fit.
-- Needs visual and canonical page evidence before downstream exploration.
-
 ### Constraints
 
 - Do not reuse article-era pricing as current value proof.
 - Do not make universal savings or value claims.
-- Do not imply eligibility or access beyond current terms.
+- Do not imply eligibility, access, or package logic beyond current terms.
 
 ### Evidence Alignment
 
-Medium-high. The recommendation specifically asks to preserve value-fit nuance, but current pricing, occupancy requirements, and booking-flow details require verification.
+Medium-high. Theme 4 calls for value-fit nuance, but current pricing, occupancy requirements, and booking-flow details require verification.
 
 ## CON-03
 
@@ -198,15 +142,13 @@ Benefit Validation Experience
 
 ### Experience Concept
 
-Create a benefit validation experience that helps guests understand the credibility and role of major Conrad Complete inclusions.
-
-The experience starts with the package benefits, then adds source-backed validation where evidence is strongest.
+Create a validation experience that helps guests understand which Conrad Complete inclusions carry the strongest credibility and why those inclusions matter.
 
 ### User Problem Solved
 
 Package understanding and premium justification.
 
-Guests may see a long list of inclusions but still struggle to understand which benefits make the package feel premium and credible.
+Guests may see a list of inclusions but still struggle to understand which benefits make the package feel credible, premium, and experience-based.
 
 ### Component Pattern
 
@@ -214,23 +156,11 @@ Benefit Evidence Matrix
 
 ### Content Strategy
 
-Use current inclusion content as the base layer. Add approved editorial validation for benefits documented in the WSJ themes, especially Club 66 and dining. Keep pool, nightlife, valet, and other inclusions accurate without implying they were all equally validated by the article.
-
-### Placement Strategy
-
-Place near the Conrad Complete inclusion list or package detail area. Secondary relevance may exist on Club 66 content if current access rules and package linkage are confirmed.
+Use current inclusion content as the base layer. Add approved editorial validation where evidence is strongest, especially Club 66 and dining. Keep pool, nightlife, valet, and other inclusions accurate without implying they were all equally validated by WSJ coverage.
 
 ### Why It Is Different
 
-This concept organizes around proof-backed inclusions. It is different from Guided Package Fit, which asks whether the package fits a guest's trip, and from Package Comparison, which helps guests compare Conrad Complete against alternatives.
-
-### Strategic Goal Supported
-
-Make the package value story more concrete and credible.
-
-### Experience Description
-
-Guests review key benefits through a validation-oriented structure. Each major inclusion is presented as part of the current package, with supporting evidence where available. Club 66 and dining receive the strongest editorial connection because they are both current package elements and documented article themes.
+This concept organizes around proof-backed package benefits. It differs from Guided Package Fit, which asks whether the package fits the guest, and from Premium Stay Story, which turns benefits into a narrative sequence.
 
 ### Expected Guest Outcome
 
@@ -238,30 +168,17 @@ Guests understand why specific benefits matter and which parts of the package ar
 
 ### Expected Business Outcome
 
-Conrad Complete feels more credible and premium without modifying the package itself.
-
-### Benefits
-
-- Converts abstract inclusive luxury into understandable evidence.
-- Uses Club 66 and dining as strong proof bridges.
-- Keeps validation tied to current inclusions.
-- Gives evaluators a clear alternative to a press-first module.
-
-### Risks
-
-- Could overemphasize the benefits with strongest editorial support.
-- Requires validation of restaurants, menus, Club 66 access, and package terms.
-- Could become too dense if every inclusion receives equal treatment.
+Conrad Complete feels more credible and premium without modifying package structure.
 
 ### Constraints
 
-- Do not imply every benefit was reviewed by WSJ.
+- Do not imply every benefit was reviewed or endorsed by WSJ.
 - Do not imply unlimited or unrestricted access.
 - Do not let proof language override current terms.
 
 ### Evidence Alignment
 
-High. Current package content and the recommendation both identify Club 66 and dining as strong bridges between package claims and editorial validation.
+High. Theme 3 identifies Club 66 and dining as the clearest proof bridges between the article and the current package story.
 
 ## CON-04
 
@@ -277,61 +194,33 @@ Package Comparison Experience
 
 ### Experience Concept
 
-Create a comparison experience that helps guests understand when Conrad Complete differs from a standard Conrad stay, room-only booking, or other offer path.
-
-Editorial validation is used to support the package's credibility, while the primary experience helps guests compare choices.
+Create a comparison experience that helps guests understand when Conrad Complete differs from a standard Conrad stay, room-only booking, or another offer path.
 
 ### User Problem Solved
 
 Offer comparison.
 
-Guests may need to understand what Conrad Complete changes about the stay before they can judge whether the package premium is justified.
+Guests may need to understand what Conrad Complete changes about the stay before deciding whether the package premium is justified.
 
 ### Component Pattern
 
-Comparison Module
+Offer Comparison Module
 
 ### Content Strategy
 
-Use current package inclusions, standard stay context, known offer context, approved source citation, and value-fit framing. Avoid unsupported savings claims or unverified comparisons.
-
-### Placement Strategy
-
-Place on the Conrad Complete package surface where guests are likely weighing the package against other stay or offer options. Do not place in the booking engine until booking-flow evidence and platform constraints are known.
+Use current package inclusions, standard stay context, known offer context, approved source citation, and value-fit framing. Avoid unsupported savings claims or unverified offer comparisons.
 
 ### Why It Is Different
 
-This concept is competitive because it frames the problem as choice clarity. It differs from Benefit Validation by comparing pathways, and from Guided Package Fit by focusing on offer alternatives rather than self-assessment.
-
-### Strategic Goal Supported
-
-Support booking confidence by clarifying what guests gain when choosing Conrad Complete.
-
-### Experience Description
-
-Guests see Conrad Complete presented in relation to alternative booking paths at a conceptual level. The experience clarifies what the package adds, which benefits are most relevant, and where editorial validation supports confidence. It avoids creating new offer rules or unverified pricing comparisons.
+This concept frames the problem as choice clarity. It differs from Benefit Validation by comparing pathways, and from Guided Package Fit by focusing on offer alternatives rather than personal usage fit.
 
 ### Expected Guest Outcome
 
-Guests can more clearly distinguish Conrad Complete from other available ways to book or experience Conrad Las Vegas.
+Guests can more clearly distinguish Conrad Complete from other ways to book or experience Conrad Las Vegas.
 
 ### Expected Business Outcome
 
 The package becomes easier to evaluate against alternatives, supporting more confident package selection.
-
-### Benefits
-
-- Solves a different user problem than trust alone.
-- Helps clarify package value without changing pricing.
-- Supports right-guest fit through side-by-side choice framing.
-- Gives Concept Evaluation a distinct alternative to editorial, story, and proof experiences.
-
-### Risks
-
-- Requires accurate current offer, room, package, and booking-path information.
-- Could imply superiority over other offers without enough evidence.
-- May be constrained by current CMS or booking-engine capabilities.
-- Visual hierarchy evidence is missing.
 
 ### Constraints
 
@@ -359,37 +248,23 @@ Premium Stay Story Experience
 
 Create a stay-story experience that helps guests imagine Conrad Complete as a sequence of premium moments across the visit: arrival, Club 66, dining, pool, nightlife, and valet.
 
-Editorial validation appears inside the story where it supports specific moments rather than as a standalone proof block.
-
 ### User Problem Solved
 
 Premium justification and package understanding.
 
-Guests may understand the list of inclusions but not the lived experience those inclusions create.
+Guests may understand the inclusion list but not the lived experience those inclusions create.
 
 ### Component Pattern
 
-Stay Timeline
+Stay Journey Timeline
 
 ### Content Strategy
 
 Use current package inclusions as the narrative spine. Add approved editorial validation at moments with strongest source alignment, especially Club 66 and dining. Use current terms to keep the story accurate.
 
-### Placement Strategy
-
-Place on the Conrad Complete package surface after the core package proposition and near inclusion detail. It should help interpret the inclusion list, not replace terms or booking information.
-
 ### Why It Is Different
 
 This concept is experiential and narrative. It differs from Benefit Validation, which organizes around proof, and from Package Comparison, which organizes around alternatives.
-
-### Strategic Goal Supported
-
-Make inclusive luxury feel concrete, memorable, and premium while staying grounded in current package details.
-
-### Experience Description
-
-Guests encounter Conrad Complete as a conceptual stay sequence. The experience shows how included benefits can combine across a trip, while source-backed validation reinforces the moments most connected to the WSJ coverage.
 
 ### Expected Guest Outcome
 
@@ -399,20 +274,6 @@ Guests can picture how Conrad Complete changes the feel of a stay.
 
 The package feels more differentiated and premium without requiring new inclusions.
 
-### Benefits
-
-- Turns a static inclusion list into an understandable experience.
-- Supports emotional comprehension as well as rational trust.
-- Lets Club 66 and dining appear inside a broader package story.
-- Avoids making editorial proof carry the entire decision.
-
-### Risks
-
-- Can overpromise if the story implies guaranteed timing, access, or itinerary flow.
-- Requires current operational accuracy across multiple inclusions.
-- Needs later visual evidence before downstream exploration.
-- Could become too promotional if value-fit nuance is lost.
-
 ### Constraints
 
 - Do not invent itinerary steps or fulfillment processes.
@@ -421,7 +282,7 @@ The package feels more differentiated and premium without requiring new inclusio
 
 ### Evidence Alignment
 
-High. Current package evidence already includes multiple premium stay moments, and the recommendation identifies Club 66 and dining as the strongest proof bridges.
+High. Current package evidence includes multiple premium stay moments, and the recommendation identifies Club 66 and dining as strong proof bridges.
 
 ## CON-06
 
@@ -437,9 +298,7 @@ Booking Confidence Experience
 
 ### Experience Concept
 
-Create a booking-adjacent reassurance experience that gives high-intent guests a concise confidence check before they move from package consideration into booking.
-
-This concept uses editorial validation sparingly and focuses on reducing final hesitation.
+Create a booking-adjacent reassurance experience that gives high-intent guests a concise confidence check before moving from package consideration into booking.
 
 ### User Problem Solved
 
@@ -455,21 +314,9 @@ Booking Confidence Panel
 
 Use concise package recap, approved source citation or recognition language, current inclusion highlights, and terms reminders. Avoid long editorial storytelling or detailed comparison at this stage.
 
-### Placement Strategy
-
-Primary candidate placement is near the package `BOOK NOW` handoff on the Conrad Complete surface. Booking-engine placement should be considered only after booking-flow capture and platform constraints are verified.
-
 ### Why It Is Different
 
-This concept focuses on the moment of action. It differs from the Editorial Feature Experience, which builds trust through source depth, and from Guided Package Fit, which supports earlier decision formation.
-
-### Strategic Goal Supported
-
-Support booking intent by giving guests concise, governed reassurance before the booking handoff.
-
-### Experience Description
-
-Guests see a compact confidence experience near the package action point. It reinforces the package's core value, reminds guests of key inclusions, and references approved editorial validation without pulling them away from the decision.
+This concept focuses on the action moment. It differs from the Editorial Feature Experience, which builds trust through source depth, and from Guided Package Fit, which supports earlier decision formation.
 
 ### Expected Guest Outcome
 
@@ -478,20 +325,6 @@ Guests feel reassured enough to continue into booking with clearer expectations.
 ### Expected Business Outcome
 
 The package handoff receives credibility support without overloading the booking path.
-
-### Benefits
-
-- Solves a high-intent hesitation problem.
-- Keeps reassurance close to action.
-- Can use conservative source treatment.
-- Does not require a full editorial or narrative experience.
-
-### Risks
-
-- Booking-engine evidence is currently limited.
-- Could crowd the action area if downstream design is not careful.
-- May be too late for guests who need earlier education.
-- Requires current terms and package recap accuracy.
 
 ### Constraints
 
@@ -503,19 +336,23 @@ The package handoff receives credibility support without overloading the booking
 
 Medium. The package `BOOK NOW` handoff is documented, but booking-flow states and platform constraints are not fully captured.
 
-## Concept Portfolio Summary
+## Portfolio Diversity Summary
 
-| Concept ID | Recommendation Alignment | Concept Type | Notes |
+| Concept ID | Experience Direction | Component Pattern | Primary User Problem |
 | --- | --- | --- | --- |
-| CON-01 | Themes 1, 2, 3 | Editorial Feature | Builds trust by making WSJ coverage a governed feature experience. |
-| CON-02 | Themes 2, 4, 5 | Guided Decision Support | Helps guests assess whether Conrad Complete fits their trip and expected usage. |
-| CON-03 | Themes 2, 3, 4 | Benefit Validation | Validates major inclusions through package evidence and approved editorial support. |
-| CON-04 | Themes 2, 4, 5 | Comparison | Helps guests compare Conrad Complete against other booking or offer paths. |
-| CON-05 | Themes 2, 3, 4 | Storytelling | Turns package inclusions into a premium stay sequence. |
-| CON-06 | Themes 1, 2, 5 | Booking Confidence | Reduces final hesitation near the package booking handoff. |
+| CON-01 | Press recognition | Editorial Recognition Module | Trust |
+| CON-02 | Guided decision support | Guided Fit Selector | Fit confidence |
+| CON-03 | Benefit validation | Benefit Evidence Matrix | Premium justification |
+| CON-04 | Offer comparison | Offer Comparison Module | Choice clarity |
+| CON-05 | Journey storytelling | Stay Journey Timeline | Experience comprehension |
+| CON-06 | Booking reassurance | Booking Confidence Panel | Handoff confidence |
+
+The generated portfolio is intentionally diverse: concepts vary by journey stage, organizing model, user problem, and component pattern. The set includes recognition, decision support, validation, comparison, storytelling, and conversion-adjacent reassurance rather than multiple treatments of the same editorial quote or proof point.
 
 ## Execution Summary
 
 - Number of concepts generated: 6
 - Recommendations covered: Theme 1, Theme 2, Theme 3, Theme 4, Theme 5 from `outputs/recommendation.md`
-- Evidence limitations encountered: no usable screenshots, no mobile evidence, unclear canonical Conrad Complete URL behavior, limited booking-engine evidence, and no documented legal or brand approval for WSJ quote, logo, attribution, or excerpt usage
+- Concept type: Experience-level directions
+- Content-variation concepts generated: 0
+- Upstream agents rerun: 0
