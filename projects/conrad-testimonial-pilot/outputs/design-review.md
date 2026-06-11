@@ -58,6 +58,55 @@ Conversion should feel like concierge guidance. The existing package booking act
 
 The experience should avoid fake urgency, universal value claims, aggressive savings framing, or overconfident editorial language. The strongest conversion strategy is a clear package story that makes the guest feel oriented and respected.
 
+## Benefit Validation Assessment
+
+### Strongest Proof Opportunities
+
+Club 66 is the strongest proof opportunity because it is visible in current Conrad Complete package content, has a dedicated supporting page, and connects to concrete premium moments: private lounge access, continental breakfast, evening social hour, drinks, light bites, and Strip views. It should be treated as a primary benefit proof unit rather than a generic amenity mention.
+
+Dining is the second strongest proof opportunity because current package content names lunch and dinner venues, provides menu links, and aligns with the editorial source themes around experienced value. Dining proof should help guests understand what the package changes about the stay, not merely repeat restaurant names.
+
+Pool access is a moderate proof opportunity. It contributes to the inclusive resort experience and should be visible, but it has less editorial strength than Club 66 and dining in the available inputs. Nightclub entry and valet are supporting proof opportunities that can help complete the package story, but they should not receive the same hierarchy as Club 66 or dining unless additional evidence becomes available.
+
+### Benefit-Validation Pattern Evaluation
+
+The strongest pattern is a benefit-level proof hierarchy:
+
+- What's included.
+- Why it matters.
+- Validation evidence.
+- Terms or constraints.
+
+This pattern should appear inside each primary benefit area. It lets the guest answer four decision questions: what they receive, why it improves the stay, why the claim is credible, and what conditions apply.
+
+The design should avoid a separate testimonial carousel, review wall, press-logo strip, or generic quote gallery as the organizing pattern. Those treatments would aggregate proof away from the benefit being evaluated and would weaken the selected concept. Editorial validation should operate as evidence inside the benefit-validation experience, not as a separate destination.
+
+### Editorial Validation Placement
+
+Editorial validation should appear adjacent to the specific benefit it supports. For the first exploration, that means inside or directly below the Club 66 and dining benefit sections. If approved editorial language is available, it should be placed within the benefit card, row, or section where the guest is evaluating that benefit.
+
+Do not create a dedicated Editorial Recognition section unless a later Design Review explicitly recommends a page-level editorial feature. For this selected concept, editorial validation should remain subordinate to package understanding. It should reinforce benefit credibility at the point of evaluation.
+
+Approved source context may appear as a small attribution or governed press-recognition note within each applicable proof unit. If source usage is not approved, the Figma exploration should use placeholder language such as approved editorial validation or approved third-party validation rather than naming, quoting, excerpting, or visually implying WSJ-specific content.
+
+### Comparison Opportunity Evaluation
+
+Comparison should be explored as decision support, not as aggressive sales messaging. The selected concept excluded a full Package Comparison Experience, so comparison should not become the primary component or concept. However, small comparison moments can make benefit value easier to understand when they stay close to individual benefits.
+
+Useful comparison moments include:
+
+- Standard room stay vs Conrad Complete stay.
+- Included dining vs purchased separately.
+- General access vs included Club 66 access.
+- Typical pool arrival vs included early-entry/reserved-area pool experience.
+- Self-directed offer browsing vs package-supported stay planning.
+
+These comparisons should be framed in neutral, guest-helpful language. They should clarify differentiation without implying universal savings, guaranteed access, or superiority for every traveler. Any pricing, value, or availability comparison must remain conditional until current package terms and pricing are verified.
+
+### Hierarchy Implication
+
+The design should lead with benefit comprehension, then proof, then fit and terms, then booking. Editorial recognition belongs after the guest understands the relevant benefit, not before. Comparison belongs as a small explanatory layer inside benefit proof units or fit guidance, not as a standalone comparison table.
+
 ## Placement Exploration
 
 ### Candidate Placement 1
@@ -253,6 +302,8 @@ Benefit Evidence Matrix.
 
 A structured package module that groups Conrad Complete inclusions into evidence-backed benefit rows or cards. Each proof unit explains what the guest receives, why it matters, and what confidence signal supports it. Club 66 and dining should anchor the first layer, with pool, nightlife, valet, and other inclusions arranged as supporting benefits.
 
+Each primary benefit unit should preserve the proof relationship in the same place: what's included, why it matters, validation evidence, and terms or constraints. Editorial validation should appear inside the relevant benefit unit, not in a disconnected recognition area.
+
 ### Placement
 
 Primary placement on the Conrad Complete Package Surface. Secondary placement may be adapted inside the Summer Offers offer detail area.
@@ -314,6 +365,8 @@ Fit Guidance Panel.
 ### Description
 
 A lightweight support component that clarifies when Conrad Complete is likely to be most relevant. It should help guests self-identify whether they plan to use lounge access, dining, pool, nightlife, valet, and other inclusions enough for the package to make sense.
+
+This panel may include restrained comparison moments, such as standard stay vs package stay or included access vs purchased separately, but only as decision support. It should not become a full comparison concept, pricing calculator, or aggressive savings module.
 
 ### Placement
 
