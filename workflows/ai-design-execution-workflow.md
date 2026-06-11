@@ -184,25 +184,26 @@ Exit criteria:
 
 ## 6. UX Concept Generation
 
-UX concept generation turns the approved problem and strategy into candidate experience flows. Concepts should be structured around journey stage, component role, user decision, and measurable outcome.
+UX concept generation turns the approved problem and strategy into candidate
+experience directions. Concepts should answer "What experience should we
+build?" and should be structured around experience concept, component pattern,
+user problem, journey placement, and meaningful differentiation.
 
 Concept brief requirements:
 
-- Target surface or flow
-- Journey sequence
-- Primary user task
-- Component candidates
-- CTA hierarchy
-- Content hierarchy
-- Mobile behavior
-- States and edge cases
-- Measurement intent
-- Design risks
-- Experiment hypothesis if applicable
+- Experience concept
+- User problem solved
+- Component pattern
+- Content strategy
+- Placement strategy
+- Why the concept is different from the other candidates
+- Benefits
+- Risks
+- Evidence alignment
 
 Tool interaction:
 
-- ChatGPT creates structured UX concepts and compares alternatives.
+- ChatGPT creates structured UX concepts that can compete against one another.
 - Claude pressure-tests clarity, edge cases, and user reasoning.
 - v0 may generate code-shaped layout concepts when interaction, layout density, or responsive behavior needs quick validation.
 - Figma Make explores visual direction after concept structure is clear.
@@ -210,9 +211,10 @@ Tool interaction:
 
 Exit criteria:
 
-- At least one concept is strong enough for AI design exploration.
-- Weak concepts are documented or discarded with rationale.
-- The concept references component doctrine and analytics intent.
+- Concepts are experience-level directions, not content, CTA, or placement variations.
+- Concepts are clearly differentiated.
+- Each concept names the component pattern that enables it.
+- Concepts are suitable for Concept Evaluation to choose between rather than combine.
 
 ## 7. AI Design Exploration
 

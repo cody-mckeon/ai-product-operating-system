@@ -29,7 +29,7 @@ Status: Stable
 ### Concept Generation Agent
 
 File: agents/concept-generation-agent.md
-Version: v1.0
+Version: v1.1
 Status: Stable
 
 ### Design Review Agent
