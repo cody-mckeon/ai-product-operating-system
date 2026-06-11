@@ -10,6 +10,8 @@ Use WSJ editorial validation as a governed Press Recognition Pattern for Conrad 
 
 The current Conrad Complete story already emphasizes inclusive luxury, Club 66, dining, pool access, nightlife, and valet. The WSJ article independently validates many of those same experience areas and gives the package credible third-party support. The source is editorial press coverage, so it should be treated as press recognition or editorial validation rather than a generic customer testimonial.
 
+The enhanced current-state inventory supports this direction by separating available placement surfaces, existing trust signals, and editorial assets. That separation matters because the project has many existing trust mechanisms, but no observed onsite WSJ validation in extracted page text.
+
 ### Why It Matters
 
 The business objective is to increase trust, decision confidence, and booking intent. Editorial validation is most useful where guests are evaluating whether Conrad Complete is credible, premium, and worth the package premium. The evidence points first to the package decision surface, then to supporting Conrad and Club 66 touchpoints.
@@ -32,6 +34,8 @@ Governed Press Recognition
 
 - Opportunity 1: Editorial validation is not visible in observed page text
 - Opportunity 4: Press proof may be more appropriate than personal testimonial framing
+- Opportunity 9: Existing trust signals are strong but source-specific editorial validation is absent onsite
+- Opportunity 10: Editorial asset availability requires approval clarity
 
 ### Priority
 
@@ -75,6 +79,8 @@ The current observed package story is brand-authored. The pilot has credible edi
 
 - Opportunity 1
 - Opportunity 4
+- Opportunity 9
+- Opportunity 10
 
 ### Expected Guest Outcome
 
@@ -92,7 +98,7 @@ Conrad Complete gains trust support while preserving brand credibility and reduc
 
 ### Dependencies
 
-Legal review, brand review, press attribution policy, approved excerpt/paraphrase rules, current offer validation, and stakeholder approval.
+Legal review, brand review, press attribution policy, approved excerpt/paraphrase rules, current offer validation, stakeholder approval, and confirmation of which editorial assets are approved for use.
 
 ### Quality Standards
 
@@ -118,6 +124,7 @@ Package Decision Confidence
 - Opportunity 3: Package value requires trust and specificity
 - Opportunity 5: Placement strategy depends on journey stage
 - Opportunity 8: Canonical Conrad Complete surface is unclear
+- Opportunity 9: Existing trust signals are strong but source-specific editorial validation is absent onsite
 
 ### Priority
 
@@ -163,6 +170,7 @@ Guests may see a premium inclusive package claim and a value figure, but may nee
 - Opportunity 3
 - Opportunity 5
 - Opportunity 8
+- Opportunity 9
 
 ### Expected Guest Outcome
 
@@ -190,7 +198,7 @@ Secondary placement areas should be considered only after primary package placem
 
 ### Dependencies
 
-Canonical URL confirmation, screenshots, booking-flow captures, package owner review, current offer terms, and approved source usage.
+Canonical URL confirmation, screenshots, booking-flow captures, package owner review, current offer terms, approved source usage, and verification of current-state placement-surface prominence.
 
 ### Quality Standards
 

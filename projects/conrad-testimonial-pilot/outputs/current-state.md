@@ -4,6 +4,16 @@
 
 Project: `projects/conrad-testimonial-pilot/`
 
+Test execution:
+
+| Check | Result |
+| --- | --- |
+| Repository sync: `git fetch origin` | Success |
+| Repository state | Pulled latest `origin/main`; repository was already up to date. |
+| Required input: `pilot-brief.md` | Present |
+| Required input: `urls.md` | Present |
+| Required input: `article-source/wsj-all-inclusive-las-vegas.pdf` | Present |
+
 Reviewed evidence:
 
 | Evidence | Status | Coverage |

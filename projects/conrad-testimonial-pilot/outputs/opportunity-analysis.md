@@ -9,6 +9,7 @@ This analysis is based on:
 - `outputs/current-state.md`
 - `article-source/wsj-all-inclusive-las-vegas.pdf`
 - Accessible live-page text from Conrad, Stay, Summer Offers, Club 66, A World of Flavor, and booking-engine surfaces
+- The Current State Agent's Placement Opportunity Inventory, Trust Signal Inventory, and Editorial Asset Assessment
 
 No usable screenshots were available. Opportunities are therefore grounded in text-visible content, source evidence, and documented gaps. This output does not recommend solutions, generate concepts, define designs, create telemetry, create analytics, or produce experimentation outputs.
 
@@ -251,3 +252,63 @@ There is an opportunity to clarify the primary Conrad Complete destination befor
 ### Dependencies
 
 URL status, redirects, campaign routing, CMS ownership, and booking-engine linkage need confirmation.
+
+## Opportunity 9
+
+### Name
+
+Existing trust signals are strong but source-specific editorial validation is absent onsite
+
+### Observation
+
+The current-state Trust Signal Inventory documents multiple existing trust mechanisms, including Conrad/Hilton affiliation, luxury positioning, Club 66 VIP access, named restaurants, package value framing, loyalty presence, support signals, and footer certification marks. The same inventory notes that WSJ editorial validation exists only as source evidence and was not observed as an onsite trust signal.
+
+### Evidence
+
+`outputs/current-state.md` includes Trust Signal Inventory entries for brand affiliation, luxury positioning, VIP access, package value claim, restaurant credibility, exclusive access, loyalty program, service support, Hilton affiliation, sustainability/safety/responsibility marks, press room link, and editorial validation. The editorial validation entry is marked as source evidence rather than observed onsite page text.
+
+### User Impact
+
+Guests can see several brand-authored and institutional trust mechanisms, but may not encounter the third-party editorial proof that directly relates to the Conrad Complete experience.
+
+### Business Impact
+
+The business may have a distinct trust gap around external validation, even though other trust mechanisms are already present.
+
+### Opportunity Statement
+
+There is an opportunity to distinguish existing trust mechanisms from available third-party editorial validation when evaluating future trust-signal strategy.
+
+### Dependencies
+
+Source usage approval, legal review, visual evidence, and stakeholder alignment are required before any downstream strategy decision.
+
+## Opportunity 10
+
+### Name
+
+Editorial asset availability requires approval clarity
+
+### Observation
+
+The Current State Agent's Editorial Asset Assessment identifies available WSJ-related asset types but also documents that direct quotes, pull quote candidates, publication mention, author attribution, and article title require approval before guest-facing use.
+
+### Evidence
+
+`outputs/current-state.md` lists observed editorial assets from the WSJ PDF, including publication mention, author attribution, article title, review summary, direct quotes, pull quote candidates, and review themes. It also notes no publication logo asset, no ranking, no award, and no rights or approval evidence in the project folder.
+
+### User Impact
+
+Guests may benefit from credible editorial context only if it is presented accurately and with appropriate source context.
+
+### Business Impact
+
+Without approval clarity, editorial proof may create legal, brand, or trust risk.
+
+### Opportunity Statement
+
+There is an opportunity to clarify which editorial assets are available, approved, and current before downstream recommendation or execution work relies on them.
+
+### Dependencies
+
+Legal guidance, brand guidance, source licensing, approved attribution language, and current package-term validation are required.
