@@ -310,3 +310,27 @@ Success Criteria: The exploration gives guests honest fit cues in plain language
 | Benefit Evidence Matrix | Conrad Complete Package Surface | Guests evaluating Conrad Complete before booking consideration | High: existing inclusion copy, Club 66 references, dining/menu links, package terms, and `BOOK NOW` handoff | Learn whether evidence-backed benefit grouping improves package understanding and trust. |
 | Editorial Proof Bridge | Within or adjacent to the Benefit Evidence Matrix near Club 66 and dining | Guests who need external validation before trusting the package | Medium: existing package copy and trust/callout patterns may be adapted, but source usage requires approval | Learn whether governed press recognition can increase credibility without implying endorsement or overpowering package details. |
 | Fit Guidance Panel | After core benefit evidence and before or near booking action | Guests deciding whether the package fits their stay style and expected use | Medium: existing terms, inclusion copy, informational callouts, and booking-support copy may be adapted | Learn whether lightweight fit guidance improves decision confidence without creating friction or a separate selector. |
+
+# Prompt Agent Validation
+
+## Source Of Truth Confirmation
+
+This output uses `outputs/selected-concept.md` and `outputs/design-review.md` as the source of truth.
+
+The selected concept remains CON-03: Benefit Validation Experience. The prompts do not re-evaluate concepts, revive excluded concepts, or introduce a new strategic direction.
+
+## Design Direction Alignment
+
+Pass. The prompt set keeps Benefit Evidence Matrix as the primary exploration direction and treats Editorial Proof Bridge and Fit Guidance Panel as supporting patterns only. Club 66 and dining remain the strongest proof bridges.
+
+## Placement Strategy
+
+Pass. The prompts identify the Conrad Complete Package Surface as the primary placement, with the observed Summer Offers module as the working surface until the canonical dedicated page is confirmed. Offer detail and Club 66 placements remain secondary or supporting contexts rather than primary destinations.
+
+## Component Reuse Guidance
+
+Pass. The prompts direct Figma Make to reuse existing Conrad Complete inclusion content, Club 66 references, dining and menu links, pool/nightlife/valet content, package terms, existing offer or package module patterns, informational callouts, disclosure/detail patterns, and the current `BOOK NOW` handoff.
+
+## Figma Make Usability
+
+Pass. Each prompt includes context, goal, audience, placement, core pattern, supporting patterns, reuse guidance, constraints, desired learning outcome, risks to explore, and success criteria. The prompts are ready to paste into Figma Make for visual exploration.
