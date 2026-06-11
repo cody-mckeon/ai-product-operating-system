@@ -194,6 +194,131 @@ not be verified. Use only documented current content, observed patterns, and
 reuse opportunities from Design Review, and avoid inventing named reusable
 components.
 
+# Experience Integration Context
+
+Design explorations must specify how they integrate into existing surfaces.
+
+The Figma Prompt Agent should communicate:
+
+- Where the experience lives.
+- What already exists.
+- What must remain.
+- What scope of exploration is allowed.
+
+For each generated design direction include:
+
+### Surface Type
+
+Classify the exploration surface as one of:
+
+- Standalone Page
+- Page Module
+- Page Section
+- Embedded Component
+- Booking Flow Step
+- Modal
+- Drawer
+- Expansion Panel
+
+### Existing Surface
+
+Document the existing page or experience the exploration integrates with.
+
+Examples:
+
+- Conrad Complete Package Page
+- Conrad Landing Page
+- Club 66 Page
+- Booking Flow
+
+### Existing Components To Preserve
+
+Document components that should remain unchanged.
+
+Examples:
+
+- Hero
+- Booking Widget
+- Package Overview
+- Existing CTA
+- Terms Section
+
+### Recommended Placement
+
+Document where the exploration should live relative to existing content.
+
+Examples:
+
+- Above existing content
+- Below existing content
+- Between existing sections
+- Near booking CTA
+- Near package summary
+
+### Module Scope
+
+Classify the exploration scope as:
+
+- Small
+- Medium
+- Large
+
+Definitions:
+
+Small:
+
+- Single embedded component.
+
+Medium:
+
+- Multi-component section.
+
+Large:
+
+- Multiple connected modules.
+
+### Exploration Constraint
+
+Generate explicit integration instructions such as:
+
+- Design this as an integrated module.
+- Do not redesign the entire page.
+- Do not create a new landing page.
+- Do not redesign navigation.
+- Do not redesign booking flow.
+- Assume the surrounding page already exists.
+
+For a Conrad Complete pilot, use integration context such as:
+
+Surface Type:
+
+Page Module
+
+Existing Surface:
+
+Conrad Complete Package Page
+
+Existing Components To Preserve:
+
+- Hero
+- Package Overview
+- Dining Menu Links
+- BOOK NOW CTA
+- Terms Section
+
+Recommended Placement:
+
+Between package overview and BOOK NOW CTA
+
+Module Scope:
+
+Medium
+
+Exploration Constraint:
+
+Design a benefit-validation module that integrates into the existing Conrad
+Complete page. Do not redesign the page itself.
+
 ## Figma Prompt Structure
 
 For each approved design direction or supporting pattern include:
@@ -215,6 +340,11 @@ State what the design exploration should learn.
 ### Primary Placement
 
 State where the exploration should appear first.
+
+### Experience Integration Context
+
+Document the surface type, existing surface, existing components to preserve,
+recommended placement, module scope, and exploration constraint.
 
 ### Audience
 
@@ -253,6 +383,13 @@ Generate a copy-paste-ready Figma Make prompt.
 Every generated prompt must include:
 
 - Context
+- Experience Integration Context
+- Surface Type
+- Existing Surface
+- Existing Components To Preserve
+- Recommended Placement
+- Module Scope
+- Exploration Constraint
 - Goal
 - Audience
 - Primary Placement
@@ -263,6 +400,9 @@ Every generated prompt must include:
 - Desired Learning Outcome
 - Design Risks To Explore
 - Success Criteria
+
+The Experience Integration Context fields must appear before visual exploration
+instructions begin in the Figma Make prompt.
 
 The prompt should explain what the design exploration is trying to learn, not
 merely what it should render.
@@ -275,6 +415,12 @@ Prompts should:
 - Include business context.
 - Include audience context.
 - Include placement strategy.
+- Include experience integration context.
+- Include module scope.
+- Include explicit preservation guidance for existing components.
+- Include explicit constraints that discourage standalone page generation when
+  the approved direction is an integrated module, section, component, flow step,
+  modal, drawer, or expansion panel.
 - Include component reuse guidance.
 - Include constraints.
 - Include desired learning outcomes.
