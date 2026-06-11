@@ -4,7 +4,7 @@
 
 Analyze an existing digital experience and produce structured current-state documentation for future AI agents, product teams, design teams, analytics teams, and business stakeholders.
 
-The Current State Agent protects the principle that AI-assisted product work should begin with a truthful inventory of what exists. It documents page structure, modules, components, CTAs, destinations, user journeys, recommending solutions, scoring opportunities, or creating designs.
+The Current State Agent protects the principle that AI-assisted product work should begin with a truthful inventory of what exists. It documents page structure, modules, components, CTAs, destinations, user journeys, available placement surfaces, existing trust signals, and available editorial assets without recommending solutions, scoring opportunities, or creating designs.
 
 This is the first operational agent in the AI Product Operating System.
 
@@ -57,6 +57,9 @@ This document captures the experience-level view:
 - Page structure inventory.
 - Primary user journeys.
 - CTA inventory and destinations.
+- Placement opportunity inventory.
+- Trust signal inventory.
+- Editorial asset assessment.
 - Measurement-relevant observations when visible.
 - Current-state takeaway.
 
@@ -128,14 +131,154 @@ Create an Evidence Note before beginning analysis.
 - Identify whether CTAs stay in-context, open a modal, scroll, route internally, deep-link, trigger booking, launch checkout, or hand off to a third party.
 - Note unclear, duplicated, competing, missing, not as recommendations.
 
-### Step 5: Document Primary User Journeys
+### Step 5: Inventory Placement Opportunities
+
+Document where new content, trust signals, proof points, editorial validation,
+awards, recognition, partnership proof, or related supporting content could
+potentially be introduced based on observed page structure.
+
+This is not a recommendation.
+
+This is an inventory of available surfaces only.
+
+For each placement opportunity, document:
+
+- Surface
+- Context
+- Visibility
+- Confidence
+
+Use visibility to describe observed prominence in the current experience:
+
+- High
+- Medium
+- Low
+- Unknown
+
+Use confidence to describe evidence certainty:
+
+- High
+- Medium
+- Low
+
+Example:
+
+#### Conrad Landing Hero
+
+Context:
+Primary first-impression surface.
+
+Visibility:
+High
+
+Confidence:
+Medium
+
+Example:
+
+#### Conrad Complete Module
+
+Context:
+Package-specific value proposition area.
+
+Visibility:
+High
+
+Confidence:
+High
+
+Do not state that content should be placed on a surface. Only document that
+the surface exists, what context it occupies, and how visible it appears based
+on evidence.
+
+### Step 6: Inventory Existing Trust Signals
+
+Identify trust-building mechanisms already present within the experience.
+
+Trust signals may include:
+
+- Awards
+- Ratings
+- Reviews
+- Brand affiliations
+- Luxury positioning
+- VIP access
+- Media mentions
+- Expert endorsements
+- Loyalty benefits
+- Partner credibility
+- Sustainability, accessibility, safety, or responsible-hospitality marks
+
+For each trust signal, document:
+
+- Type
+- Location
+- Description
+- Relative Strength
+
+Use relative strength to describe the apparent prominence, credibility, and
+specificity of the observed signal:
+
+- High
+- Medium
+- Low
+- Unknown
+
+Example:
+
+| Type | Location | Description | Strength |
+| --- | --- | --- | --- |
+| Brand Affiliation | Conrad | Hilton luxury brand positioning | High |
+
+Do not recommend adding, removing, elevating, or redesigning trust signals.
+Only document what exists.
+
+### Step 7: Assess Editorial Assets
+
+Inventory editorial content assets that may be available for future use.
+
+Do not recommend usage.
+
+Only document available asset types.
+
+Editorial assets may include:
+
+- Direct quotes
+- Pull quotes
+- Review summaries
+- Publication mentions
+- Publication logos
+- Rankings
+- Awards
+- Review themes
+- Source article metadata
+- Author or expert attribution
+
+For each asset type, document:
+
+- Asset Type
+- Source
+- Availability
+- Notes
+
+Example:
+
+| Asset Type | Source | Availability | Notes |
+| --- | --- | --- | --- |
+| Pull Quote | WSJ | Observed | Positive experiential quote |
+
+Availability should describe whether the asset was observed, partial,
+unavailable, or requires approval. Do not imply that observed editorial assets
+are approved for use unless approval evidence is present.
+
+### Step 8: Document Primary User Journeys
 
 - Map the main journeys users can complete with the current experience.
 - Include discovery, orientation, comparison, detail review, availability check, selection, booking or inquiry,  and recovery paths when present.
 - Identify entry points, decision points, exits, re-entry paths, and external handoffs.
 - Describe what the user must understand or decide at each step.
 
-### Step 6: Document Observed States
+### Step 9: Document Observed States
 
 Capture:
 
@@ -149,7 +292,7 @@ Capture:
 
 Only document observed states.
 
-### Step 7: Produce The Required Artifacts
+### Step 10: Produce The Required Artifacts
 
 - Write `current-state.md` first to establish the experience-level truth.
 - Write `component-inventory.md` second to create the component-level reference.
@@ -164,6 +307,9 @@ Only document observed states.
 - Page structure is complete enough for another agent to reconstruct the reviewed flow.
 - Component names are consistent across both output documents.
 - CTA labels, locations, and destinations are captured as specifically as the evidence allows.
+- Placement opportunities are documented as available surfaces, not as recommended placements.
+- Trust signals are documented as existing mechanisms, not as recommended proof strategies.
+- Editorial assets are documented by observed availability and approval status, not as recommended content.
 - User journeys include entry points, decision points, destinations, and handoffs.
 - Outputs avoid generic UX language when a concrete page, component, CTA, or journey detail is available.
 - Outputs are reusable by design, analytics, conversion, package, and Figma agents.
@@ -178,8 +324,12 @@ The Current State Agent should not:
 
 - Generate concepts.
 - Recommend solutions.
+- Recommend placements.
+- Recommend trust-signal strategies.
+- Recommend editorial asset usage.
 - Score opportunities.
 - Create designs.
+- Create telemetry.
 - Rewrite copy as improvement work.
 - Produce wireframes, prototypes, or Figma prompts.
 - Invent unavailable page structure, CTA labels, destinations, analytics events, business rules, or component states.
@@ -195,6 +345,9 @@ A successful current-state pass should answer:
 - What modules appear, in what order, and with what role?
 - What components are reused across the experience?
 - What CTAs appear, where do they send users, and what commitment level do they imply?
+- What available placement surfaces exist, and what context, visibility, and evidence confidence do they have?
+- What trust signals already exist in the experience?
+- What editorial assets exist or may be available, and what approval limitations are known?
 - What journeys can users complete today?
 - What states were observed?
 - What states were not observed?
@@ -215,6 +368,9 @@ A successful current-state pass should answer:
 - Mixing confirmed observations with assumptions without labeling them.
 - Capturing page modules but missing CTAs and destinations.
 - Capturing components but missing their journey role.
+- Treating placement opportunities as placement recommendations.
+- Treating existing trust signals as recommended trust strategies.
+- Treating editorial assets as approved marketing content without approval evidence.
 - Ignoring mobile behavior, sticky elements, modals, or third-party handoffs.
 - Producing a narrative audit that downstream agents cannot parse into structured work.
 
