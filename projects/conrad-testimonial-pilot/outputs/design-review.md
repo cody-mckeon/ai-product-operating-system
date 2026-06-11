@@ -368,6 +368,49 @@ The Benefit Evidence Matrix should be explored first on the Conrad Complete Pack
 
 The Editorial Proof Bridge should be the secondary direction because WSJ validation is valuable but governed. It should support the benefit matrix, not dominate it. This pairing gives designers a clear visual exploration path: first place the experience on the package decision surface, then organize the package around validated benefits, then add press recognition where it strengthens trust.
 
+# Design Risk Assessment
+
+## Highest Risks
+
+- Source governance risk: WSJ attribution, excerpt use, logo use, and paraphrase rules are not approved in the available inputs.
+- Surface certainty risk: the dedicated Conrad Complete URL was not directly reviewable, so the observed Summer Offers package module is the practical primary surface until the canonical package surface is confirmed.
+- Visual hierarchy risk: no usable screenshots or mobile captures were available, so spacing, prominence, responsive order, and visual density cannot be validated.
+- Content accuracy risk: package terms, restaurant participation, menus, Club 66 access rules, operating nights, pool access, and valet details must remain current.
+- Density risk: a benefit validation experience could become too busy if every inclusion is treated as equally important proof.
+
+## Risk Management Direction
+
+Design exploration should start with a restrained package-surface layout that gives Club 66 and dining the strongest proof emphasis, keeps other inclusions supportive, and treats WSJ validation as a governed source-context layer. Visual exploration should include mobile and desktop states before any approval decision advances beyond concept-level design direction.
+
+# Telemetry Planning Readiness
+
+## Readiness Recommendation
+
+Conditionally Ready For Telemetry Planning.
+
+## Why
+
+The concept has clear measurable surfaces: package benefit engagement, menu-link engagement, Club 66 detail engagement, editorial-recognition engagement if approved, fit-guidance engagement, and package `BOOK NOW` handoff. These are strong enough for a future telemetry planning pass.
+
+Readiness is conditional because the final placement, component treatment, source-usage rules, and booking-flow constraints are not yet confirmed. Telemetry planning should follow initial visual exploration of the primary package surface rather than precede it.
+
+## Candidate Measurement Areas
+
+- Benefit evidence interaction by inclusion type.
+- Club 66 proof engagement.
+- Dining/menu-link engagement.
+- Fit guidance engagement.
+- Editorial proof engagement, only if approved for use.
+- Package `BOOK NOW` handoff.
+- Drop-off between package understanding and booking action.
+
+## Not Ready For
+
+- Final analytics specification.
+- Event naming.
+- Dashboard design.
+- Booking-engine instrumentation decisions.
+
 # Review Findings
 
 ## Exploration ID
