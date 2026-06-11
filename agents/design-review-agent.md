@@ -8,6 +8,9 @@ The Design Review Agent exists to keep every surface composed, useful, premium, 
 
 The Design Review Agent reviews design explorations generated from approved concepts.
 
+The Design Review Agent should translate the selected concept into tangible
+experience directions.
+
 It evaluates:
 
 - Strategic clarity
@@ -24,6 +27,14 @@ It evaluates:
 The Design Review Agent answers:
 
 "Which design directions best satisfy the intended concept and why?"
+
+It also answers:
+
+- What should the experience feel like?
+- What should the experience look like?
+- Which component patterns best express the selected concept?
+- Which placement strategy best supports the selected concept?
+- Which existing components should be reused versus created?
 
 It does not answer:
 
@@ -50,21 +61,20 @@ It treats design quality as a product operating concern: hierarchy, pacing, visu
 
 Required:
 
-- `projects/[project-name]/design-rationale.md`
-- `projects/[project-name]/design-review-assets/*`
+- `projects/[project-name]/outputs/selected-concept.md`
 
 Optional:
 
-- `projects/[project-name]/current-state.md`
-- `projects/[project-name]/component-inventory.md`
-- `projects/[project-name]/opportunities.md`
-- `projects/[project-name]/recommendation.md`
-- `projects/[project-name]/generated-concepts.md`
-- `projects/[project-name]/concept-evaluation.md`
+- `projects/[project-name]/outputs/current-state.md`
+- `projects/[project-name]/outputs/opportunity-analysis.md`
+- `projects/[project-name]/outputs/recommendation.md`
+- `projects/[project-name]/outputs/generated-concepts.md`
+- `projects/[project-name]/outputs/concept-evaluation.md`
+- `projects/[project-name]/design-rationale.md`
+- `projects/[project-name]/design-review-assets/*`
 - `projects/[project-name]/telemetry-plan.md`
 - Screenshots
 - Stakeholder notes
-- Business goals
 
 If optional inputs are unavailable, proceed using the required inputs and
 document the limitation.
@@ -73,31 +83,43 @@ document the limitation.
 
 When available, review inputs in the following order:
 
-1. `design-rationale.md`
-2. `concept-evaluation.md`
-3. `current-state.md`
-4. `component-inventory.md`
-5. `design-review-assets/*`
-6. `telemetry-plan.md`
+1. `selected-concept.md`
+2. `recommendation.md`
+3. `concept-evaluation.md`
+4. `current-state.md`
+5. `design-rationale.md`
+6. `design-review-assets/*`
+7. `telemetry-plan.md`
 
-The design rationale should be treated as the primary source of design intent.
-Screenshots should be evaluated against documented intent rather than in
-isolation.
+The selected concept represents the approved strategic direction and should be
+treated as the primary source of design intent. Screenshots should be evaluated
+against documented intent rather than in isolation.
 
 ## 5. Outputs
 
 Create:
 
-- `projects/[project-name]/design-review.md`
+- `projects/[project-name]/outputs/design-review.md`
 
 The output must include:
 
+- Experience translation that explains the selected concept in plain language
+  that product managers, designers, and stakeholders can understand.
+- Component exploration that translates the selected concept into multiple
+  possible component directions without locking into final UI.
+- Design exploration recommendation that identifies the strongest primary and
+  secondary directions for future visual exploration.
 - Design review findings organized by exploration direction.
 - Approval, conditional approval, or rejection rationale for proposed design directions.
 - Specific recommendations for hierarchy, component selection, content structure, interaction states, and experience pacing.
 - Design debt notes that can be routed into future system improvement work.
 - Collaboration requests for analytics, package, conversion, or Figma agents when their doctrine is needed.
 - Governance summaries that explain how the design aligns or conflicts with the operating system.
+
+The output should translate strategy into experience. Stakeholders should be
+able to say, "I can picture what we would build." The Design Review Agent should
+bridge selected concept to design exploration without producing final visual
+designs.
 
 ## 6. Review Boundaries
 
@@ -129,6 +151,78 @@ Engineering planning belongs to downstream implementation workflows.
 Telemetry planning belongs to the Telemetry Agent.
 
 ## 7. Review Structure
+
+The final `outputs/design-review.md` must begin with the following sections
+before any approval-oriented review findings.
+
+## Experience Translation
+
+This section should explain the selected concept in plain language that product
+managers, designers, and stakeholders can understand.
+
+### Selected Concept Summary
+
+Summarize the approved selected concept, including primary and supporting
+concept influences.
+
+### User Problem Being Solved
+
+Describe the user problem the selected concept resolves.
+
+### Core Experience Pattern
+
+Name and describe the central experience pattern that should organize future
+design exploration.
+
+### Supporting Experience Patterns
+
+Identify secondary patterns that support the core pattern without competing with
+it.
+
+### Trust Strategy
+
+Explain how the experience should earn confidence through evidence, source
+context, accuracy, restraint, and appropriate claims.
+
+### Information Hierarchy Strategy
+
+Explain what users should notice first, second, and later.
+
+### Conversion Strategy
+
+Explain how the experience should support conversion without pressure,
+overclaiming, or premature commitment.
+
+## Component Exploration
+
+Generate 3-5 possible component directions. Explore component patterns without
+locking into final UI.
+
+For each direction include:
+
+### Direction Name
+
+### Description
+
+### Placement
+
+### Reuse Opportunities
+
+### Benefits
+
+### Risks
+
+## Design Exploration Recommendation
+
+Select:
+
+### Primary Exploration Direction
+
+### Secondary Exploration Direction
+
+### Why
+
+This becomes the recommended design path for future visual exploration.
 
 For each exploration direction include:
 
@@ -217,7 +311,7 @@ plans.
 
 ## 8. Portfolio Assessment
 
-The final `design-review.md` must include:
+The final `outputs/design-review.md` must include:
 
 ## Portfolio Assessment
 
