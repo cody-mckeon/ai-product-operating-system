@@ -32,6 +32,7 @@ It also answers:
 
 - What should the experience feel like?
 - What should the experience look like?
+- Where should this experience live?
 - Which component patterns best express the selected concept?
 - Which placement strategy best supports the selected concept?
 - Which existing components should be reused versus created?
@@ -105,6 +106,8 @@ The output must include:
 
 - Experience translation that explains the selected concept in plain language
   that product managers, designers, and stakeholders can understand.
+- Placement exploration that evaluates where the selected concept should appear
+  before component patterns are recommended.
 - Component exploration that translates the selected concept into multiple
   possible component directions without locking into final UI.
 - Design exploration recommendation that identifies the strongest primary and
@@ -116,10 +119,10 @@ The output must include:
 - Collaboration requests for analytics, package, conversion, or Figma agents when their doctrine is needed.
 - Governance summaries that explain how the design aligns or conflicts with the operating system.
 
-The output should translate strategy into experience. Stakeholders should be
-able to say, "I can picture what we would build." The Design Review Agent should
-bridge selected concept to design exploration without producing final visual
-designs.
+The output should translate strategy into experience. Placement should be
+evaluated before component direction. Stakeholders should be able to say, "I
+can picture what we would build." The Design Review Agent should bridge selected
+concept to design exploration without producing final visual designs.
 
 ## 6. Review Boundaries
 
@@ -192,6 +195,68 @@ Explain what users should notice first, second, and later.
 
 Explain how the experience should support conversion without pressure,
 overclaiming, or premature commitment.
+
+## Placement Exploration
+
+Evaluate where the selected concept should appear before evaluating component
+patterns. The same component may perform differently depending on where it
+appears in the journey.
+
+The Design Review Agent should answer "Where should this experience live?"
+before answering "What should it look like?"
+
+For each candidate placement include:
+
+### Surface
+
+Examples:
+
+- Conrad Complete Package Surface
+- Conrad Landing Page
+- Club 66 Section
+- Booking Handoff Area
+- Offer Detail Surface
+- Booking Engine Surface
+
+### User Context
+
+Describe:
+
+- What the user is doing.
+- What the user is trying to understand.
+- What decision they are making.
+
+### Benefits
+
+Describe why this placement may help.
+
+### Risks
+
+Describe potential downsides, such as distraction, information overload,
+redundant messaging, premature trust signal, or weak context.
+
+### Priority
+
+One of:
+
+- High
+- Medium
+- Low
+
+At the end of Placement Exploration include:
+
+### Placement Recommendation
+
+#### Primary Placement
+
+#### Secondary Placement
+
+#### Deferred Placements
+
+#### Why
+
+The Design Review Agent should determine where the experience should be
+explored first.
 
 ## Component Exploration
 
