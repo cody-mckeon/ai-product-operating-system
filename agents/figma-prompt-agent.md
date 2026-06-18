@@ -44,6 +44,45 @@ been approved.
 
 Use `design-review.md` as the primary source of visual exploration intent.
 
+## Design System Context Requirements
+
+Before generating any Figma Make prompt, the Figma Prompt Agent must review:
+
+- `design-system/figma-make-context.md`
+- `design-system/component-patterns.md`
+- `design-system/imagery.md`
+- `design-system/typography.md`
+
+These files provide reusable RWLV design guidance and should be treated as
+persistent context.
+
+Generated prompts should:
+
+- Reuse promoted component patterns when appropriate.
+- Follow RWLV imagery guidance.
+- Follow RWLV typography guidance.
+- Follow RWLV hospitality and conversion behaviors.
+- Preserve existing page context unless a redesign is explicitly requested.
+- Prefer inserted enhancements over standalone landing-page behavior when
+  operating on existing pages.
+
+Prompts should reference reusable pattern families when relevant:
+
+- Experience Hero
+- Editorial Feature
+- Venue Orientation Feature
+- Event Bridge
+- Benefit Validation Module
+- Content Proof Module
+- Event Card
+- Venue Card
+- CTA Block
+- FAQ Continuity
+- Social Proof Layer
+
+The agent should not invent new pattern families when an existing promoted
+pattern can fulfill the same role.
+
 ## Outputs
 
 Create:

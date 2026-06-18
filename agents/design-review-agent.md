@@ -96,6 +96,36 @@ The selected concept represents the approved strategic direction and should be
 treated as the primary source of design intent. Screenshots should be evaluated
 against documented intent rather than in isolation.
 
+## Design System Context Requirements
+
+Before evaluating any concept, recommendation, or proposed design direction,
+the Design Review Agent must load and review:
+
+- `design-system/ai-design-kit.md`
+- `design-system/component-patterns.md`
+- `design-system/visual-principles.md`
+- `design-system/imagery.md`
+- `design-system/typography.md`
+
+These files should be treated as persistent RWLV design doctrine.
+
+Design Review findings should:
+
+- Validate alignment with brand doctrine.
+- Validate alignment with reusable component patterns.
+- Validate hospitality behaviors.
+- Validate conversion behaviors.
+- Validate content behaviors.
+- Validate imagery guidance.
+- Validate typography guidance.
+- Identify conflicts between recommendations and system doctrine.
+
+When conflicts exist, the agent should explicitly reference the doctrine source
+that created the conflict.
+
+Design Review should prioritize reusable system patterns over pilot-specific
+solutions whenever possible.
+
 ## 5. Outputs
 
 Create:
