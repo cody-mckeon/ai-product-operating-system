@@ -113,6 +113,40 @@ Observed pilot guidance:
 - Venue or program taxonomy should be explicit when names could be misunderstood.
 - Social, partner, press, and package content require governance before becoming prominent claims.
 
+## Collective Evidence Guidance
+
+When introducing a cross-venue program, collective, initiative, membership, loyalty experience, festival, package ecosystem, or recurring activation:
+
+- Participating venue evidence should explain the relationship rather than simply listing venue names.
+- Guests should understand why a venue participates and what role it plays within the broader experience.
+- Evidence should create understanding, not promotion.
+- Prefer concise contextual descriptions over logo walls, venue grids, or unexplained lists.
+- Program proof should feel informative and guest-centered rather than marketing-driven.
+- Collective identity should remain primary while venue evidence serves as supporting context.
+- Avoid repeating existing venue discovery experiences when explaining a collective.
+- Supporting evidence should help guests connect programs, venues, experiences, and actions without creating duplicate navigation structures.
+
+Examples include:
+
+- Savor Society
+- Resorts World Live
+- Package ecosystems
+- Culinary festivals
+- Cross-property activations
+- Loyalty or membership experiences
+
+Anti-patterns:
+
+- Simple venue name lists without context
+- Logo walls presented as proof
+- Duplicate venue grids
+- Event inventory used as a substitute for explanation
+- Promotional claims without operational meaning
+
+Design objective:
+
+Help guests understand the relationship between the collective and participating venues before asking them to explore, reserve, purchase, or engage.
+
 ## Conversion Behaviors
 
 Confirmed guidance:

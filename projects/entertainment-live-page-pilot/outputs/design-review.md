@@ -6,21 +6,40 @@ Project: `projects/entertainment-live-page-pilot`
 
 Inputs reviewed:
 
-* `outputs/opportunity-analysis.md`
-* `outputs/recommendation.md`
-* `outputs/concept-selection.md`
-* `projects/entertainment-page-pilot/outputs/current-state.md`
-* `design-system/brand-guidelines/rwlv-brand-guidelines-2026.pdf`
-* `design-system/brand.md`
-* `design-system/components.md`
+- `agents/design-review-agent.md`
+- `projects/entertainment-live-page-pilot/outputs/opportunity-analysis.md`
+- `projects/entertainment-live-page-pilot/outputs/recommendation.md`
+- `projects/entertainment-live-page-pilot/outputs/concept-selection.md`
+- `projects/entertainment-page-pilot/outputs/current-state.md`
+
+Required design-system doctrine reviewed:
+
+- `design-system/ai-design-kit.md`
+- `design-system/component-patterns.md`
+- `design-system/visual-principles.md`
+- `design-system/imagery.md`
+- `design-system/typography.md`
 
 Evidence limitations:
 
-* `projects/entertainment-live-page-pilot/outputs/current-state.md` was not present in the project folder.
-* The available current-state artifact lives at `projects/entertainment-page-pilot/outputs/current-state.md`.
-* No visual design exploration, wireframes, or Figma files were provided for review.
-* The brand guideline PDF was reviewed through page rendering and partial text extraction. The readable brand evidence emphasizes luxury that feels personal and welcoming, a curated resort ecosystem, Vegas energy without overwhelm, and photography with movement and energy.
-* Downstream ticketing, table reservation, booking, social, FAQ-expanded, mobile-anchor, and analytics states were not available.
+- `projects/entertainment-live-page-pilot/outputs/current-state.md` was not present. The review uses `projects/entertainment-page-pilot/outputs/current-state.md`, which is cited by the opportunity analysis and recommendation as the available current-state evidence.
+- No visual design exploration, wireframes, Figma files, or updated screenshots were provided for this review.
+- No live downstream ticketing, table reservation, booking-engine, social, mobile-anchor, FAQ-expanded, or analytics states were available.
+- Component reuse is based on observed and documented patterns, not a pilot-specific component inventory.
+
+## Design System Doctrine Validation Summary
+
+The approved direction aligns with system doctrine when treated as an inserted Entertainment page enhancement, not as a standalone landing page or full-page redesign.
+
+Validated alignments:
+
+- `design-system/ai-design-kit.md`: supports orienting guests before asking them to act, preserving existing discovery paths, explaining unclear venue/program relationships, and keeping conversion helpful rather than pressured.
+- `design-system/component-patterns.md`: supports using a Venue Orientation Feature as the core pattern, with Event Bridge, Event Card, Venue Card, Page Anchor Navigation, FAQ / Support Continuity, CTA Block, and Social Proof Layer as supporting patterns.
+- `design-system/visual-principles.md`: supports a composed, premium, operationally clear module with one focal point, preserved page rhythm, and no full-page redesign drift.
+- `design-system/imagery.md`: supports specific venue or entertainment imagery that clarifies The Stage at Zouk and shows venue energy without relying on abstract lights, dark crops, or ungoverned social imagery.
+- `design-system/typography.md`: supports clear heading structure, with `The Stage at Zouk` as the primary section heading and concise body copy explaining the Resorts World Live relationship.
+
+No doctrine conflict was found with CON-01 when the section is governed as a Venue Orientation Feature plus Event Bridge. Potential conflicts would emerge if the design makes Resorts World Live look like a separate venue, invents social or package claims, uses social content without governance, or turns the enhancement into a standalone campaign page.
 
 ## Experience Translation
 
@@ -28,859 +47,591 @@ Evidence limitations:
 
 The approved concept is CON-01: Resorts World Live Orientation Journey.
 
-The experience should create a clear orientation moment on the Entertainment page that explains Resorts World Live through The Stage at Zouk, then connects guests back into event discovery and ticket actions. Supporting influences are:
+The experience should add a clear orientation moment to the existing Entertainment page that introduces The Stage at Zouk as the section identity, explains the Resorts World Live relationship, and bridges guests into relevant event discovery and ticket actions.
 
-* CON-02: Entertainment Map Of Experiences, for broader venue hierarchy and anchor/navigation cues.
-* CON-04: Event Action Clarity Experience, for ticket, table, learn-more, and booking path clarity.
-* CON-06: Venue Pulse Experience, for restrained venue-level social context where governance allows.
+Supporting concepts should inform, not replace, the primary direction:
+
+- CON-02: Entertainment Map Of Experiences should inform venue hierarchy, page anchors, and continuity with existing venue discovery.
+- CON-04: Event Action Clarity Experience should inform CTA labeling, event-card relationship cues, and commercial action clarity.
+- CON-06: Venue Pulse Experience should inform restrained, governed venue-level social context.
 
 ### User Problem Being Solved
 
-Guests can currently encounter Resorts World Live in navigation, The Stage at Zouk in event cards, and venue sections elsewhere on the page without a clear explanation of how these pieces relate. The review direction should reduce that ambiguity before asking guests to choose tickets, tables, or venue paths.
+Guests can encounter Resorts World Live in navigation, The Stage at Zouk in event-card labels, and separate venue sections lower on the page without a clear body-level explanation of how these elements relate.
+
+The selected concept should help guests understand:
+
+- What The Stage at Zouk is.
+- How Resorts World Live relates to The Stage at Zouk.
+- Where related events can be discovered.
+- Which action path leads to tickets, tables, event details, or stay-related exploration.
 
 ### Core Experience Pattern
 
-Orientation Section.
+Venue Orientation Feature.
 
-This should function as a composed hospitality orientation moment: a clear relationship explanation, a venue/programming identity, and a bridge into relevant events. It should feel like a helpful host introducing the guest to the right part of the resort ecosystem, not like another promotional tile.
+This pattern is confirmed in `design-system/component-patterns.md` as the appropriate reusable pattern for explaining a venue, program, or named experience relationship before discovery or action. It fits the approved concept because the central design task is taxonomy clarity and guest orientation.
 
 ### Supporting Experience Patterns
 
-* Experience Directory cues: help the new section sit coherently among Resorts World Theatre, Ayu Dayclub, and Zouk Nightclub.
-* Action Clarity cues: make the next available ticket, table, learn-more, or booking action understandable.
-* Social Context cues: optionally use official, brand-safe signals to convey venue atmosphere and recency.
+- Event Bridge: connect The Stage at Zouk orientation to relevant event discovery and ticket actions.
+- Event Card: preserve the existing event-discovery foundation and make venue/date/action context easy to scan.
+- Venue Card or Venue Moment Module: keep The Stage at Zouk coherent with existing venue discovery without flattening all venues into identical tiles.
+- Page Anchor Navigation: make the revised page structure visible and navigable.
+- FAQ / Support Continuity: move support content lower while preserving findability.
+- CTA Block: provide clear action after sufficient context.
+- Social Proof Layer: support venue atmosphere only when official, governed, and subordinate to discovery and conversion.
 
 ### Trust Strategy
 
-Trust should come from accurate taxonomy, restrained claims, clear source context, and operational truth. The design should not overstate package availability, social proof, or partner relationships. The phrase structure and hierarchy must make it clear that The Stage at Zouk is the venue context for Resorts World Live.
+Trust should be earned through accurate taxonomy, restrained language, source clarity, and operational truth.
 
-AEG logo and AEG content should be treated as governed brand/legal content, not as interchangeable decoration.
+The design should:
+
+- Make The Stage at Zouk the primary section identity.
+- Explain Resorts World Live as associated programming or context without presenting it as a separate venue.
+- Avoid invented event counts, package eligibility, social proof, or partner claims.
+- Treat AEG logo placement and AEG content removal as governance-sensitive constraints.
+- Keep social content official, moderated, and clearly subordinate if explored.
+
+This aligns with `design-system/ai-design-kit.md`, which requires unclear venue or program taxonomy to be explicit, and with `design-system/component-patterns.md`, which warns that Venue Orientation Feature usage can create confusion if it implies a program is a separate venue.
 
 ### Information Hierarchy Strategy
 
 Users should notice first:
 
-* `The Stage at Zouk` as the primary heading and venue anchor for the Resorts World Live context.
-* A concise explanation of how Resorts World Live relates to The Stage at Zouk.
+- `The Stage at Zouk` as the H2 section heading.
+- A concise relationship statement that explains Resorts World Live in relation to The Stage at Zouk.
 
 Users should notice second:
 
-* Relevant event discovery paths and upcoming programming cues.
-* Clear commercial actions tied to the event or venue context.
+- Related event discovery cues.
+- Event date, venue, and action context.
+- A clear path to tickets or event details.
 
 Users should notice later:
 
-* Venue atmosphere or social context.
-* Supporting details, policies, FAQ content, partner marks, and footer utilities.
+- Venue atmosphere or social context.
+- Related venue-discovery continuity.
+- FAQ, policy, partner, and support content.
+
+This follows `design-system/typography.md`, which says headings should clarify structure and taxonomy, and `design-system/visual-principles.md`, which says hierarchy should orient before selling.
 
 ### Conversion Strategy
 
-The experience should support conversion by improving confidence before action. Ticket actions should feel timely and contextual, not pressured. The review direction should preserve event discovery as the main commercial surface while making it easier to understand which action leads to tickets, tables, learn-more detail, or booking.
+The design should preserve event discovery as the main commercial surface and strengthen confidence before action.
+
+Ticket conversion support should:
+
+- Keep ticket actions visible and timely.
+- Clarify action intent across tickets, tables, learn-more, and stay-related paths.
+- Avoid adding friction for guests who are ready to purchase.
+- Avoid pressure-heavy or urgency-driven conversion patterns.
+
+This aligns with `design-system/ai-design-kit.md`, which defines conversion as an act of hospitality and requires relevance, trust, and timing before action.
 
 ## Placement Exploration
 
-### Placement 1
-
 ### Surface
 
-Entertainment Page, after Resorts World Theatre / Theatre context.
+Entertainment Page: After Resorts World Theatre / Theatre Amenities, before FAQ.
 
 ### User Context
 
-The guest has moved from broad Entertainment discovery into venue orientation. They are trying to understand the relationship between entertainment venues and which events or experiences are relevant to them.
+The guest has already encountered hero/event discovery and Theatre content. They are moving from one major entertainment venue into broader entertainment venue discovery and may be deciding whether The Stage at Zouk, Resorts World Live programming, Theatre events, nightlife, or dayclub content is relevant.
 
 ### Benefits
 
-* Directly matches the stakeholder request to add a Resorts World Live section after The Theatre section.
-* Restores continuity between Theatre content and other venue discovery.
-* Creates a natural point to introduce The Stage at Zouk before the lower-page venue section.
-* Makes the on-page anchor structure easier to align with the revised hierarchy.
-* Allows FAQ to move later without losing its support role.
+- Directly satisfies the stakeholder request to add a Resorts World Live section after The Theatre section.
+- Restores venue-discovery continuity before support content.
+- Creates the clearest moment to explain The Stage at Zouk before guests reach lower venue sections.
+- Supports `design-system/component-patterns.md` guidance that Venue Orientation Features typically appear after relevant category context and before deeper listings.
+- Supports `design-system/visual-principles.md` guidance to preserve page rhythm when adding inserted modules.
 
 ### Risks
 
-* If too large, the section could interrupt guests who are focused on the event listing.
-* If the relationship language is unclear, Resorts World Live could appear to be a separate venue.
-* AEG logo/content governance must be resolved so the section does not inherit conflicting partner context.
+- If the section is too promotional, it may interrupt the page's event-discovery momentum.
+- If the copy is imprecise, it may make Resorts World Live look like a separate venue.
+- If FAQ is moved without anchor or support continuity, support findability may suffer.
 
 ### Priority
 
 High
 
-### Placement 2
-
 ### Surface
 
-Entertainment Page, integrated near event discovery and relevant The Stage at Zouk event cards.
+Entertainment Page: Near the existing event listing or relevant event cards.
 
 ### User Context
 
-The guest is browsing artists, event dates, venue labels, and CTAs. They may notice The Stage at Zouk as an event-card label but may not understand the venue/programming relationship.
+The guest is actively browsing events, comparing dates, venues, and CTAs. The Stage at Zouk may appear as an event-card venue label without explanatory context.
 
 ### Benefits
 
-* Reinforces orientation at the exact point where event choice happens.
-* Supports ticket conversion by clarifying context close to action.
-* Can help guests connect The Stage at Zouk labels with Resorts World Live programming.
+- Puts orientation near the moment when venue labels matter.
+- Supports ticket conversion by clarifying event-to-venue relationships.
+- Reinforces Event Bridge and Event Card patterns from `design-system/component-patterns.md`.
 
 ### Risks
 
-* May add cognitive load to an already dense event-browsing surface.
-* Could compete with primary event CTAs if overemphasized.
-* Requires careful action hierarchy to avoid mixing orientation with conversion pressure.
+- The event listing is already commercially dense. Additional explanatory content could clutter discovery.
+- Placement too close to filters may compete with date/category/artist browsing tasks.
+- It may not satisfy the stakeholder request for a section after The Theatre section.
 
 ### Priority
 
 Medium
 
-### Placement 3
-
 ### Surface
 
-On-page anchor/navigation structure.
+Resorts World Live Experiences Page.
 
 ### User Context
 
-The guest uses page anchors to understand what is on the page and jump to relevant venue sections.
+The guest has navigated specifically to Resorts World Live and is likely evaluating upcoming programming, tickets, stay options, or related entertainment.
 
 ### Benefits
 
-* Improves discoverability before the guest reaches the section.
-* Signals that the page hierarchy has changed.
-* Supports both orientation and wayfinding.
+- The page already has a Just Announced lineup, Secure Tickets CTAs, Concert Weekend Stay, and More Entertainment Awaits.
+- It can reinforce the relationship between Resorts World Live and The Stage at Zouk for guests already in that context.
 
 ### Risks
 
-* Mobile anchor behavior was not observed, so responsive behavior is an evidence gap.
-* Anchor naming must preserve the The Stage at Zouk / Resorts World Live relationship.
-* If the body section is not clear, anchor changes alone will not solve the hierarchy problem.
-
-### Priority
-
-Medium
-
-### Placement 4
-
-### Surface
-
-Resorts World Live page.
-
-### User Context
-
-The guest has already chosen the Resorts World Live path and is reviewing lineup, ticket, cross-promotion, and stay-oriented content.
-
-### Benefits
-
-* Reinforces consistency between the Entertainment page and the Resorts World Live destination page.
-* Can align ticket and stay context with the orientation language.
-* Helps reduce taxonomy drift across related pages.
-
-### Risks
-
-* Does not solve the Entertainment page discoverability gap by itself.
-* Could create duplicated explanation if the Entertainment page already handles orientation clearly.
-* Stay-package content on the Resorts World Live page has operational dependencies.
+- It does not solve the Entertainment page body hierarchy gap.
+- It does not satisfy the primary stakeholder request for the Entertainment page.
+- It could create duplicated orientation content unless governed carefully.
 
 ### Priority
 
 Low
-
-### Placement 5
-
-### Surface
-
-FAQ / support area.
-
-### User Context
-
-The guest is looking for policies, ticketing rules, directions, accessibility, food and beverage, or cancellation information.
-
-### Benefits
-
-* Keeps operational support available after discovery.
-* Can contain policy and AEG references where legally or operationally required.
-* Reduces interruption to venue discovery if placed after the main venue/programming hierarchy.
-
-### Risks
-
-* Moving FAQ too low may reduce support visibility for guests with immediate policy questions.
-* FAQ content may include venue-specific or partner-specific policy language that requires review.
-
-### Priority
-
-Medium
 
 ### Placement Recommendation
 
 #### Primary Placement
 
-Entertainment Page, immediately after the Theatre / Theatre Amenities context and before FAQ.
+Place the core orientation section after Resorts World Theatre / Theatre Amenities and before FAQ.
 
 #### Secondary Placement
 
-Event discovery reinforcement near relevant The Stage at Zouk / Resorts World Live event moments.
+Add a lighter Event Bridge near relevant event discovery surfaces where The Stage at Zouk events appear, using existing event-card logic and action hierarchy.
 
 #### Deferred Placements
 
-* Resorts World Live page alignment.
-* FAQ policy/context treatment.
-* Full venue-social integration across all entertainment venues.
+Defer major Resorts World Live Experiences page changes and broader entertainment ecosystem mapping until taxonomy, package, and social governance are more mature.
 
 #### Why
 
-The primary placement solves the core hierarchy problem at the right journey moment. Guests have enough page context to understand that they are moving through entertainment venues, but they have not yet been interrupted by FAQ or pushed into lower-page venue content. The secondary placement helps conversion clarity by reinforcing the same relationship near event actions.
+The primary placement best satisfies stakeholder direction, current-state gaps, and design-system doctrine. It creates orientation before support content, preserves existing event discovery, and avoids full-page redesign drift.
 
 ## Component Exploration
 
-### Direction Name
+### Direction DR-01: The Stage at Zouk Orientation Feature
 
-Venue Orientation Feature
+#### Component Pattern
 
-### Description
+Venue Orientation Feature.
 
-A composed orientation section that introduces The Stage at Zouk as the venue context for Resorts World Live, explains the relationship in concise language, and creates a bridge into relevant events.
+#### Experience Role
 
-### Placement
+Introduce The Stage at Zouk as the primary section identity and explain the Resorts World Live relationship in a concise, guest-friendly way.
 
-Primary placement after Theatre / Theatre Amenities and before FAQ.
+#### Existing Components To Reuse
 
-### Reuse Opportunities
+- Section heading and eyebrow patterns from existing Entertainment sections.
+- Venue imagery or carousel framing if already used for Theatre, Ayu, or Zouk sections.
+- Existing CTA styling and hierarchy.
 
-* Reuse the existing `VenueInfoPanel` logic from Resorts World Theatre and Venues sections.
-* Reuse existing section-heading and eyebrow patterns.
-* Reuse existing image carousel frame if approved venue imagery requires multiple assets.
+#### Existing Components To Adapt
 
-### Benefits
+- Venue information blocks currently used for entertainment venues.
+- Editorial feature structure for a concise orientation moment.
 
-* Strongest alignment with CON-01.
-* Clear hierarchy and low guest ambiguity.
-* Supports brand doctrine by creating a composed, hospitality-led orientation moment.
+#### Potential New Capability Areas
 
-### Risks
+- Program-to-venue relationship labeling.
+- Governed partner/logo placement rules for AEG-related content.
+- Taxonomy-safe content fields for The Stage at Zouk and Resorts World Live.
 
-* Needs careful copy governance.
-* Could feel redundant if too close to existing Theatre content.
-* May require new approved imagery for The Stage at Zouk.
+#### Doctrine Validation
 
-### Direction Name
+- Aligns with `design-system/component-patterns.md` Venue Orientation Feature.
+- Aligns with `design-system/ai-design-kit.md` hospitality behavior to orient guests before asking them to act.
+- Aligns with `design-system/typography.md` because the heading clarifies taxonomy.
+- Aligns with `design-system/imagery.md` if imagery shows the actual venue, stage, or entertainment environment clearly.
 
-Resorts World Live Event Bridge
+#### Risks
 
-### Description
+- Copy could over-explain and slow event-focused guests.
+- Imagery could become generic nightlife atmosphere instead of clarifying the venue.
+- Poor taxonomy could create the false impression that Resorts World Live is a separate venue.
 
-A bridge from orientation into relevant event discovery that keeps The Stage at Zouk context visible while allowing guests to continue into ticket or learn-more paths.
+#### Approval Status
 
-### Placement
+Approved for design exploration.
 
-Secondary placement near the event listing or within the revised section.
+### Direction DR-02: Resorts World Live Event Bridge
 
-### Reuse Opportunities
+#### Component Pattern
 
-* Reuse `EventCard` patterns.
-* Reuse venue badges and date-row patterns.
-* Reuse existing CTA styles while clarifying action hierarchy.
+Event Bridge supported by Event Card.
 
-### Benefits
+#### Experience Role
 
-* Protects ticket conversion by connecting orientation to action.
-* Keeps events from feeling detached from the new section.
-* Makes the selected concept more commercially useful.
+Connect the orientation section to relevant upcoming events, ticket paths, and event detail paths without duplicating the full event listing.
 
-### Risks
+#### Existing Components To Reuse
 
-* Too many event cards or actions could turn orientation into another listing.
-* CTA labels may be constrained by third-party systems.
-* Requires event feed/content rules for which events qualify.
+- Event cards.
+- Venue labels or badges.
+- Date rows.
+- Ticket, table, and learn-more CTA patterns.
+- Event listing/filter context where applicable.
 
-### Direction Name
+#### Existing Components To Adapt
 
-Entertainment Anchor Refresh
+- Event cards may need stronger venue/program labels where The Stage at Zouk and Resorts World Live context matters.
+- CTA grouping may need clearer action intent when ticket, table, and detail actions appear together.
 
-### Description
+#### Potential New Capability Areas
 
-A navigation and anchor exploration that makes the revised page structure legible before guests scroll through it.
+- Relationship-aware event labeling.
+- CTA intent labeling or helper copy.
+- Event-to-section anchor links.
 
-### Placement
+#### Doctrine Validation
 
-On-page anchor area and related section labels.
+- Aligns with `design-system/component-patterns.md` Event Bridge and Event Card patterns.
+- Aligns with `design-system/ai-design-kit.md` conversion behavior by placing CTAs after enough context.
+- Aligns with `design-system/visual-principles.md` if dense event information remains grouped and scannable.
+- Aligns with `design-system/typography.md` if date, venue, and CTA labels remain precise.
 
-### Reuse Opportunities
+#### Risks
 
-* Reuse `PageAnchorNav`.
-* Adapt existing anchor labels and section targets.
-* Preserve desktop anchor behavior while investigating mobile alternatives.
+- Too much event explanation can clutter event browsing.
+- Stale or invented event data would conflict with `design-system/component-patterns.md` Event Bridge risk guidance.
+- Third-party ticketing and table partners may constrain CTA labels.
 
-### Benefits
+#### Approval Status
 
-* Improves discoverability for the new section.
-* Helps guests form a mental model of the page.
-* Scales to future venue additions.
+Approved for design exploration.
 
-### Risks
+### Direction DR-03: Entertainment Anchor Refresh
 
-* Mobile anchor behavior is not yet evidenced.
-* Anchor labels can create taxonomy confusion if they mix program and venue names poorly.
-* Navigation changes must align with actual body content.
+#### Component Pattern
 
-### Direction Name
+Page Anchor Navigation.
 
-Venue Pulse Layer
+#### Experience Role
 
-### Description
+Reflect the revised page hierarchy and help guests understand that The Stage at Zouk is part of the Entertainment page structure.
 
-A restrained social-context layer that supports venue confidence through official, brand-safe atmosphere signals.
+#### Existing Components To Reuse
 
-### Placement
+- Current `On This Page` anchor navigation.
 
-Within the primary orientation section or broader venue discovery, secondary to content and ticket actions.
+#### Existing Components To Adapt
 
-### Reuse Opportunities
+- Anchor labels should reflect actual page sections and preserve discoverability for Resorts World Theatre, Ayu Dayclub, Zouk Nightclub, FAQ, and the new The Stage at Zouk section.
 
-* Reuse footer social icon conventions as a global account reference.
-* Adapt social proof layer doctrine from the component system.
-* Use existing venue content framing rather than creating a dominant social feed.
+#### Potential New Capability Areas
 
-### Benefits
+- Mobile anchor behavior validation.
+- Active-section or section-aware anchor behavior if already supported.
 
-* Addresses the stakeholder request to explore social integrations.
-* Supports venue atmosphere and recency.
-* Can strengthen the identity of The Stage at Zouk if official social assets exist.
+#### Doctrine Validation
 
-### Risks
+- Aligns with `design-system/component-patterns.md` Page Anchor Navigation.
+- Aligns with `design-system/ai-design-kit.md` interaction behavior around guided agency and reversible exploration.
+- Aligns with `design-system/typography.md` label guidance if anchor labels remain short and accurate.
 
-* Requires moderation, rights, brand safety, and ownership.
-* Can distract from ticket actions if too prominent.
-* Social activity may vary by venue.
+#### Risks
 
-### Direction Name
+- Anchor labels can create false hierarchy if they do not match body sections.
+- Adding both Resorts World Live and The Stage at Zouk as separate anchors could contradict taxonomy guidance.
+- Mobile anchor behavior is not confirmed.
 
-FAQ Continuity Treatment
+#### Approval Status
 
-### Description
+Conditionally approved for design exploration.
 
-A support-content exploration that keeps FAQ findable while moving it out of the main venue-discovery flow.
+### Direction DR-04: Venue Pulse Social Context
 
-### Placement
+#### Component Pattern
 
-After primary venue/programming discovery and before footer/booking utilities, or in a later support area with clear access.
+Social Proof Layer.
 
-### Reuse Opportunities
+#### Experience Role
 
-* Reuse existing `FAQTabsAccordion`.
-* Preserve FAQ category structure.
-* Adapt section sequencing rather than inventing a new support component.
+Provide restrained venue-level atmosphere or social context for The Stage at Zouk and other entertainment venues where official channels, moderation, and rights are confirmed.
 
-### Benefits
+#### Existing Components To Reuse
 
-* Reduces interruption between Theatre and venue discovery.
-* Keeps policy content intact.
-* Supports stakeholder request to move FAQ lower.
+- Footer social-link pattern as a baseline for official channel behavior.
+- Existing venue modules as the context where social cues may live.
 
-### Risks
+#### Existing Components To Adapt
 
-* Guests with urgent policy needs may need a clear access cue.
-* AEG policy references may require legal/partner review.
-* Relocation alone does not improve FAQ content clarity.
+- Venue modules may support a small official-social cue or contextual link rather than a full feed.
+
+#### Potential New Capability Areas
+
+- Official venue social-channel inventory.
+- Social moderation and rights workflow.
+- Brand-safety review model.
+- Freshness and source labeling.
+
+#### Doctrine Validation
+
+- Aligns with `design-system/component-patterns.md` Social Proof Layer only if official, governed, and subordinate.
+- Aligns with `design-system/ai-design-kit.md` content behavior by avoiding claims that cannot be governed.
+- Aligns with `design-system/imagery.md` by requiring source confidence and avoiding ungoverned social-looking imagery.
+
+#### Risks
+
+- High governance risk around rights, moderation, stale content, and brand safety.
+- Social content can distract from ticket conversion.
+- Venue social quality may vary and create inconsistent representation.
+
+#### Approval Status
+
+Conditionally approved as a supporting exploration, not as a primary design direction.
+
+### Direction DR-05: FAQ Continuity Treatment
+
+#### Component Pattern
+
+FAQ / Support Continuity.
+
+#### Experience Role
+
+Move FAQ lower on the page to preserve venue-discovery continuity while keeping support content accessible and findable.
+
+#### Existing Components To Reuse
+
+- Existing FAQ tabs.
+- Existing FAQ accordion/question rows.
+- Previous/next category controls.
+
+#### Existing Components To Adapt
+
+- FAQ placement and anchor access may need adjustment so support content remains discoverable after moving lower.
+
+#### Potential New Capability Areas
+
+- Section-level support anchor.
+- FAQ category preservation across moved placement.
+- Analytics review for FAQ engagement and support need.
+
+#### Doctrine Validation
+
+- Aligns with `design-system/component-patterns.md` FAQ / Support Continuity pattern.
+- Aligns with `design-system/visual-principles.md`, which says support content should answer practical questions without interrupting primary merchandising.
+- Aligns with `design-system/typography.md` support guidance prioritizing readability and scannability.
+
+#### Risks
+
+- FAQ movement could reduce access to operational information if anchors or labels are weak.
+- Some FAQ content may be Theatre-specific or policy-sensitive and may need governance before relocation.
+- AEG references in FAQ may need legal or partner review before removal or rewrite.
+
+#### Approval Status
+
+Approved for placement exploration with content-governance review.
 
 ## Design Exploration Recommendation
 
-### Primary Exploration Direction
+### Primary Design Exploration Direction
 
-Venue Orientation Feature with Resorts World Live Event Bridge.
+DR-01: The Stage at Zouk Orientation Feature.
 
-### Secondary Exploration Direction
+This is the strongest exploration because it directly addresses the approved concept, stakeholder hierarchy request, user taxonomy confusion, and design-system doctrine around orienting before action.
 
-Entertainment Anchor Refresh with FAQ Continuity Treatment.
+### Secondary Design Exploration Direction
 
-### Why
+DR-02: Resorts World Live Event Bridge.
 
-The primary direction best satisfies the approved concept because it combines hierarchy clarity with a path back into event discovery and ticket conversion. The secondary direction supports wayfinding and page pacing without becoming a competing concept.
+This should be explored alongside DR-01 because orientation must lead into event discovery and ticket conversion. Without an Event Bridge, the new section may improve awareness but fail to support the pilot's conversion objective.
 
-### Exploration ID
+### Supporting Directions
 
-DR-01
+- DR-03: Entertainment Anchor Refresh should support page wayfinding.
+- DR-05: FAQ Continuity Treatment should support the requested FAQ relocation.
+- DR-04: Venue Pulse Social Context should remain exploratory and governance-gated.
 
-### Exploration Name
+### Deferred Directions
 
-The Stage at Zouk Orientation Feature
+- Full Entertainment page redesign.
+- Standalone Resorts World Live landing-page treatment inside the Entertainment page.
+- Concert weekend planning path or stay-package module expansion, until package eligibility and booking ownership are confirmed.
+- Full social feed integration, until official channels, rights, moderation, and performance requirements are confirmed.
 
-### Concept Alignment
+## Design Review Findings
 
-Strongly satisfies CON-01 by creating a dedicated orientation moment for The Stage at Zouk and Resorts World Live.
+### Finding 1: The primary section identity should be The Stage at Zouk.
 
-### Approval Status
+Severity: High.
 
-Approved For Further Exploration
+The stakeholder request and design-system typography guidance both support using the clearest taxonomy in the heading. `design-system/typography.md` says headings should communicate structure and priority, and pilot guidance states The Stage at Zouk should be the H2 heading.
 
-### Strategic Clarity
+Design implication:
 
-High
+- Use `The Stage at Zouk` as the section heading.
+- Present Resorts World Live as relationship context, not as an equivalent venue heading.
 
-### Guest Value
+### Finding 2: Resorts World Live must be explained without becoming a separate venue.
 
-High
+Severity: High.
 
-### Business Value
+`design-system/component-patterns.md` warns that a Venue Orientation Feature can create confusion if it implies a program is a separate venue. The pilot brief explicitly says Resorts World Live is associated with The Stage at Zouk and should not be treated as separate.
 
-High
+Design implication:
 
-### Brand Alignment
+- The relationship explanation must be concise and placed near the heading.
+- Avoid separate venue-card treatment for Resorts World Live.
+- Avoid anchor structures that split Resorts World Live and The Stage at Zouk into competing sections.
 
-High
+### Finding 3: Event discovery should remain the commercial foundation.
 
-### Component Reuse Quality
+Severity: High.
 
-High
+The current state shows event cards, filters, date controls, and ticket/table actions as primary commercial surfaces. `design-system/ai-design-kit.md` says conversion should come after sufficient context and should preserve clear primary actions.
 
-### CTA Clarity
+Design implication:
 
-Medium
+- Do not replace the event listing.
+- Use an Event Bridge to continue into existing event discovery.
+- Keep ticket, table, and learn-more actions visually and semantically distinct.
 
-### Cognitive Load
+### Finding 4: FAQ relocation supports hierarchy, but support access must be preserved.
 
-Medium
+Severity: Medium.
 
-### Measurement Readiness
+The current FAQ placement interrupts the path from Theatre content to broader venue discovery. `design-system/visual-principles.md` says support content should not interrupt primary merchandising, while `design-system/component-patterns.md` notes that moving FAQ too low without anchors can reduce findability.
 
-Medium
+Design implication:
 
-### Strengths
+- Move FAQ lower, after primary venue/program discovery.
+- Preserve FAQ category structure and accessible accordion behavior.
+- Include anchor or navigation access if FAQ is important to task completion.
 
-* Solves the central hierarchy gap.
-* Reuses existing venue-information patterns.
-* Fits the brand pillar of a curated resort ecosystem.
-* Supports luxury that feels welcoming and confidence-forward.
+### Finding 5: Social context should be a governed proof layer, not decorative media.
 
-### Weaknesses
+Severity: Medium.
 
-* CTA clarity depends on the event bridge or nearby event listing.
-* Needs approved copy and imagery.
-* Does not resolve social integration alone.
+`design-system/imagery.md` warns against social-looking imagery without governance or source confidence. `design-system/component-patterns.md` says Social Proof Layer usage requires source, freshness, and governance status.
 
-### Risks
+Design implication:
 
-* Taxonomy drift could make Resorts World Live look like a separate venue.
-* Overlarge editorial treatment could slow the page.
-* Partner/logo governance could affect visual balance.
+- Explore only official venue-level social cues or links until governance is confirmed.
+- Do not use live social feeds as the default design assumption.
+- Do not let social context compete with ticket actions.
 
-### Recommendations
+### Finding 6: Imagery should clarify venue identity and energy.
 
-* Lead with The Stage at Zouk as the H2 / primary section identity.
-* Use concise relationship copy to explain Resorts World Live.
-* Keep the section visually composed, not card-heavy.
-* Use movement-rich venue imagery if available, consistent with the brand guideline.
-* Preserve a clear path into ticket discovery.
+Severity: Medium.
 
-### Exploration ID
+`design-system/imagery.md` says entertainment imagery should show venue energy with legible performers, crowd, stage, or environment, and avoid overly dark or abstract visuals.
 
-DR-02
+Design implication:
 
-### Exploration Name
+- Prefer imagery that helps guests recognize The Stage at Zouk or understand its atmosphere.
+- Avoid generic nightlife texture, abstract lights, or crops that hide the venue.
+- Do not use unconfirmed event, artist, or social imagery.
 
-Resorts World Live Event Bridge
+### Finding 7: AEG treatment is a governance constraint, not a design embellishment.
 
-### Concept Alignment
+Severity: Medium.
 
-Strongly supports CON-01 and CON-04 by connecting orientation to relevant event actions.
+The stakeholder asks to remove AEG content and add AEG logo placement. `design-system/ai-design-kit.md` says partner claims and marks require governance before becoming prominent claims.
 
-### Approval Status
+Design implication:
 
-Approved For Further Exploration
+- Separate logo placement decisions from editorial copy decisions.
+- Do not treat AEG references in FAQ, intro copy, or partner marks as interchangeable.
+- Flag any AEG conflict for legal, partner, or stakeholder review.
 
-### Strategic Clarity
+## Existing Components To Reuse
 
-High
+- Existing Entertainment page event cards.
+- Existing event date, venue-label, and CTA patterns.
+- Existing Theatre and venue section structure where appropriate.
+- Existing `On This Page` anchor navigation.
+- Existing FAQ tabs, category controls, and accordion rows.
+- Existing footer social-link pattern as a baseline for official social channels.
 
-### Guest Value
+## Existing Components To Adapt
 
-High
+- Venue section pattern into a more precise Venue Orientation Feature.
+- Event card labels to clarify The Stage at Zouk / Resorts World Live context where applicable.
+- CTA grouping to better distinguish ticket, table, learn-more, and booking intent.
+- Anchor navigation to reflect the new section while preserving accurate hierarchy.
+- FAQ placement and anchor access to maintain support continuity.
 
-### Business Value
+## Potential New Capability Areas
 
-High
-
-### Brand Alignment
-
-Medium
-
-### Component Reuse Quality
-
-High
-
-### CTA Clarity
-
-High
-
-### Cognitive Load
-
-Medium
-
-### Measurement Readiness
-
-High
-
-### Strengths
-
-* Keeps the orientation from becoming passive content.
-* Protects event and ticket conversion.
-* Reuses event-card, venue-badge, date-row, and CTA patterns.
-* Can expose measurable interaction surfaces without feeling instrumented.
-
-### Weaknesses
-
-* Requires rules for which events appear in or near the section.
-* Can become cluttered if too many events or CTAs are shown.
-* Third-party CTA labels may limit clarity.
-
-### Risks
-
-* Event feed or CMS constraints may prevent consistent curation.
-* Table, ticket, booking, and learn-more actions can compete.
-* If action labels remain inconsistent, the bridge may not solve CTA confusion.
-
-### Recommendations
-
-* Keep event quantity focused.
-* Preserve date and venue context near actions.
-* Clarify action intent through hierarchy and short supporting labels, not pressure copy.
-* Avoid implying stay-package eligibility unless explicitly confirmed.
-
-### Exploration ID
-
-DR-03
-
-### Exploration Name
-
-Entertainment Anchor And Section Hierarchy Refresh
-
-### Concept Alignment
-
-Supports CON-01 and CON-02 by making revised page structure visible through navigation and section naming.
-
-### Approval Status
-
-Conditionally Approved
-
-### Strategic Clarity
-
-Medium
-
-### Guest Value
-
-Medium
-
-### Business Value
-
-Medium
-
-### Brand Alignment
-
-High
-
-### Component Reuse Quality
-
-High
-
-### CTA Clarity
-
-Low
-
-### Cognitive Load
-
-Low
-
-### Measurement Readiness
-
-Medium
-
-### Strengths
-
-* Reuses existing anchor navigation.
-* Helps guests see the revised Entertainment structure.
-* Scales to future venue hierarchy changes.
-* Low visual disruption when paired with clear body sections.
-
-### Weaknesses
-
-* Does not solve hierarchy by itself.
-* Mobile anchor behavior was not evidenced.
-* Naming must be handled carefully.
-
-### Risks
-
-* Anchor labels may overcomplicate the relationship between program and venue.
-* If the section content is weak, navigation changes may create false confidence.
-
-### Recommendations
-
-* Explore anchor language only after the primary section identity is resolved.
-* Treat mobile wayfinding as an explicit design-review question.
-* Keep anchor naming aligned with body headings and venue taxonomy.
-
-### Exploration ID
-
-DR-04
-
-### Exploration Name
-
-Venue Pulse Social Context Layer
-
-### Concept Alignment
-
-Supports CON-06 and secondary stakeholder needs, but should remain subordinate to CON-01.
-
-### Approval Status
-
-Conditionally Approved
-
-### Strategic Clarity
-
-Medium
-
-### Guest Value
-
-Medium
-
-### Business Value
-
-Medium
-
-### Brand Alignment
-
-Medium
-
-### Component Reuse Quality
-
-Medium
-
-### CTA Clarity
-
-Low
-
-### Cognitive Load
-
-Medium
-
-### Measurement Readiness
-
-Medium
-
-### Strengths
-
-* Addresses venue-level social integration opportunities.
-* Can help communicate energy, atmosphere, and recency.
-* Fits entertainment context if official content is strong.
-
-### Weaknesses
-
-* Does not solve the primary hierarchy issue.
-* Social content quality may vary.
-* New governance is likely required.
-
-### Risks
-
-* Brand-safety, rights, moderation, and performance risks.
-* Can feel noisy or unpremium if treated like a raw social feed.
-* Could distract from ticket conversion.
-
-### Recommendations
-
-* Treat social as proof/context, not as the main content.
-* Use official, curated, rights-cleared signals only.
-* Keep social content visually restrained and clearly attached to venue context.
-* Defer broad venue-social rollout until ownership and moderation are confirmed.
-
-### Exploration ID
-
-DR-05
-
-### Exploration Name
-
-FAQ Relocation And Support Continuity
-
-### Concept Alignment
-
-Supports CON-01 by improving page pacing and preserving support access after venue discovery.
-
-### Approval Status
-
-Conditionally Approved
-
-### Strategic Clarity
-
-Medium
-
-### Guest Value
-
-Medium
-
-### Business Value
-
-Medium
-
-### Brand Alignment
-
-High
-
-### Component Reuse Quality
-
-High
-
-### CTA Clarity
-
-Low
-
-### Cognitive Load
-
-Low
-
-### Measurement Readiness
-
-Medium
-
-### Strengths
-
-* Reuses existing FAQ component.
-* Supports stakeholder request to move FAQ lower.
-* Restores venue-discovery continuity.
-
-### Weaknesses
-
-* Does not add Resorts World Live clarity by itself.
-* Support visibility may decrease if access cues are weak.
-* FAQ content may need governance review.
-
-### Risks
-
-* AEG policy references may be legal or partner content.
-* Accessibility and ticketing support questions must remain easy to find.
-
-### Recommendations
-
-* Keep FAQ accessible but secondary to venue discovery.
-* Preserve category structure unless evidence supports simplification.
-* Review AEG references before changing policy language.
-
-## Portfolio Assessment
-
-### Approval Summary
-
-Approved For Further Exploration
-
-* DR-01
-* DR-02
-
-Conditionally Approved
-
-* DR-03
-* DR-04
-* DR-05
-
-Not Recommended
-
-* None
-
-DR-01 and DR-02 are approved because together they solve the selected concept: orientation plus event continuity. DR-03, DR-04, and DR-05 are conditionally approved because they support the direction but depend on taxonomy, mobile behavior, social governance, or FAQ policy decisions.
-
-### Strongest Exploration Directions
-
-* DR-01: The Stage at Zouk Orientation Feature.
-* DR-02: Resorts World Live Event Bridge.
-
-### Moderate Exploration Directions
-
-* DR-03: Entertainment Anchor And Section Hierarchy Refresh.
-* DR-05: FAQ Relocation And Support Continuity.
-
-### Weakest Exploration Directions
-
-* DR-04 is strategically useful but weakest as a near-term design direction because social governance and rights constraints are unresolved.
-
-### Recommended For Further Design Iteration
-
-* DR-01 and DR-02 should move forward together as the primary design review path.
-* DR-03 should be explored as supporting wayfinding after DR-01 defines the section identity.
-* DR-05 should be explored as a page-pacing adjustment.
-* DR-04 should be explored only as a restrained supporting layer.
-
-### Recommended For Telemetry Planning
-
-Future telemetry planning should evaluate:
-
-* Section impressions and scroll depth through the new orientation area.
-* Engagement with Resorts World Live / The Stage at Zouk event actions.
-* Anchor usage before and after hierarchy changes.
-* FAQ engagement after relocation.
-* Social context interaction if a governed social layer proceeds.
-
-This is measurement readiness guidance, not a telemetry plan.
-
-### Design Debt Observed
-
-* The pilot-local current-state artifact is missing.
-* The Entertainment page currently uses inconsistent levels of representation: navigation item, event-card venue label, body section, and destination page.
-* FAQ interrupts venue discovery.
-* Mobile anchor behavior is not evidenced.
-* AEG logo, AEG content, and AEG policy references are not yet governed as separate content types.
-* Venue-level social integration lacks ownership and brand-safety rules.
-
-### Cross-Concept Findings
-
-* The selected direction should not become a broad guided selector.
-* Stay-package promotion should remain deferred until package rules are known.
-* The best near-term design path is clear orientation plus clear event action, not a full redesign of Entertainment discovery.
-* Existing components can support most of the approved direction if taxonomy and content are resolved.
-
-## Existing Component Reuse Opportunities
-
-### Existing Components To Reuse
-
-* `VenueInfoPanel` for the primary orientation feature.
-* `PageAnchorNav` for hierarchy and wayfinding.
-* `EventCard` for the event bridge.
-* Venue badge and date-row patterns for event context.
-* Existing red outlined CTA style for ticket/table/booking actions.
-* `FAQTabsAccordion` for relocated support content.
-* Footer social icon conventions for global social access.
-
-### Existing Components To Adapt
-
-* AEG intro / editorial intro pattern: adapt only if governance allows partner separation and content cleanup.
-* Resorts World Theatre section pattern: adapt for The Stage at Zouk without making Resorts World Live a separate venue.
-* Venue section pattern: adapt to support a programming-plus-venue relationship, not just standalone venue copy.
-* Event listing controls: adapt only if filtering or labeling can support The Stage at Zouk / Resorts World Live clarity.
-* Social proof layer: adapt from doctrine as a restrained social-context layer, not a raw feed.
-
-### Potential New Capability Areas
-
-* Program-to-venue relationship labeling.
-* Governed social-context modules for venue atmosphere.
-* Cross-page taxonomy consistency between Entertainment and Resorts World Live.
-* Mobile wayfinding for long entertainment pages.
-* CTA intent labeling across ticket, table, learn-more, booking, and stay paths.
+- Taxonomy-safe relationship labeling for programs and venues.
+- Governance model for partner logo placement versus partner content.
+- Official venue social-channel inventory and moderation workflow.
+- Event-to-venue relationship metadata.
+- CTA ownership and destination inventory across ticketing, tables, booking, and external partners.
+- Mobile anchor and long-page wayfinding validation.
 
 ## Governance Summary
 
-### Brand Alignment
+### Brand Doctrine
 
-The strongest direction should express Resorts World as a curated resort ecosystem: entertainment, venue identity, ticket action, and support content should feel connected. The brand guide's idea of Vegas energy without guest exhaustion is especially relevant. The design should use energetic imagery and clear hierarchy without creating visual noise or action pressure.
+The recommended direction aligns with RWLV doctrine when it feels like a confident host clarifying the entertainment ecosystem. It should feel premium, welcoming, and precise, not promotional or overbuilt.
 
-### AEG Governance Constraints
+### Component Doctrine
 
-AEG logo placement, AEG content removal, and AEG policy references must be handled separately. Design Review should not assume that visible AEG marks, intro copy, and FAQ policy copy have the same approval requirements.
+The direction should prioritize promoted system patterns: Venue Orientation Feature, Event Bridge, Event Card, Page Anchor Navigation, FAQ / Support Continuity, CTA Block, and Social Proof Layer. New pattern families are not needed.
 
-### Hospitality Quality
+### Hospitality Behaviors
 
-The experience should feel like a host explaining where the guest is and what they can do next. It should avoid generic promo grids, overpacked event cards, or social modules that feel detached from the guest journey.
+The direction aligns by orienting guests before asking for action, explaining relationships clearly, and preserving exploration paths.
 
-### Measurement Readiness
+### Conversion Behaviors
 
-The primary direction is measurable because it introduces clear surfaces: orientation impression, event bridge engagement, anchor usage, action selection, and FAQ engagement after relocation. Measurement readiness is medium until analytics access and third-party handoff visibility are confirmed.
+The direction aligns by using orientation to support ticket confidence while keeping ticket paths visible and action intent clear.
+
+### Content Behaviors
+
+The direction depends on precise, governed relationship language. Any unconfirmed venue, package, partner, event, or social claim would conflict with `design-system/ai-design-kit.md`.
+
+### Imagery Guidance
+
+The direction aligns if imagery is specific to the venue, stage, event environment, or official experience. Generic nightlife imagery, ungoverned social visuals, or overly dark abstract crops would conflict with `design-system/imagery.md`.
+
+### Typography Guidance
+
+The direction aligns if The Stage at Zouk carries the primary section heading role, supporting copy explains the relationship, and CTA/label typography remains precise and scannable. Display treatment should not be overused in dense event or FAQ areas.
 
 ## Collaboration Requests
 
-* Analytics Agent: confirm measurement readiness for section impressions, anchors, event actions, FAQ relocation, and outbound handoffs.
-* Conversion Agent: review CTA hierarchy across tickets, tables, learn-more, booking, and stay paths.
-* Package Agent: review any future stay-package exposure before package content appears in this section.
-* Brand / Legal / Partner Review: confirm AEG logo placement, AEG content removal, and AEG policy references.
-* Figma Agent: use this review as design intent only after design exploration is explicitly requested.
+- Content governance: confirm exact relationship language for Resorts World Live and The Stage at Zouk.
+- Partner governance: confirm AEG logo placement, removable AEG content, and policy-copy requirements.
+- Entertainment operations: confirm approved The Stage at Zouk imagery, event feed, and venue details.
+- Analytics: confirm current anchor, event-card, CTA, FAQ, outbound ticketing, table, booking, and social-link measurement.
+- Social governance: confirm official venue channels, moderation, rights, freshness, and ownership.
+- Figma Prompt Agent: use DR-01 and DR-02 as the approved primary prompt directions, with DR-03 and DR-05 as supporting prompt directions.
+
+## Approval Summary
+
+Approved for downstream Figma prompt generation:
+
+- DR-01: The Stage at Zouk Orientation Feature.
+- DR-02: Resorts World Live Event Bridge.
+
+Conditionally approved as supporting explorations:
+
+- DR-03: Entertainment Anchor Refresh.
+- DR-04: Venue Pulse Social Context.
+- DR-05: FAQ Continuity Treatment.
+
+Rejected or deferred at this stage:
+
+- Full Entertainment page redesign.
+- Standalone landing-page treatment.
+- Full social feed integration.
+- Stay-package planning module expansion without package eligibility evidence.
+- New component families that duplicate promoted system patterns.

@@ -62,25 +62,28 @@ The Pilot Orchestrator should understand this workflow order:
 
 Current State
 ↓
-Component Inventory
-↓
 Opportunity Analysis
-↓
-Recommendation
 ↓
 Concept Generation
 ↓
-Concept Evaluation
+Concept Selection
 ↓
-Figma Prompt
+Recommendation
 ↓
 Design Review
 ↓
-Telemetry
+Figma Prompt
 ↓
-Analytics
-↓
-Experimentation
+Vendor Handoff
+
+This is the canonical vendor-handoff workflow. Use this order when determining
+the current phase, identifying sequence gaps, and recommending the next
+specialist agent.
+
+Component inventory, concept evaluation, telemetry, analytics, and
+experimentation artifacts may provide supporting or downstream evidence, but
+they are not stages in this vendor-handoff workflow unless a project explicitly
+defines them as required dependencies.
 
 ## Artifact Registry
 
@@ -89,16 +92,17 @@ Evaluate the following workflow artifacts:
 | Phase | Artifact |
 | --- | --- |
 | Current State | `current-state.md` |
-| Component Inventory | `component-inventory.md` |
-| Opportunity Analysis | `opportunities.md` |
-| Recommendation | `recommendation.md` |
+| Opportunity Analysis | `opportunity-analysis.md` |
 | Concept Generation | `generated-concepts.md` |
-| Concept Evaluation | `concept-evaluation.md` |
-| Figma Prompt | `figma-prompts.md` |
+| Concept Selection | `concept-selection.md` or `selected-concept.md` |
+| Recommendation | `recommendation.md` |
 | Design Review | `design-review.md` |
-| Telemetry | `telemetry-plan.md` |
-| Analytics | `analytics-requirements.md` |
-| Experimentation | `experimentation-plan.md` |
+| Figma Prompt | `figma-prompts.md` |
+| Vendor Handoff | `vendor-handoff.md` |
+
+Legacy projects may use `opportunities.md` in place of
+`opportunity-analysis.md`. Treat the legacy filename as the same phase and note
+which artifact was found.
 
 ## Orchestration Boundaries
 
@@ -121,6 +125,7 @@ The Pilot Orchestrator must not:
 - Create concepts
 - Create designs
 - Create Figma prompts
+- Create vendor handoffs
 - Create telemetry plans
 - Create analytics requirements
 - Create experimentation plans
@@ -156,9 +161,9 @@ Guidance:
   partial, mark the workflow as out of sequence and assess related blockers.
 - If the latest artifact requires human approval, the current phase may be
   human review rather than the next specialist agent.
-- If all artifacts are present and usable, the current phase is
-  Experimentation Review or Pilot Execution Readiness, depending on project
-  evidence.
+- If all canonical vendor-handoff artifacts are present and usable, the current
+  phase is Vendor Handoff Review or Implementation Readiness, depending on
+  documented approval evidence.
 
 ## Health Classification
 
@@ -236,6 +241,7 @@ Classify the project as one of:
 - Discovery Complete
 - Strategy Complete
 - Design Complete
+- Vendor Handoff Complete
 - Measurement Complete
 - Experimentation Complete
 - Pilot Approved
@@ -268,23 +274,28 @@ Use the following guidance:
 Required:
 
 - `current-state.md`
-- `component-inventory.md`
+- `opportunity-analysis.md` or legacy `opportunities.md`
 
 ### Strategy Complete
 
 Required:
 
-- `opportunities.md`
+- `generated-concepts.md`
+- `concept-selection.md` or `selected-concept.md`
 - `recommendation.md`
 
 ### Design Complete
 
 Required:
 
-- `generated-concepts.md`
-- `concept-evaluation.md`
-- `figma-prompts.md`
 - `design-review.md`
+- `figma-prompts.md`
+
+### Vendor Handoff Complete
+
+Required:
+
+- `vendor-handoff.md`
 
 ### Measurement Complete
 
@@ -333,16 +344,22 @@ Evaluate:
 
 ### Discovery Readiness
 
-Based on `current-state.md` and `component-inventory.md`.
+Based on `current-state.md` and `opportunity-analysis.md` or legacy
+`opportunities.md`.
 
 ### Strategy Readiness
 
-Based on `opportunities.md` and `recommendation.md`.
+Based on `generated-concepts.md`, `concept-selection.md` or
+`selected-concept.md`, and `recommendation.md`.
 
 ### Design Readiness
 
-Based on `generated-concepts.md`, `concept-evaluation.md`,
-`figma-prompts.md`, and `design-review.md`.
+Based on `design-review.md` and `figma-prompts.md`.
+
+### Vendor Handoff Readiness
+
+Based on the readiness of all upstream canonical artifacts and the completeness
+of `vendor-handoff.md`.
 
 ### Measurement Readiness
 
@@ -397,6 +414,7 @@ One of:
 - Discovery Complete
 - Strategy Complete
 - Design Complete
+- Vendor Handoff Complete
 - Measurement Complete
 - Experimentation Complete
 - Pilot Approved
@@ -407,9 +425,9 @@ One of:
 
 Estimate based on artifact completion.
 
-Use the eleven registered artifacts as the denominator. Count present artifacts
-as complete and partial artifacts as half complete. Round to the nearest whole
-percentage.
+Use the eight canonical vendor-handoff workflow artifacts as the denominator.
+Count present artifacts as complete and partial artifacts as half complete.
+Round to the nearest whole percentage.
 
 ### Recommended Next Action
 
@@ -426,16 +444,13 @@ Evaluate:
 For:
 
 - `current-state.md`
-- `component-inventory.md`
-- `opportunities.md`
-- `recommendation.md`
+- `opportunity-analysis.md` or legacy `opportunities.md`
 - `generated-concepts.md`
-- `concept-evaluation.md`
-- `figma-prompts.md`
+- `concept-selection.md` or `selected-concept.md`
+- `recommendation.md`
 - `design-review.md`
-- `telemetry-plan.md`
-- `analytics-requirements.md`
-- `experimentation-plan.md`
+- `figma-prompts.md`
+- `vendor-handoff.md`
 
 ## Workflow Progression
 
@@ -456,6 +471,8 @@ Evaluate and explain:
 ### Strategy Readiness
 
 ### Design Readiness
+
+### Vendor Handoff Readiness
 
 ### Measurement Readiness
 
@@ -521,6 +538,7 @@ One of:
 - Discovery Complete
 - Strategy Complete
 - Design Complete
+- Vendor Handoff Complete
 - Measurement Complete
 - Experimentation Complete
 - Pilot Approved
@@ -539,7 +557,10 @@ Examples:
 
 - Run Opportunity Analysis Agent
 - Run Recommendation Agent
-- Run Concept Evaluation Agent
+- Run Concept Selection Agent
+- Run Design Review Agent
+- Run Figma Prompt Agent
+- Run Vendor Handoff Agent
 - Run Analytics Agent
 - Request Stakeholder Review
 - Resolve Blockers
@@ -625,8 +646,8 @@ Select one primary next action using this priority order:
    approval.
 3. Run the first missing specialist agent in workflow order.
 4. Re-run or revise a partial artifact if it blocks downstream execution.
-5. Proceed to experimentation or pilot execution readiness when all artifacts
-   are present and reviewed.
+5. Proceed to vendor handoff review or implementation readiness when all
+   canonical vendor-handoff workflow artifacts are present and reviewed.
 
 Do not recommend multiple primary actions. Additional actions may appear in
 the Orchestrator Handoff execution order, but the Executive Summary and
