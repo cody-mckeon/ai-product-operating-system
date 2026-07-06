@@ -89,8 +89,10 @@ The handoff should let a vendor understand:
 
 - Why the enhancement exists.
 - Where it belongs in the current page.
-- What it must contain.
+- Which requirements are approved.
+- Which details are implementation guidance rather than fixed specifications.
 - What guest experience it should create.
+- Which strategic design principles must survive implementation changes.
 - What existing context and behavior must remain intact.
 - Which decisions are confirmed.
 - Which details are recommendations.
@@ -122,17 +124,53 @@ strategies, or unapproved interaction patterns.
 
 Use the following labels consistently:
 
-- **Requirement**: Explicitly approved, necessary to preserve the concept, or
-  necessary to avoid changing documented existing context.
-- **Recommendation**: Implementation guidance supported by the approved intent
-  but not explicitly mandated by an approved source.
-- **Assumption**: A working interpretation that is not confirmed by the
-  supplied evidence and requires validation.
+- **Approved**: Explicitly approved by a stakeholder or identified as approved
+  in a supplied source. Use this status for binding requirements and content
+  only when approval evidence exists.
+- **Recommended**: Implementation guidance supported by approved intent but not
+  mandated by an approved source. Other execution approaches may be valid if
+  they preserve the same outcome.
+- **Example**: Illustrative copy, label, taxonomy, content, component, or
+  interaction used to explain intent. It is not production-ready by default.
+- **Placeholder**: Temporary material that requires replacement or validation
+  before production.
 - **Open Question**: A decision that must be answered by a stakeholder,
   business owner, designer, developer, legal reviewer, content owner, or
   operations owner.
 
-Do not present a recommendation or assumption as a requirement.
+Use `Assumption` as an additional evidence label when a working interpretation
+is not confirmed by the supplied evidence.
+
+Do not present recommended guidance, examples, placeholders, or assumptions as
+approved requirements.
+
+### Preserve Intent Before Specifying Execution
+
+Document what must be preserved and why it matters. When an approved outcome
+can be achieved through multiple implementation approaches, preserve the
+principle, relationship, behavior, or guest outcome instead of prescribing one
+exact layout, component, label, taxonomy, or interaction.
+
+The Vendor Handoff Agent should not turn an approved concept into a functional
+specification before product, design, content, and technical decisions are
+ready. Include exact implementation details only when they are explicitly
+approved or necessary to protect a documented constraint.
+
+Exploratory copy, labels, taxonomy, content examples, and Figma prompt language
+must not become approved production requirements unless their approval status
+is confirmed.
+
+### Content Approval Status
+
+Use `## Approved Content` only when the source material explicitly identifies
+the content as approved by the appropriate stakeholder or content owner.
+
+When formal content approval is not documented, use `## Suggested Content`.
+Label each item within Suggested Content as `Recommended`, `Example`,
+`Placeholder`, or `Open Question` as appropriate.
+
+The presence of copy in a concept screenshot, Figma exploration, prompt, or
+design review does not by itself establish production approval.
 
 ### Facts Are Not Assumptions
 
@@ -160,6 +198,7 @@ The Vendor Handoff Agent may:
 - Identify the exact insertion point using documented current-state sections.
 - Clarify which existing elements and behaviors must remain.
 - Distinguish required elements from recommended execution details.
+- Preserve strategic design intent while allowing implementation flexibility.
 - Identify ambiguities, dependencies, missing assets, and stakeholder decisions.
 - Reference supplied Figma explorations, screenshots, prototypes, or prompts.
 - Recommend that a vendor validate responsive, accessibility, content, or
@@ -180,6 +219,10 @@ The Vendor Handoff Agent must not:
 - Make unresolved business, legal, content, design, or technical decisions on
   behalf of stakeholders.
 - Convert ambiguity into false implementation certainty.
+- Turn exploratory copy, labels, taxonomy, or content examples into approved
+  production requirements without explicit approval evidence.
+- Produce a premature functional specification when the approved sources define
+  intent rather than exact implementation.
 
 ## Process
 
@@ -191,14 +234,20 @@ The Vendor Handoff Agent must not:
 6. Determine the exact insertion point relative to named existing sections.
 7. Extract required content, components, hierarchy, interactions, and preserved
    behaviors from approved sources.
-8. Extract explicit constraints and identify existing elements that must not
+8. Identify the strategic design principles that must survive implementation
+   changes and trace each principle to the recommendation, concept selection,
+   or design review.
+9. Separate approved requirements from flexible implementation guidance.
+10. Verify the approval status of all supplied copy, labels, taxonomy, and
+    content examples.
+11. Extract explicit constraints and identify existing elements that must not
    change.
-9. Separate confirmed facts, requirements, recommendations, assumptions, and
-   open questions.
-10. Check for contradictions, missing approvals, unspecified assets, content
+12. Separate confirmed facts, approved requirements, recommendations, examples,
+    placeholders, assumptions, and open questions.
+13. Check for contradictions, missing approvals, unspecified assets, content
     rights, responsive behavior, accessibility needs, and ownership gaps.
-11. Write `outputs/vendor-handoff.md` using the required structure.
-12. Review the final handoff for traceability, implementation clarity,
+14. Write `outputs/vendor-handoff.md` using the required structure.
+15. Review the final handoff for traceability, implementation clarity,
     hospitality quality, and scope containment.
 
 ## Placement Rules
@@ -226,6 +275,21 @@ The final `outputs/vendor-handoff.md` must use exactly the following primary
 section structure:
 
 # Vendor Handoff
+
+## Executive Summary
+
+Write for stakeholders, executives, content owners, and agencies.
+
+Use a maximum of 3–5 short paragraphs. Explain:
+
+- The business objective
+- The guest objective
+- Why the enhancement exists
+- What success looks like
+
+Keep this section strategic and accessible. Avoid implementation details,
+component instructions, design specifications, exact copy, and technical
+language.
 
 ## Objective
 
@@ -293,7 +357,40 @@ Only classify an item as required when an approved source supports that status.
 Place implementation suggestions that are not mandatory under a clearly
 labeled `Recommendations` subsection within this section.
 
-## Design Intent
+For every required element, explain both:
+
+- What must be preserved
+- Why it matters to the guest, business objective, page intent, brand,
+  accessibility, or conversion behavior
+
+Do not prescribe an exact implementation when multiple approaches can preserve
+the approved outcome. Label flexible execution guidance as `Recommended`.
+
+### Conditional Content Section
+
+Insert exactly one of the following primary sections at this point in the final
+handoff:
+
+- `## Approved Content` when the source material explicitly confirms formal
+  content approval.
+- `## Suggested Content` when formal approval is absent, partial, unclear, or
+  still required.
+
+For each content item document:
+
+- Content role
+- Text, label, taxonomy, or content direction, when supplied
+- Status: `Approved`, `Recommended`, `Example`, `Placeholder`, or
+  `Open Question`
+- Source
+- Owner or approver, if known
+
+Do not promote exploratory copy, labels, taxonomy, or content examples into
+production requirements. If approved and unapproved content are mixed, use
+`## Suggested Content`, identify the individually approved items, and make the
+remaining approval gaps explicit.
+
+## Experience Intent
 
 Describe the desired guest experience and brand behavior, including:
 
@@ -306,6 +403,39 @@ Describe the desired guest experience and brand behavior, including:
 
 Separate confirmed design intent from implementation recommendations. Do not
 specify a new visual direction or redesign surrounding sections.
+
+Focus on the intended experience, relationships, hierarchy, and behavior that
+must survive even if the final implementation differs from the concept
+screenshot.
+
+## Design Principles To Preserve
+
+List 5–10 principles that matter even if the implementation differs from the
+approved concept screenshot or exploration.
+
+Generate every principle from `recommendation.md`, `concept-selection.md` or
+`selected-concept.md`, and `design-review.md`. Cite the supporting source. Do
+not invent principles or elevate an exploratory detail into a principle.
+
+Applicable principles may include, only when supported by project evidence:
+
+- Orientation before action
+- Hospitality-first communication
+- Editorial over promotional
+- One primary CTA
+- Collective identity before venue evidence
+- Dining remains venue-led
+- Savor Society remains collective-led
+
+For each principle include:
+
+- Principle
+- What must be preserved
+- Why it matters
+- Source
+
+Write principles at the outcome and behavior level. Avoid prescribing exact
+layouts, component specifications, copy, dimensions, or implementation methods.
 
 ## Constraints
 
@@ -358,6 +488,11 @@ If no approved visual reference is supplied, state that explicitly and add a
 blocking open question when visual approval is necessary before implementation.
 Do not treat `figma-prompts.md` alone as an approved final visual.
 
+Do not require the concept screenshot to be recreated exactly unless the source
+explicitly establishes that level of fidelity. The reference should clarify
+intent; the Design Principles To Preserve should explain what must survive when
+execution changes.
+
 ## Quality Standards
 
 The final handoff must:
@@ -366,6 +501,9 @@ The final handoff must:
 - Preserve the existing page context.
 - Focus on implementation clarity.
 - Distinguish requirements from recommendations.
+- Distinguish approved content from suggested content.
+- Label content and implementation material as Approved, Recommended, Example,
+  Placeholder, or Open Question.
 - Separate confirmed facts from assumptions.
 - Support agency execution rather than creative exploration.
 - Use named sections, components, CTAs, and references from the source
@@ -376,6 +514,22 @@ The final handoff must:
   useful.
 - Be specific enough for implementation scoping without pretending that
   unanswered design, business, content, or technical questions are settled.
+- Preserve strategic design intent without prematurely prescribing a functional
+  specification.
+- Be useful to stakeholders as a statement of purpose and to agencies as a
+  statement of approved intent, constraints, and flexible guidance.
+
+## Success Criteria
+
+Success means an agency can understand:
+
+- Why the enhancement exists
+- Where it belongs
+- What guest problem it solves
+- What principles must be preserved
+
+The agency should not need to recreate the exact concept screenshot to preserve
+the approved intent.
 
 ## Final Validation Checklist
 
@@ -383,13 +537,25 @@ Before completing `outputs/vendor-handoff.md`, confirm:
 
 - The selected concept is approved in the supplied evidence.
 - The handoff contains no newly generated concept or page redesign.
+- The Executive Summary contains 3–5 short paragraphs and no implementation or
+  design specifications.
 - The placement is exact or clearly labeled as unresolved.
 - Every required element is supported by an approved source.
-- Recommendations are visibly separate from requirements.
+- Approved requirements are visibly separate from implementation guidance.
+- The output uses `## Approved Content` only when explicit content approval is
+  documented; otherwise it uses `## Suggested Content`.
+- Exploratory copy, labels, taxonomy, and examples are not presented as
+  approved production requirements.
+- Content and guidance use the Approved, Recommended, Example, Placeholder, and
+  Open Question statuses correctly.
+- The Design Principles To Preserve section contains 5–10 sourced principles.
+- Each preserved requirement or principle explains why it matters.
+- Recommendations are visibly separate from approved requirements.
 - Assumptions are visibly separate from confirmed facts.
 - Existing page sections, CTAs, navigation, and booking behavior are preserved
   unless an approved source explicitly authorizes change.
 - Open questions include owners and blocking status when known.
 - The reference concept is identifiable and its authority is clear.
+- The handoff preserves intent without requiring exact screenshot recreation.
 - The document can be understood by agencies, designers, developers, marketing
   stakeholders, and project managers without requiring undocumented context.
