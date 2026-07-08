@@ -1,0 +1,30 @@
+project: slip18-launch
+brand: Slip 18
+positioning: Your AI Transformation Partner
+phase: company_foundation
+primary_goal: launch landing page and prepare for first workflow diagnostic sales conversations
+primary_cta: Book a Workflow Diagnostic
+vertical: hospitality
+
+source_of_truth:
+  - context/company-definition.md
+  - context/service-catalog.md
+  - context/example-agents.md
+  - context/sales-principles.md
+  - inputs/landing-page-draft.md
+  - outputs/website-build-spec.md
+
+agent_sequence:
+  - landing_page_strategist
+  - site_copy_editor
+  - ux_wireframe_agent
+  - site_builder_agent
+  - qa_agent
+  - outreach_prep_agent
+
+rules:
+  - Do not invent client logos, testimonials, or case studies.
+  - Do not make unsupported ROI claims.
+  - Keep the first website focused on booking a Workflow Diagnostic.
+  - Prioritize hospitality-specific pain and practical operations language.
+  - Use code-first implementation where a build is required.

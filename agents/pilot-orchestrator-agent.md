@@ -74,11 +74,25 @@ Design Review
 ↓
 Figma Prompt
 ↓
+Figma Make
+↓
+Design Artifact Review
+↓
+Figma Revision Prompt
+↓
+Figma Make Revision
+↓
+Design Artifact Review
+↓
 Vendor Handoff
 
 This is the canonical vendor-handoff workflow. Use this order when determining
 the current phase, identifying sequence gaps, and recommending the next
-specialist agent.
+specialist agent. The revision branch is conditional: a `Pass` review may skip
+it, and a `Minor Revision` review may skip it only when all remaining items are
+resolved or explicitly carried forward as non-blocking. A `Major Revision`
+must follow the revision branch. A `Not Ready` review returns to Design Review
+or Figma Prompt rather than continuing through the linear sequence.
 
 Component inventory, concept evaluation, telemetry, analytics, and
 experimentation artifacts may provide supporting or downstream evidence, but
@@ -98,6 +112,9 @@ Evaluate the following workflow artifacts:
 | Recommendation | `recommendation.md` |
 | Design Review | `design-review.md` |
 | Figma Prompt | `figma-prompts.md` |
+| Figma Make | Versioned artifact reference under `screenshots/figma-make/` |
+| Design Artifact Review | `design-artifact-review.md`, `design-artifact-scorecard.md`, and `design-revision-notes.md` |
+| Figma Revision Prompt | `figma-revision-prompt.md` when revision is required |
 | Vendor Handoff | `vendor-handoff.md` |
 
 Legacy projects may use `opportunities.md` in place of
@@ -125,6 +142,8 @@ The Pilot Orchestrator must not:
 - Create concepts
 - Create designs
 - Create Figma prompts
+- Create design artifact reviews
+- Create Figma revision prompts
 - Create vendor handoffs
 - Create telemetry plans
 - Create analytics requirements
@@ -161,6 +180,17 @@ Guidance:
   partial, mark the workflow as out of sequence and assess related blockers.
 - If the latest artifact requires human approval, the current phase may be
   human review rather than the next specialist agent.
+- Review generated design artifact before vendor handoff.
+- If a generated artifact exists without a Design Artifact Review, the next
+  phase is Design Artifact Review even when `vendor-handoff.md` already exists.
+- Use the latest `design-artifact-review.md` status to route the work:
+  - `Pass` or `Minor Revision`: continue toward Vendor Handoff.
+  - `Major Revision`: run the Figma Revision Prompt Agent, revise or regenerate
+    the artifact, and run Design Artifact Review again.
+  - `Not Ready`: return to Design Review or the Figma Prompt Agent according to
+    the documented cause.
+- A `Major Revision` or `Not Ready` status blocks Vendor Handoff. Do not treat a
+  handoff created despite that status as a completed canonical workflow stage.
 - If all canonical vendor-handoff artifacts are present and usable, the current
   phase is Vendor Handoff Review or Implementation Readiness, depending on
   documented approval evidence.
@@ -290,6 +320,11 @@ Required:
 
 - `design-review.md`
 - `figma-prompts.md`
+- A versioned, inspectable generated design artifact
+- `design-artifact-review.md`
+- `design-artifact-scorecard.md`
+- `design-revision-notes.md`
+- Latest Design Artifact Review status of `Pass` or `Minor Revision`
 
 ### Vendor Handoff Complete
 
@@ -354,12 +389,15 @@ Based on `generated-concepts.md`, `concept-selection.md` or
 
 ### Design Readiness
 
-Based on `design-review.md` and `figma-prompts.md`.
+Based on `design-review.md`, `figma-prompts.md`, the latest versioned generated
+artifact, and the three Design Artifact Review outputs. `Major Revision` and
+`Not Ready` are Low Design Readiness for Vendor Handoff.
 
 ### Vendor Handoff Readiness
 
-Based on the readiness of all upstream canonical artifacts and the completeness
-of `vendor-handoff.md`.
+Based on the readiness of all upstream canonical artifacts, a latest Design
+Artifact Review status of `Pass` or `Minor Revision`, and the completeness of
+`vendor-handoff.md`.
 
 ### Measurement Readiness
 
@@ -425,9 +463,14 @@ One of:
 
 Estimate based on artifact completion.
 
-Use the eight canonical vendor-handoff workflow artifacts as the denominator.
-Count present artifacts as complete and partial artifacts as half complete.
-Round to the nearest whole percentage.
+Use the nine canonical vendor-handoff workflow stages as the denominator:
+Current State, Opportunity Analysis, Concept Generation, Concept Selection,
+Recommendation, Design Review, Figma Prompt, Design Artifact Review, and Vendor
+Handoff. Count a stage as complete only when its required artifacts are present
+and usable. Count partial stages as half complete. Round to the nearest whole
+percentage. Figma Make capture is a required dependency of Design Artifact
+Review, and the Figma Revision Prompt is conditional rather than a separate
+completion stage.
 
 ### Recommended Next Action
 
@@ -450,6 +493,11 @@ For:
 - `recommendation.md`
 - `design-review.md`
 - `figma-prompts.md`
+- Latest versioned artifact reference under `screenshots/figma-make/`
+- `design-artifact-review.md`
+- `design-artifact-scorecard.md`
+- `design-revision-notes.md`
+- `figma-revision-prompt.md`, when the latest or prior review requires revision
 - `vendor-handoff.md`
 
 ## Workflow Progression
@@ -560,6 +608,9 @@ Examples:
 - Run Concept Selection Agent
 - Run Design Review Agent
 - Run Figma Prompt Agent
+- Capture Figma Make Artifact
+- Run Design Artifact Review Agent
+- Run Figma Revision Prompt Agent
 - Run Vendor Handoff Agent
 - Run Analytics Agent
 - Request Stakeholder Review
@@ -636,6 +687,8 @@ Create:
 This section should be future-automation friendly.
 
 Use concise, structured bullets that downstream automation could parse.
+Include the latest reviewed artifact version, Design Artifact Review status,
+revision count, and permitted next step whenever a generated artifact exists.
 
 ## Recommended Next Action Selection
 
@@ -646,8 +699,13 @@ Select one primary next action using this priority order:
    approval.
 3. Run the first missing specialist agent in workflow order.
 4. Re-run or revise a partial artifact if it blocks downstream execution.
-5. Proceed to vendor handoff review or implementation readiness when all
-   canonical vendor-handoff workflow artifacts are present and reviewed.
+5. Route a `Major Revision` Design Artifact Review to the Figma Revision Prompt
+   Agent and require another artifact review after regeneration.
+6. Route a `Not Ready` Design Artifact Review back to Design Review or the
+   Figma Prompt Agent according to the documented cause.
+7. Proceed to Vendor Handoff only when the latest Design Artifact Review is
+   `Pass` or `Minor Revision`, no major or blocking findings remain, and all
+   other canonical vendor-handoff artifacts are present and reviewed.
 
 Do not recommend multiple primary actions. Additional actions may appear in
 the Orchestrator Handoff execution order, but the Executive Summary and
@@ -664,6 +722,9 @@ Pilot status reports must:
 - Avoid creating designs
 - Avoid creating measurement strategy
 - Avoid creating implementation requirements
+- Prevent unreviewed generated design artifacts from reaching Vendor Handoff
+- Report the latest reviewed artifact version and review status
+- Enforce status routing for Pass, Minor Revision, Major Revision, and Not Ready
 - Clearly identify blockers
 - Clearly identify missing artifacts
 - Clearly identify next actions
@@ -693,6 +754,9 @@ A successful pilot status report should answer:
 - Recommending several primary actions instead of one next action.
 - Treating a missing artifact as complete because a later artifact exists.
 - Ignoring human approval gates.
+- Treating Figma Make output as approved because it exists or looks polished.
+- Recommending Vendor Handoff without a current Design Artifact Review.
+- Ignoring a `Major Revision` or `Not Ready` artifact-review status.
 - Evaluating product quality instead of workflow readiness.
 - Inventing missing decisions, business priorities, evidence, or approvals.
 - Producing a narrative update that cannot be parsed by future automation.

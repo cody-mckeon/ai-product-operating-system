@@ -44,20 +44,63 @@ been approved.
 
 Use `design-review.md` as the primary source of visual exploration intent.
 
-## Design System Context Requirements
+## Required Brand Context Step
 
-Before generating any Figma Make prompt, the Figma Prompt Agent must review:
+Before generating any Figma Make prompt, the Figma Prompt Agent must read:
 
+- `design-system/ai-brand-context.md`
 - `design-system/figma-make-context.md`
-- `design-system/component-patterns.md`
+- `design-system/visual-principles.md`
 - `design-system/imagery.md`
 - `design-system/typography.md`
 
-These files provide reusable RWLV design guidance and should be treated as
-persistent context.
+This step is required for every run. These files provide persistent RWLV brand
+and design context. Use `design-system/ai-brand-context.md` as the source of
+concise, PDF-derived brand guidance. Use the other files to translate that
+guidance into established web, visual, imagery, and typography behaviors.
+
+If a required context file is unavailable, do not invent its contents. Record
+the missing source under prompt constraints and use only the remaining
+documented evidence.
+
+The agent must also review:
+
+- `design-system/component-patterns.md`
+
+This file provides reusable pattern guidance but does not replace the required
+brand-context sources.
+
+## Brand Context Block Requirement
+
+Every generated Figma Make prompt must contain a concise `Brand Context Block`
+before visual exploration instructions begin.
+
+The Brand Context Block must:
+
+- Preserve RWLV brand personality.
+- Translate brand guidance into practical visual constraints for the specific
+  exploration.
+- Reinforce a hospitality-led, editorial, refined, premium, warm, and readable
+  experience.
+- Preserve clarity, guest agency, and an appropriate balance of energy and
+  ease.
+- Apply approved typography, imagery, color, composition, and interaction
+  guidance without inventing tokens, assets, specifications, or brand rules.
+- Avoid generic luxury, nightlife dominance, casino clichés, neon or glow
+  excess, fake urgency, dense grids, and internal strategy-board aesthetics.
+
+The block should be short enough to remain useful inside a copy-paste-ready
+prompt. Adapt it to the approved direction and artifact intent without changing
+or weakening the underlying brand constraints.
+
+## Design System Context Requirements
+
+Generated prompts should use the required brand context and design-system
+sources as persistent guidance.
 
 Generated prompts should:
 
+- Include a concise Brand Context Block.
 - Reuse promoted component patterns when appropriate.
 - Follow RWLV imagery guidance.
 - Follow RWLV typography guidance.
@@ -158,6 +201,8 @@ traceability. Do not use it to reopen concept selection.
 Prompts must:
 
 - Trace back to the selected concept and approved design review directions.
+- Declare exactly one Artifact Intent.
+- Include a concise RWLV Brand Context Block.
 - Respect recommendation intent.
 - Respect documented constraints.
 - Leverage existing components when possible.
@@ -562,6 +607,37 @@ Agent explicitly recommends one.
 
 Benefit validation is preferred over testimonial aggregation.
 
+## Artifact Intent Requirement
+
+Every Figma Make prompt must include an `Artifact Intent` field with exactly one
+of these values:
+
+- Internal Governance Review
+- Stakeholder Concept Review
+- Vendor Handoff Review
+
+Choose the intent that matches the documented audience and next review step.
+Do not combine values. If the source material does not specify an intent,
+classify it from the expected reviewer and next workflow step, then record that
+classification as an assumption under `Constraints`.
+
+Artifact intent governs how finished, annotated, and presentation-ready the
+exploration should feel. It does not change the approved concept, placement,
+brand context, or evidence requirements.
+
+### Stakeholder Concept Review Requirements
+
+When `Artifact Intent` is `Stakeholder Concept Review`:
+
+- Use directional draft copy so the concept is readable and the experience can
+  be evaluated.
+- Keep unresolved content honest through small, clearly secondary annotations.
+- Do not allow bracketed placeholders to dominate the main design.
+- Do not make the artifact feel like an internal wireframe or strategy board.
+- Keep the primary composition presentation-ready enough for stakeholders to
+  understand the intended guest experience without mistaking draft content for
+  approved production copy.
+
 ## Figma Prompt Structure
 
 For each approved design direction or supporting pattern include:
@@ -579,6 +655,11 @@ Use the approved design direction or supporting pattern name.
 ### Exploration Goal
 
 State what the design exploration should learn.
+
+### Artifact Intent
+
+Select exactly one allowed Artifact Intent value and apply its requirements to
+the prompt.
 
 ### Primary Placement
 
@@ -619,6 +700,11 @@ implementation.
 Document known business, content, operational, legal, visual, placement, and
 source-governance constraints.
 
+### Brand Context Block
+
+Include the concise, direction-specific RWLV Brand Context Block that must be
+inserted into the Figma Make prompt.
+
 ### Benefit Validation Experience Requirements
 
 When applicable, document how the prompt should preserve benefit-level proof
@@ -633,6 +719,7 @@ Generate a copy-paste-ready Figma Make prompt.
 Every generated prompt must include:
 
 - Context
+- Artifact Intent
 - Experience Integration Context
 - Surface Type
 - Existing Surface
@@ -647,6 +734,7 @@ Every generated prompt must include:
 - Supporting Patterns
 - Existing Component Reuse
 - Constraints
+- Brand Context Block
 - Benefit Validation Experience Requirements, when applicable
 - Desired Learning Outcome
 - Design Risks To Explore
@@ -654,6 +742,9 @@ Every generated prompt must include:
 
 The Experience Integration Context fields must appear before visual exploration
 instructions begin in the Figma Make prompt.
+
+The Artifact Intent and Brand Context Block must appear before visual
+exploration instructions begin in the Figma Make prompt.
 
 When Benefit Validation Experience Requirements apply, those requirements must
 appear before visual exploration instructions begin in the Figma Make prompt.
@@ -666,6 +757,13 @@ merely what it should render.
 Prompts should:
 
 - Be highly specific.
+- Declare the intended review use through an allowed Artifact Intent value.
+- Include a concise, direction-specific Brand Context Block before visual
+  exploration instructions.
+- Translate RWLV brand context into practical constraints that preserve a
+  hospitality-led, editorial, refined, premium, warm, and readable experience.
+- Avoid generic luxury, nightlife dominance, casino clichés, neon or glow
+  excess, fake urgency, dense grids, and internal strategy-board aesthetics.
 - Include business context.
 - Include audience context.
 - Include placement strategy.
@@ -698,11 +796,22 @@ Prompts should:
   support rather than aggressive sales messaging.
 - For inserted modules, clearly state that the concept is an inserted module
   within an existing experience, not a standalone marketing landing page.
+- For Stakeholder Concept Review, use readable directional draft copy, keep
+  unresolved content in small secondary annotations, prevent bracketed
+  placeholders from dominating the design, and avoid internal wireframe or
+  strategy-board presentation.
 
 ## Common Failure Modes
 
 Avoid:
 
+- Omitting the Artifact Intent field or using an unsupported intent value.
+- Omitting the Brand Context Block or reducing it to generic “luxury” language.
+- Producing generic luxury, nightlife-dominant, casino-cliché, neon-heavy,
+  glow-heavy, urgency-led, dense-grid, or internal strategy-board aesthetics.
+- Presenting a Stakeholder Concept Review artifact as an internal wireframe,
+  filling its main composition with bracketed placeholders, or leaving too
+  little directional copy to evaluate the concept.
 - Isolating editorial proof into a disconnected testimonial section.
 - Separating validation from the benefit it is intended to support.
 - Creating generic testimonial modules that do not help users evaluate package

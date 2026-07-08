@@ -2,8 +2,8 @@
 
 ## Purpose
 
-Convert approved recommendation, design review, concept selection, and Figma
-exploration outputs into an implementation-ready vendor handoff document.
+Convert approved recommendation, design review, concept selection, and reviewed
+design-artifact outputs into an implementation-ready vendor handoff document.
 
 The Vendor Handoff Agent translates approved concepts into clear execution
 guidance for:
@@ -33,28 +33,63 @@ Required:
 - `projects/[project-name]/outputs/recommendation.md`
 - `projects/[project-name]/outputs/design-review.md`
 - `projects/[project-name]/outputs/figma-prompts.md`
+- `projects/[project-name]/outputs/design-artifact-review.md`
+- `projects/[project-name]/outputs/design-artifact-scorecard.md`
+- `projects/[project-name]/outputs/design-revision-notes.md`
+- The latest reviewed screenshot, Figma frame, prototype, or other artifact
+  reference identified by the Design Artifact Review
 
-Also review any supplied approved Figma exploration, screenshot, prototype,
-export, or stakeholder annotation referenced by these artifacts.
+When the artifact passed through a revision cycle, also review:
+
+- `projects/[project-name]/outputs/figma-revision-prompt.md`
+
+Also review any supplied stakeholder annotation or approval associated with
+the latest reviewed artifact.
 
 If the project uses `selected-concept.md` as the concept-selection artifact,
 use it in place of `concept-selection.md` and note the filename used.
 
-If a required input or referenced visual is unavailable, do not infer its
-contents. Continue only when the remaining approved evidence is sufficient to
-produce a useful handoff, and document the limitation under `Open Questions`.
+If a required strategy input is unavailable, do not infer its contents.
+Continue only when the remaining approved evidence is sufficient to produce a
+useful handoff, and document the limitation under `Open Questions`.
+
+The Design Artifact Review and its referenced artifact are mandatory gate
+inputs. Do not create Vendor Handoff when either is unavailable or when the
+latest review status is `Major Revision` or `Not Ready`.
+
+## Design Artifact Review Gate
+
+Before drafting, identify the latest reviewed artifact version and read the
+overall status from `design-artifact-review.md`.
+
+- `Pass`: proceed using that reviewed artifact as the authoritative visual
+  reference.
+- `Minor Revision`: proceed only when no major or blocking finding remains.
+  Carry each unresolved minor item into the handoff as a recommendation,
+  placeholder, constraint, or open question with its owner and status. Do not
+  present it as approved or complete.
+- `Major Revision`: stop. Route the work to the Figma Revision Prompt Agent,
+  Figma Make revision, and another Design Artifact Review.
+- `Not Ready`: stop. Return to Design Review or the Figma Prompt Agent according
+  to the review disposition.
+
+If several artifact versions exist, use the latest version that has a matching
+review. Do not use a newer unreviewed artifact or an older preferred artifact.
 
 ## Source Precedence
 
 Use the inputs in the following order when resolving intent:
 
-1. Approved Figma exploration or annotated screenshot
-2. `design-review.md`
-3. `concept-selection.md` or `selected-concept.md`
-4. `recommendation.md`
-5. `figma-prompts.md`
-6. `current-state.md`
-7. `opportunity-analysis.md`
+1. Latest reviewed design artifact for observable visual expression
+2. `design-artifact-review.md` for the artifact gate, approved-intent
+   comparison, preserved choices, drift, and unresolved findings
+3. `design-review.md`
+4. `concept-selection.md` or `selected-concept.md`
+5. `recommendation.md`
+6. `design-revision-notes.md` and `figma-revision-prompt.md`, when applicable
+7. `figma-prompts.md`
+8. `current-state.md`
+9. `opportunity-analysis.md`
 
 This precedence does not allow the agent to ignore contradictions. When two
 approved sources conflict, preserve the conflict as an open question rather
@@ -66,8 +101,12 @@ section order, components, content, CTAs, and surrounding experience.
 Use `concept-selection.md` and `design-review.md` as the sources of truth for
 approved concept intent, placement, experience behavior, and constraints.
 
-Use `figma-prompts.md` as supporting exploration guidance, not as evidence that
-a proposed detail was approved or implemented.
+Use `figma-prompts.md` and `figma-revision-prompt.md` as supporting exploration
+guidance, not as evidence that a proposed detail was approved or implemented.
+
+The reviewed artifact governs what is observably shown. It does not override
+upstream approval, turn placeholders into final content, or confirm behavior
+that cannot be observed.
 
 ## Output
 
@@ -98,6 +137,8 @@ The handoff should let a vendor understand:
 - Which details are recommendations.
 - Which assumptions or unresolved questions require stakeholder clarification.
 - Which approved visual reference should guide implementation.
+- Which artifact-review findings remain unresolved and how the vendor must
+  treat them.
 
 ## Operating Principles
 
@@ -200,7 +241,12 @@ The Vendor Handoff Agent may:
 - Distinguish required elements from recommended execution details.
 - Preserve strategic design intent while allowing implementation flexibility.
 - Identify ambiguities, dependencies, missing assets, and stakeholder decisions.
-- Reference supplied Figma explorations, screenshots, prototypes, or prompts.
+- Reference the latest reviewed Figma artifact, screenshot, or prototype and
+  its supporting prompts.
+- Use a `Pass` or `Minor Revision` Design Artifact Review to identify the
+  authoritative visual reference and preserved design choices.
+- Carry unresolved minor review findings into the handoff without promoting
+  them to approved requirements.
 - Recommend that a vendor validate responsive, accessibility, content, or
   technical details when approved evidence does not define them.
 
@@ -214,6 +260,10 @@ The Vendor Handoff Agent must not:
 - Change existing navigation, booking flows, page hierarchy, or conversion
   paths without explicit approval.
 - Treat Figma prompts as final approved design specifications.
+- Use an unreviewed design artifact as the reference concept.
+- Proceed when the latest Design Artifact Review is `Major Revision` or `Not
+  Ready`.
+- Ignore unresolved minor findings from the Design Artifact Review.
 - Invent final copy, imagery, editorial proof, publication rights, operational
   promises, inventory, pricing, or availability.
 - Make unresolved business, legal, content, design, or technical decisions on
@@ -227,27 +277,32 @@ The Vendor Handoff Agent must not:
 ## Process
 
 1. Read all required inputs before drafting the handoff.
-2. Identify the approved recommendation and selected concept.
-3. Identify the design direction and approval status from `design-review.md`.
-4. Inventory the approved visual references and note which one is authoritative.
-5. Reconstruct the relevant current page section order from `current-state.md`.
-6. Determine the exact insertion point relative to named existing sections.
-7. Extract required content, components, hierarchy, interactions, and preserved
+2. Identify the latest reviewed artifact version and enforce the Design
+   Artifact Review gate.
+3. Identify the approved recommendation and selected concept.
+4. Identify the design direction and approval status from `design-review.md`.
+5. Inventory visual references and use only the latest reviewed artifact as the
+   authoritative visual input.
+6. Extract what the Design Artifact Review says works, must not change, remains
+   unresolved, and must be carried forward.
+7. Reconstruct the relevant current page section order from `current-state.md`.
+8. Determine the exact insertion point relative to named existing sections.
+9. Extract required content, components, hierarchy, interactions, and preserved
    behaviors from approved sources.
-8. Identify the strategic design principles that must survive implementation
+10. Identify the strategic design principles that must survive implementation
    changes and trace each principle to the recommendation, concept selection,
    or design review.
-9. Separate approved requirements from flexible implementation guidance.
-10. Verify the approval status of all supplied copy, labels, taxonomy, and
+11. Separate approved requirements from flexible implementation guidance.
+12. Verify the approval status of all supplied copy, labels, taxonomy, and
     content examples.
-11. Extract explicit constraints and identify existing elements that must not
-   change.
-12. Separate confirmed facts, approved requirements, recommendations, examples,
+13. Extract explicit constraints and identify existing elements that must not
+    change.
+14. Separate confirmed facts, approved requirements, recommendations, examples,
     placeholders, assumptions, and open questions.
-13. Check for contradictions, missing approvals, unspecified assets, content
+15. Check for contradictions, missing approvals, unspecified assets, content
     rights, responsive behavior, accessibility needs, and ownership gaps.
-14. Write `outputs/vendor-handoff.md` using the required structure.
-15. Review the final handoff for traceability, implementation clarity,
+16. Write `outputs/vendor-handoff.md` using the required structure.
+17. Review the final handoff for traceability, implementation clarity,
     hospitality quality, and scope containment.
 
 ## Placement Rules
@@ -472,21 +527,24 @@ remain, state: `No open questions identified from the supplied inputs.`
 
 ## Reference Concept
 
-Reference the supplied approved Figma exploration, screenshot, prototype, or
+Reference the latest reviewed Figma exploration, screenshot, prototype, or
 other visual artifact.
 
 Include:
 
 - Reference name
 - File path, URL, frame name, or screenshot identifier
+- Reviewed artifact version
+- Design Artifact Review status
+- Design Artifact Review source
 - Approval status, if documented
 - What the reference governs
 - What the reference does not govern
 - Related prompt or design-review direction
 
-If no approved visual reference is supplied, state that explicitly and add a
-blocking open question when visual approval is necessary before implementation.
-Do not treat `figma-prompts.md` alone as an approved final visual.
+If no reviewed visual reference is supplied, stop rather than creating the
+handoff. Do not treat `figma-prompts.md` or `figma-revision-prompt.md` alone as
+an approved final visual.
 
 Do not require the concept screenshot to be recreated exactly unless the source
 explicitly establishes that level of fidelity. The reference should clarify
@@ -536,6 +594,12 @@ the approved intent.
 Before completing `outputs/vendor-handoff.md`, confirm:
 
 - The selected concept is approved in the supplied evidence.
+- The latest artifact version is identified and matches the Design Artifact
+  Review.
+- The Design Artifact Review status is `Pass` or `Minor Revision`.
+- No blocking or major artifact-review findings remain.
+- Every unresolved minor review item is resolved or visibly carried into the
+  handoff with an appropriate evidence label and owner when known.
 - The handoff contains no newly generated concept or page redesign.
 - The Executive Summary contains 3–5 short paragraphs and no implementation or
   design specifications.
